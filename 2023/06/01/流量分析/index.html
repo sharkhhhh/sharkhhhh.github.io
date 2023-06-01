@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="流量分析基础用法查看协议统计(Statistics)-&gt;协议分级(Protocol Hierarchy)  查看地址统计(Statistics)-&gt; 会话(Conversations)  统计信息长度统计(Statistics)-&gt; 分组长度(Packet Lengths)  常用过滤 过滤ip，如源IP或者目标x.x.x.x： ip.src eq xxxx or ip.dst">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/06/01/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="流量分析基础用法查看协议统计(Statistics)-&gt;协议分级(Protocol Hierarchy)  查看地址统计(Statistics)-&gt; 会话(Conversations)  统计信息长度统计(Statistics)-&gt; 分组长度(Packet Lengths)  常用过滤 过滤ip，如源IP或者目标x.x.x.x： ip.src eq xxxx or ip.dst">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/assets/image-20230327221435002.png">
+<meta property="og:image" content="http://example.com/assets/image-20230327221941879.png">
+<meta property="og:image" content="http://example.com/assets/image-20230327222416825.png">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230420224512.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230420224756.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230421160522.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230421181504.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230421182019.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230423232631.jpg">
+<meta property="og:image" content="http://example.com/assets/image-20230423233202157.png">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230424100852.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230424101244.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230424101426.jpg">
+<meta property="og:image" content="http://example.com/assets/image-20230424111101110.png">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230424104344.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230424111316.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230424111702.jpg">
+<meta property="og:image" content="http://example.com/assets/QQ%E6%88%AA%E5%9B%BE20230424111637.jpg">
+<meta property="article:published_time" content="2023-06-01T03:08:58.226Z">
+<meta property="article:modified_time" content="2023-06-01T03:01:33.182Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/assets/image-20230327221435002.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-流量分析" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2023/06/01/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.226Z" itemprop="datePublished">2023-06-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="流量分析"><a href="#流量分析" class="headerlink" title="流量分析"></a>流量分析</h1><h2 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h2><h3 id="查看协议"><a href="#查看协议" class="headerlink" title="查看协议"></a>查看协议</h3><p><code>统计(Statistics)</code>-&gt;<code>协议分级(Protocol Hierarchy)</code></p>
+<p><img src="/./assets/image-20230327221435002.png" alt="image-20230327221435002"></p>
+<h3 id="查看地址"><a href="#查看地址" class="headerlink" title="查看地址"></a>查看地址</h3><p><code>统计(Statistics)</code>-&gt;<code> 会话(Conversations)</code></p>
+<p><img src="/./assets/image-20230327221941879.png" alt="image-20230327221941879"></p>
+<h3 id="统计信息长度"><a href="#统计信息长度" class="headerlink" title="统计信息长度"></a>统计信息长度</h3><p><code>统计(Statistics)</code>-&gt;<code> 分组长度(Packet Lengths)</code></p>
+<p><img src="/./assets/image-20230327222416825.png" alt="image-20230327222416825"></p>
+<h3 id="常用过滤"><a href="#常用过滤" class="headerlink" title="常用过滤"></a>常用过滤</h3><ul>
+<li><p>过滤ip，如源IP或者目标x.x.x.x：</p>
+<p><code>ip.src eq xxxx or ip.dst eq xxxx </code>或者<code> ip.addr eq xxxx</code></p>
+</li>
+<li><p>过滤端口：</p>
+</li>
+</ul>
+<p>​				<code>	tcp.port eq(等于) 80 or udp.port eq 80</code></p>
+<ul>
+<li>过滤MAC:</li>
+</ul>
+<p>​				<code>	eth.dst == MAC地址</code></p>
+<ul>
+<li><p>协议过滤:</p>
+<p>直接在Filter框中直接输入协议名即可，http udp dns</p>
+</li>
+<li><p>http模式过滤</p>
+</li>
+<li><p><code>http.request.method==&quot;POST&quot;</code> 过滤全部POST数据包</p>
+</li>
+<li><p><code>http.request.uri==&quot;/img/logo-edu.gif&quot;</code></p>
+</li>
+<li><p><code>http contains&quot;GET&quot;</code> 模糊匹配 http头中有这个关键字</p>
+</li>
+<li><p><code>http contains&quot;HTTP/1.&quot;</code> 版本号</p>
+</li>
+<li><p><code>http.request.method==&quot;GET&quot;&amp;&amp; http contains&quot;User-Agent:&quot;</code></p>
+</li>
+</ul>
+<h3 id="常见指纹特征"><a href="#常见指纹特征" class="headerlink" title="常见指纹特征"></a>常见指纹特征</h3><ul>
+<li><p><strong>Awvs</strong>:</p>
+<ul>
+<li>acunetix_wvs_security_test acunetix</li>
+<li>acunetix_wvs acunetix_test</li>
+<li>Acunetix-Aspect-Password:Cookie:</li>
+<li>acunetix_wvs_security_test X-Forwarded-Host:</li>
+<li>acunetix_wvs_security_test X-Forwarder-For:</li>
+<li>acunetix_wvs-security_test Host:</li>
+<li>acunetix_wvs_security_test</li>
+</ul>
+</li>
+<li><p><strong>Netsparker</strong>:</p>
+<ul>
+<li>X-Scanner:NetsparkerLocation:</li>
+<li>NetsparkerAccept:netsparker&#x2F;chechCookie:</li>
+<li>netsparkerCookie:NETSPARKER</li>
+</ul>
+</li>
+<li><p><strong>Appscan</strong>:</p>
+<ul>
+<li>Headers Content-Type:Appscan</li>
+<li>Content-Type:AppScanHeader</li>
+<li>Accept:Appscan User-Agent:Appscan</li>
+</ul>
+</li>
+<li><p><strong>Nessus</strong>:</p>
+<ul>
+<li>x_forwarded_for:nessus</li>
+<li>referer:nessus</li>
+<li>host:nessus</li>
+</ul>
+</li>
+<li><p><strong>sqlmap</strong>:</p>
+<ul>
+<li>User-Agent:sqlmap1.2.8#stable</li>
+</ul>
+</li>
+<li><p><strong>中国菜刀</strong></p>
+<ul>
+<li>x-www-form-urlencoded</li>
+</ul>
+</li>
+</ul>
+<h2 id="USB-流量分析"><a href="#USB-流量分析" class="headerlink" title="USB 流量分析"></a>USB 流量分析</h2><p>usb流量目前遇到的是<code>鼠标流量</code>，<code>键盘流量</code>，<code>数位板流量</code>,后面遇到新的再补充</p>
+<p>usb设备的流量包比较朴素，用wireshark打开后可以直观感受到，所以很好辨认。</p>
+<h3 id="鼠标流量"><a href="#鼠标流量" class="headerlink" title="鼠标流量"></a>鼠标流量</h3><p>鼠标流量的一般思路为</p>
+<ol>
+<li>提取鼠标的按键信息和移动信息</li>
+<li>将这些信息转换坐标信息</li>
+<li>将坐标信息变为图片</li>
+</ol>
+<p>在提取信息之前先来认识一下提取的那些信息</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230420224512.jpg" alt="QQ截图20230420224512"></p>
+<p>流量最开始的这几行是鼠标与主机链接通信产生的，虽然可以通过这里判断是键盘流量还是鼠标流量，但是没有必要</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230420224756.jpg" alt="QQ截图20230420224756"></p>
+<p>我们需要的流量是目标地址为host的流量</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230421160522.jpg" alt="QQ截图20230421160522"></p>
+<p>其他的不管只看HID Data</p>
+<p><strong>HID Data一般情况下有六个字节</strong>(这种得看鼠标的情况，我自己抓出来是7字节的，6字节出题比较常见，我们以六字节来举例)</p>
+<p>这六个字节去掉第一个字节和最后两个字节，剩下的三个字节从左到右分别代表<code>按键信息</code>,<code>鼠标X轴移动信息</code>,<code>鼠标y轴移动信息</code></p>
+<p>对于<code>按键信息</code></p>
+<ul>
+<li>00表示没有任何键按下</li>
+<li>01表示左键按下</li>
+<li>02表示右键按下</li>
+<li>04表示中键按下</li>
+</ul>
+<p>对于<code>鼠标X轴移动信息</code></p>
+<ul>
+<li><p>这是一个八位有符号的整数</p>
+</li>
+<li><p>最高位是符号位，为1时表示向左移动，为0表示向右移动</p>
+</li>
+<li><p>后面7位时移动的像素位数</p>
+<p>举个例子，<code>A9 -&gt;&gt; (10101001) -&gt;&gt; (-51) </code>,表示向左移动51像素</p>
+<p>当hex数值大于80时表示向左移动，小于表示向右移动</p>
+</li>
+</ul>
+<p>对于<code>鼠标Y轴移动信息</code>，同上</p>
+<p>知道这些之后，就需要把这些数据提取出来，这时候就借助到Tshark工具(在windows环境下，需要将tshark的路径加到环境变量里面才能执行tshark.exe)</p>
+<p>tshark的基础命令如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入文件:</span><br><span class="line">　　-r: -r &lt;infile&gt; 设置读取本地文件</span><br><span class="line">处理选项:</span><br><span class="line">　　-R: -R &lt;<span class="built_in">read</span> filter&gt;,包的读取过滤器，可以在wireshark的filter语法上查看；在wireshark的视图-&gt;过滤器视图，在这一栏点击表达式，就会列出来对所有协议的支持</span><br><span class="line">　　-Y: -Y &lt;display filter&gt;,使用读取过滤器的语法，在单次分析中可以代替-R选项</span><br><span class="line">输出选项:</span><br><span class="line">　　-T: -T pdml|ps|text|fields|psml,设置解码结果输出的格式，包括text,ps,psml和pdml，默认为text</span><br><span class="line">　　-e: 如果-T fields选项指定，-e用来指定输出哪些字段(这个可以在wireshark中左键选中想要导出的信息，然后往出拖一下，就可以看到要提取的信息了)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark.exe -r file -T fields -e usbhid.data &gt; hiddata.txt</span><br></pre></td></tr></table></figure>
+
+<p>这条指令会把数据提取到hiddata.txt文件中，接下来就要对txt文件进行处理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">nums = []</span><br><span class="line">keys = <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>)<span class="comment">#这两处文件可能需要修改，如过脚本执行有问题，需要把txt文件编码改成utf-8</span></span><br><span class="line">result=<span class="built_in">open</span>(<span class="string">&#x27;xy.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">posx = <span class="number">0</span></span><br><span class="line">posy = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> keys: </span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(line) != <span class="number">13</span> :<span class="comment">#忽略空行,长度看情况定</span></span><br><span class="line">         <span class="keyword">continue</span> </span><br><span class="line">    x = <span class="built_in">int</span>(line[<span class="number">4</span>:<span class="number">6</span>],<span class="number">16</span>)</span><br><span class="line">    y = <span class="built_in">int</span>(line[<span class="number">6</span>:<span class="number">8</span>],<span class="number">16</span>)</span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">127</span> :</span><br><span class="line">        x -= <span class="number">256</span></span><br><span class="line">    <span class="keyword">if</span> y &gt;<span class="number">120</span> :<span class="comment">#这个参数控制单个字符的高度，如果高度过大导致字符过瘦，请调大</span></span><br><span class="line">        y -=<span class="number">264</span><span class="comment">#这个参数控制字符串的倾斜程度，如果向下倾斜就调高，如果向上倾斜就调低</span></span><br><span class="line">    posx += x</span><br><span class="line">    posy += y</span><br><span class="line">    btn_flag = <span class="built_in">int</span>(line[<span class="number">2</span>:<span class="number">4</span>],<span class="number">16</span>)  <span class="comment"># 1代表左键按下 , 2代表右键按下 , 0代表无事</span></span><br><span class="line">    <span class="keyword">if</span> btn_flag == <span class="number">1</span> :<span class="comment">#btn_flag的值可能也需要更改</span></span><br><span class="line">        result.write(<span class="built_in">str</span>(posx)+<span class="string">&#x27; &#x27;</span>+<span class="built_in">str</span>(-posy)+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">keys.close()</span><br><span class="line">result.close()</span><br></pre></td></tr></table></figure>
+
+<p>这时我们就得到了处理好的坐标</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230421181504.jpg" alt="QQ截图20230421181504"></p>
+<p>这时就画出图像了，画图可以使用python脚本，需要安装numpy库和matplotlib库</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x, y = np.loadtxt(<span class="string">&#x27;xy.txt&#x27;</span>, delimiter=<span class="string">&#x27; &#x27;</span>, unpack=<span class="literal">True</span>)</span><br><span class="line">plt.plot(x, y, <span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如果没有也可以使用kali中的<code>gnuplot</code>工具(这个也需要提前安装)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gunplot</span><br><span class="line">&gt;plot <span class="string">&quot;filename&quot;</span> <span class="comment">#记得加引号</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230421182019.jpg" alt="QQ截图20230421182019"></p>
+<p>具体效果一言难尽，能凑合看就行</p>
+<h3 id="键盘流量"><a href="#键盘流量" class="headerlink" title="键盘流量"></a>键盘流量</h3><p>键盘流量原理和鼠标流量差不太多，不过是六个字节变成8个字节了</p>
+<p>这8个字节所用到的信息存贮在第一个字节和第三个字节中，</p>
+<ul>
+<li><p>第一个中存贮的几个特殊按键的信息(转换成二进制，看二进制数的1的位置)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">BYTE1 --</span><br><span class="line">       |--bit0:   Left Control是否按下，按下为1 </span><br><span class="line">       |--bit1:   Left Shift  是否按下，按下为1 </span><br><span class="line">       |--bit2:   Left Alt    是否按下，按下为1 </span><br><span class="line">       |--bit3:   Left GUI    是否按下，按下为1 </span><br><span class="line">       |--bit4:   Right Control是否按下，按下为1  </span><br><span class="line">       |--bit5:   Right Shift 是否按下，按下为1 </span><br><span class="line">       |--bit6:   Right Alt   是否按下，按下为1 </span><br><span class="line">       |--bit7:   Right GUI   是否按下，按下为1 </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第三个字节中存贮的是按键的信息，具体的对应表如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">normalKeys = &#123;<span class="string">&quot;04&quot;</span>:<span class="string">&quot;a&quot;</span>, <span class="string">&quot;05&quot;</span>:<span class="string">&quot;b&quot;</span>, <span class="string">&quot;06&quot;</span>:<span class="string">&quot;c&quot;</span>, <span class="string">&quot;07&quot;</span>:<span class="string">&quot;d&quot;</span>, <span class="string">&quot;08&quot;</span>:<span class="string">&quot;e&quot;</span>, <span class="string">&quot;09&quot;</span>:<span class="string">&quot;f&quot;</span>, <span class="string">&quot;0a&quot;</span>:<span class="string">&quot;g&quot;</span>, <span class="string">&quot;0b&quot;</span>:<span class="string">&quot;h&quot;</span>, <span class="string">&quot;0c&quot;</span>:<span class="string">&quot;i&quot;</span>, <span class="string">&quot;0d&quot;</span>:<span class="string">&quot;j&quot;</span>, <span class="string">&quot;0e&quot;</span>:<span class="string">&quot;k&quot;</span>, <span class="string">&quot;0f&quot;</span>:<span class="string">&quot;l&quot;</span>, <span class="string">&quot;10&quot;</span>:<span class="string">&quot;m&quot;</span>, <span class="string">&quot;11&quot;</span>:<span class="string">&quot;n&quot;</span>, <span class="string">&quot;12&quot;</span>:<span class="string">&quot;o&quot;</span>, <span class="string">&quot;13&quot;</span>:<span class="string">&quot;p&quot;</span>, <span class="string">&quot;14&quot;</span>:<span class="string">&quot;q&quot;</span>, <span class="string">&quot;15&quot;</span>:<span class="string">&quot;r&quot;</span>, <span class="string">&quot;16&quot;</span>:<span class="string">&quot;s&quot;</span>, <span class="string">&quot;17&quot;</span>:<span class="string">&quot;t&quot;</span>, <span class="string">&quot;18&quot;</span>:<span class="string">&quot;u&quot;</span>, <span class="string">&quot;19&quot;</span>:<span class="string">&quot;v&quot;</span>, <span class="string">&quot;1a&quot;</span>:<span class="string">&quot;w&quot;</span>, <span class="string">&quot;1b&quot;</span>:<span class="string">&quot;x&quot;</span>, <span class="string">&quot;1c&quot;</span>:<span class="string">&quot;y&quot;</span>, <span class="string">&quot;1d&quot;</span>:<span class="string">&quot;z&quot;</span>,<span class="string">&quot;1e&quot;</span>:<span class="string">&quot;1&quot;</span>, <span class="string">&quot;1f&quot;</span>:<span class="string">&quot;2&quot;</span>, <span class="string">&quot;20&quot;</span>:<span class="string">&quot;3&quot;</span>, <span class="string">&quot;21&quot;</span>:<span class="string">&quot;4&quot;</span>, <span class="string">&quot;22&quot;</span>:<span class="string">&quot;5&quot;</span>, <span class="string">&quot;23&quot;</span>:<span class="string">&quot;6&quot;</span>,<span class="string">&quot;24&quot;</span>:<span class="string">&quot;7&quot;</span>,<span class="string">&quot;25&quot;</span>:<span class="string">&quot;8&quot;</span>,<span class="string">&quot;26&quot;</span>:<span class="string">&quot;9&quot;</span>,<span class="string">&quot;27&quot;</span>:<span class="string">&quot;0&quot;</span>,<span class="string">&quot;28&quot;</span>:<span class="string">&quot;&lt;RET&gt;&quot;</span>,<span class="string">&quot;29&quot;</span>:<span class="string">&quot;&lt;ESC&gt;&quot;</span>,<span class="string">&quot;2a&quot;</span>:<span class="string">&quot;&lt;DEL&gt;&quot;</span>, <span class="string">&quot;2b&quot;</span>:<span class="string">&quot;\t&quot;</span>,<span class="string">&quot;2c&quot;</span>:<span class="string">&quot;&lt;SPACE&gt;&quot;</span>,<span class="string">&quot;2d&quot;</span>:<span class="string">&quot;-&quot;</span>,<span class="string">&quot;2e&quot;</span>:<span class="string">&quot;=&quot;</span>,<span class="string">&quot;2f&quot;</span>:<span class="string">&quot;[&quot;</span>,<span class="string">&quot;30&quot;</span>:<span class="string">&quot;]&quot;</span>,<span class="string">&quot;31&quot;</span>:<span class="string">&quot;\\&quot;</span>,<span class="string">&quot;32&quot;</span>:<span class="string">&quot;&lt;NON&gt;&quot;</span>,<span class="string">&quot;33&quot;</span>:<span class="string">&quot;;&quot;</span>,<span class="string">&quot;34&quot;</span>:<span class="string">&quot;&#x27;&quot;</span>,<span class="string">&quot;35&quot;</span>:<span class="string">&quot;&lt;GA&gt;&quot;</span>,<span class="string">&quot;36&quot;</span>:<span class="string">&quot;,&quot;</span>,<span class="string">&quot;37&quot;</span>:<span class="string">&quot;.&quot;</span>,<span class="string">&quot;38&quot;</span>:<span class="string">&quot;/&quot;</span>,<span class="string">&quot;39&quot;</span>:<span class="string">&quot;&lt;CAP&gt;&quot;</span>,<span class="string">&quot;3a&quot;</span>:<span class="string">&quot;&lt;F1&gt;&quot;</span>,<span class="string">&quot;3b&quot;</span>:<span class="string">&quot;&lt;F2&gt;&quot;</span>, <span class="string">&quot;3c&quot;</span>:<span class="string">&quot;&lt;F3&gt;&quot;</span>,<span class="string">&quot;3d&quot;</span>:<span class="string">&quot;&lt;F4&gt;&quot;</span>,<span class="string">&quot;3e&quot;</span>:<span class="string">&quot;&lt;F5&gt;&quot;</span>,<span class="string">&quot;3f&quot;</span>:<span class="string">&quot;&lt;F6&gt;&quot;</span>,<span class="string">&quot;40&quot;</span>:<span class="string">&quot;&lt;F7&gt;&quot;</span>,<span class="string">&quot;41&quot;</span>:<span class="string">&quot;&lt;F8&gt;&quot;</span>,<span class="string">&quot;42&quot;</span>:<span class="string">&quot;&lt;F9&gt;&quot;</span>,<span class="string">&quot;43&quot;</span>:<span class="string">&quot;&lt;F10&gt;&quot;</span>,<span class="string">&quot;44&quot;</span>:<span class="string">&quot;&lt;F11&gt;&quot;</span>,<span class="string">&quot;45&quot;</span>:<span class="string">&quot;&lt;F12&gt;&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果按下shift的会字母变为大写</p>
+<p>举个例子</p>
+<p><code>10 00 19 00 00 00 00 00</code></p>
+<p><code>10</code>转换成二进制是<code>0001 0000</code>第五位为1代表右shift按下，<code>19</code>对应的是<code>v</code>所以结果是大写的V</p>
+<p>原理知道了，直接上脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">normalKeys = &#123;<span class="string">&quot;04&quot;</span>: <span class="string">&quot;a&quot;</span>, <span class="string">&quot;05&quot;</span>: <span class="string">&quot;b&quot;</span>, <span class="string">&quot;06&quot;</span>: <span class="string">&quot;c&quot;</span>, <span class="string">&quot;07&quot;</span>: <span class="string">&quot;d&quot;</span>, <span class="string">&quot;08&quot;</span>: <span class="string">&quot;e&quot;</span>, <span class="string">&quot;09&quot;</span>: <span class="string">&quot;f&quot;</span>, <span class="string">&quot;0a&quot;</span>: <span class="string">&quot;g&quot;</span>, <span class="string">&quot;0b&quot;</span>: <span class="string">&quot;h&quot;</span>, <span class="string">&quot;0c&quot;</span>: <span class="string">&quot;i&quot;</span>,</span><br><span class="line">              <span class="string">&quot;0d&quot;</span>: <span class="string">&quot;j&quot;</span>, <span class="string">&quot;0e&quot;</span>: <span class="string">&quot;k&quot;</span>, <span class="string">&quot;0f&quot;</span>: <span class="string">&quot;l&quot;</span>, <span class="string">&quot;10&quot;</span>: <span class="string">&quot;m&quot;</span>, <span class="string">&quot;11&quot;</span>: <span class="string">&quot;n&quot;</span>, <span class="string">&quot;12&quot;</span>: <span class="string">&quot;o&quot;</span>, <span class="string">&quot;13&quot;</span>: <span class="string">&quot;p&quot;</span>, <span class="string">&quot;14&quot;</span>: <span class="string">&quot;q&quot;</span>, <span class="string">&quot;15&quot;</span>: <span class="string">&quot;r&quot;</span>,</span><br><span class="line">              <span class="string">&quot;16&quot;</span>: <span class="string">&quot;s&quot;</span>, <span class="string">&quot;17&quot;</span>: <span class="string">&quot;t&quot;</span>, <span class="string">&quot;18&quot;</span>: <span class="string">&quot;u&quot;</span>, <span class="string">&quot;19&quot;</span>: <span class="string">&quot;v&quot;</span>, <span class="string">&quot;1a&quot;</span>: <span class="string">&quot;w&quot;</span>, <span class="string">&quot;1b&quot;</span>: <span class="string">&quot;x&quot;</span>, <span class="string">&quot;1c&quot;</span>: <span class="string">&quot;y&quot;</span>, <span class="string">&quot;1d&quot;</span>: <span class="string">&quot;z&quot;</span>, <span class="string">&quot;1e&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">              <span class="string">&quot;1f&quot;</span>: <span class="string">&quot;2&quot;</span>, <span class="string">&quot;20&quot;</span>: <span class="string">&quot;3&quot;</span>, <span class="string">&quot;21&quot;</span>: <span class="string">&quot;4&quot;</span>, <span class="string">&quot;22&quot;</span>: <span class="string">&quot;5&quot;</span>, <span class="string">&quot;23&quot;</span>: <span class="string">&quot;6&quot;</span>, <span class="string">&quot;24&quot;</span>: <span class="string">&quot;7&quot;</span>, <span class="string">&quot;25&quot;</span>: <span class="string">&quot;8&quot;</span>, <span class="string">&quot;26&quot;</span>: <span class="string">&quot;9&quot;</span>, <span class="string">&quot;27&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">              <span class="string">&quot;28&quot;</span>: <span class="string">&quot;&lt;RET&gt;&quot;</span>, <span class="string">&quot;29&quot;</span>: <span class="string">&quot;&lt;ESC&gt;&quot;</span>, <span class="string">&quot;2a&quot;</span>: <span class="string">&quot;&lt;DEL&gt;&quot;</span>, <span class="string">&quot;2b&quot;</span>: <span class="string">&quot;\t&quot;</span>, <span class="string">&quot;2c&quot;</span>: <span class="string">&quot;&lt;SPACE&gt;&quot;</span>, <span class="string">&quot;2d&quot;</span>: <span class="string">&quot;-&quot;</span>, <span class="string">&quot;2e&quot;</span>: <span class="string">&quot;=&quot;</span>, <span class="string">&quot;2f&quot;</span>: <span class="string">&quot;[&quot;</span>,</span><br><span class="line">              <span class="string">&quot;30&quot;</span>: <span class="string">&quot;]&quot;</span>, <span class="string">&quot;31&quot;</span>: <span class="string">&quot;\\&quot;</span>, <span class="string">&quot;32&quot;</span>: <span class="string">&quot;&lt;NON&gt;&quot;</span>, <span class="string">&quot;33&quot;</span>: <span class="string">&quot;;&quot;</span>, <span class="string">&quot;34&quot;</span>: <span class="string">&quot;&#x27;&quot;</span>, <span class="string">&quot;35&quot;</span>: <span class="string">&quot;&lt;GA&gt;&quot;</span>, <span class="string">&quot;36&quot;</span>: <span class="string">&quot;,&quot;</span>, <span class="string">&quot;37&quot;</span>: <span class="string">&quot;.&quot;</span>, <span class="string">&quot;38&quot;</span>: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">              <span class="string">&quot;39&quot;</span>: <span class="string">&quot;&lt;CAP&gt;&quot;</span>, <span class="string">&quot;3a&quot;</span>: <span class="string">&quot;&lt;F1&gt;&quot;</span>, <span class="string">&quot;3b&quot;</span>: <span class="string">&quot;&lt;F2&gt;&quot;</span>, <span class="string">&quot;3c&quot;</span>: <span class="string">&quot;&lt;F3&gt;&quot;</span>, <span class="string">&quot;3d&quot;</span>: <span class="string">&quot;&lt;F4&gt;&quot;</span>, <span class="string">&quot;3e&quot;</span>: <span class="string">&quot;&lt;F5&gt;&quot;</span>, <span class="string">&quot;3f&quot;</span>: <span class="string">&quot;&lt;F6&gt;&quot;</span>,</span><br><span class="line">              <span class="string">&quot;40&quot;</span>: <span class="string">&quot;&lt;F7&gt;&quot;</span>, <span class="string">&quot;41&quot;</span>: <span class="string">&quot;&lt;F8&gt;&quot;</span>, <span class="string">&quot;42&quot;</span>: <span class="string">&quot;&lt;F9&gt;&quot;</span>, <span class="string">&quot;43&quot;</span>: <span class="string">&quot;&lt;F10&gt;&quot;</span>, <span class="string">&quot;44&quot;</span>: <span class="string">&quot;&lt;F11&gt;&quot;</span>, <span class="string">&quot;45&quot;</span>: <span class="string">&quot;&lt;F12&gt;&quot;</span>&#125;</span><br><span class="line"> </span><br><span class="line">shiftKeys = &#123;<span class="string">&quot;04&quot;</span>: <span class="string">&quot;A&quot;</span>, <span class="string">&quot;05&quot;</span>: <span class="string">&quot;B&quot;</span>, <span class="string">&quot;06&quot;</span>: <span class="string">&quot;C&quot;</span>, <span class="string">&quot;07&quot;</span>: <span class="string">&quot;D&quot;</span>, <span class="string">&quot;08&quot;</span>: <span class="string">&quot;E&quot;</span>, <span class="string">&quot;09&quot;</span>: <span class="string">&quot;F&quot;</span>, <span class="string">&quot;0a&quot;</span>: <span class="string">&quot;G&quot;</span>, <span class="string">&quot;0b&quot;</span>: <span class="string">&quot;H&quot;</span>, <span class="string">&quot;0c&quot;</span>: <span class="string">&quot;I&quot;</span>,</span><br><span class="line">             <span class="string">&quot;0d&quot;</span>: <span class="string">&quot;J&quot;</span>, <span class="string">&quot;0e&quot;</span>: <span class="string">&quot;K&quot;</span>, <span class="string">&quot;0f&quot;</span>: <span class="string">&quot;L&quot;</span>, <span class="string">&quot;10&quot;</span>: <span class="string">&quot;M&quot;</span>, <span class="string">&quot;11&quot;</span>: <span class="string">&quot;N&quot;</span>, <span class="string">&quot;12&quot;</span>: <span class="string">&quot;O&quot;</span>, <span class="string">&quot;13&quot;</span>: <span class="string">&quot;P&quot;</span>, <span class="string">&quot;14&quot;</span>: <span class="string">&quot;Q&quot;</span>, <span class="string">&quot;15&quot;</span>: <span class="string">&quot;R&quot;</span>,</span><br><span class="line">             <span class="string">&quot;16&quot;</span>: <span class="string">&quot;S&quot;</span>, <span class="string">&quot;17&quot;</span>: <span class="string">&quot;T&quot;</span>, <span class="string">&quot;18&quot;</span>: <span class="string">&quot;U&quot;</span>, <span class="string">&quot;19&quot;</span>: <span class="string">&quot;V&quot;</span>, <span class="string">&quot;1a&quot;</span>: <span class="string">&quot;W&quot;</span>, <span class="string">&quot;1b&quot;</span>: <span class="string">&quot;X&quot;</span>, <span class="string">&quot;1c&quot;</span>: <span class="string">&quot;Y&quot;</span>, <span class="string">&quot;1d&quot;</span>: <span class="string">&quot;Z&quot;</span>, <span class="string">&quot;1e&quot;</span>: <span class="string">&quot;!&quot;</span>,</span><br><span class="line">             <span class="string">&quot;1f&quot;</span>: <span class="string">&quot;@&quot;</span>, <span class="string">&quot;20&quot;</span>: <span class="string">&quot;#&quot;</span>, <span class="string">&quot;21&quot;</span>: <span class="string">&quot;$&quot;</span>, <span class="string">&quot;22&quot;</span>: <span class="string">&quot;%&quot;</span>, <span class="string">&quot;23&quot;</span>: <span class="string">&quot;^&quot;</span>, <span class="string">&quot;24&quot;</span>: <span class="string">&quot;&amp;&quot;</span>, <span class="string">&quot;25&quot;</span>: <span class="string">&quot;*&quot;</span>, <span class="string">&quot;26&quot;</span>: <span class="string">&quot;(&quot;</span>, <span class="string">&quot;27&quot;</span>: <span class="string">&quot;)&quot;</span>,</span><br><span class="line">             <span class="string">&quot;28&quot;</span>: <span class="string">&quot;&lt;RET&gt;&quot;</span>, <span class="string">&quot;29&quot;</span>: <span class="string">&quot;&lt;ESC&gt;&quot;</span>, <span class="string">&quot;2a&quot;</span>: <span class="string">&quot;&lt;DEL&gt;&quot;</span>, <span class="string">&quot;2b&quot;</span>: <span class="string">&quot;\t&quot;</span>, <span class="string">&quot;2c&quot;</span>: <span class="string">&quot;&lt;SPACE&gt;&quot;</span>, <span class="string">&quot;2d&quot;</span>: <span class="string">&quot;_&quot;</span>, <span class="string">&quot;2e&quot;</span>: <span class="string">&quot;+&quot;</span>, <span class="string">&quot;2f&quot;</span>: <span class="string">&quot;&#123;&quot;</span>,</span><br><span class="line">             <span class="string">&quot;30&quot;</span>: <span class="string">&quot;&#125;&quot;</span>, <span class="string">&quot;31&quot;</span>: <span class="string">&quot;|&quot;</span>, <span class="string">&quot;32&quot;</span>: <span class="string">&quot;&lt;NON&gt;&quot;</span>, <span class="string">&quot;33&quot;</span>: <span class="string">&quot;\&quot;&quot;</span>, <span class="string">&quot;34&quot;</span>: <span class="string">&quot;:&quot;</span>, <span class="string">&quot;35&quot;</span>: <span class="string">&quot;&lt;GA&gt;&quot;</span>, <span class="string">&quot;36&quot;</span>: <span class="string">&quot;&lt;&quot;</span>, <span class="string">&quot;37&quot;</span>: <span class="string">&quot;&gt;&quot;</span>, <span class="string">&quot;38&quot;</span>: <span class="string">&quot;?&quot;</span>,</span><br><span class="line">             <span class="string">&quot;39&quot;</span>: <span class="string">&quot;&lt;CAP&gt;&quot;</span>, <span class="string">&quot;3a&quot;</span>: <span class="string">&quot;&lt;F1&gt;&quot;</span>, <span class="string">&quot;3b&quot;</span>: <span class="string">&quot;&lt;F2&gt;&quot;</span>, <span class="string">&quot;3c&quot;</span>: <span class="string">&quot;&lt;F3&gt;&quot;</span>, <span class="string">&quot;3d&quot;</span>: <span class="string">&quot;&lt;F4&gt;&quot;</span>, <span class="string">&quot;3e&quot;</span>: <span class="string">&quot;&lt;F5&gt;&quot;</span>, <span class="string">&quot;3f&quot;</span>: <span class="string">&quot;&lt;F6&gt;&quot;</span>,</span><br><span class="line">             <span class="string">&quot;40&quot;</span>: <span class="string">&quot;&lt;F7&gt;&quot;</span>, <span class="string">&quot;41&quot;</span>: <span class="string">&quot;&lt;F8&gt;&quot;</span>, <span class="string">&quot;42&quot;</span>: <span class="string">&quot;&lt;F9&gt;&quot;</span>, <span class="string">&quot;43&quot;</span>: <span class="string">&quot;&lt;F10&gt;&quot;</span>, <span class="string">&quot;44&quot;</span>: <span class="string">&quot;&lt;F11&gt;&quot;</span>, <span class="string">&quot;45&quot;</span>: <span class="string">&quot;&lt;F12&gt;&quot;</span>&#125;</span><br><span class="line">nums = []</span><br><span class="line">keys = <span class="built_in">open</span>(<span class="string">&quot;C:\\Users\\SharkChili\\Desktop\\2_10_1.txt&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> keys:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(line)!=<span class="number">17</span>: <span class="comment">#首先过滤掉鼠标等其他设备的USB流量</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        nums.append(line[<span class="number">0</span>:<span class="number">2</span>]+line[<span class="number">4</span>:<span class="number">6</span>]) </span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">keys.close()</span><br><span class="line">output=[]</span><br><span class="line">flag=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> nums:</span><br><span class="line">    <span class="keyword">if</span> n[<span class="number">2</span>:<span class="number">4</span>] == <span class="string">&quot;00&quot;</span> :</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> n[<span class="number">2</span>:<span class="number">4</span>] <span class="keyword">in</span> normalKeys:</span><br><span class="line">        <span class="keyword">if</span> n[<span class="number">0</span>:<span class="number">2</span>]==<span class="string">&quot;02&quot;</span>: </span><br><span class="line">            output.append( shiftKeys [n[<span class="number">2</span>:<span class="number">4</span>]])</span><br><span class="line">        <span class="keyword">else</span> :</span><br><span class="line">            output.append( normalKeys [n[<span class="number">2</span>:<span class="number">4</span>]])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        output += <span class="string">&#x27;[unknown]&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(output)):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        a=output.index(<span class="string">&#x27;&lt;DEL&gt;&#x27;</span>)</span><br><span class="line">        <span class="keyword">del</span> output[a]</span><br><span class="line">        <span class="keyword">del</span> output[a-<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(output)):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> output[i]==<span class="string">&quot;&lt;CAP&gt;&quot;</span>:</span><br><span class="line">            flag+=<span class="number">1</span></span><br><span class="line">            output.pop(i)</span><br><span class="line">            <span class="keyword">if</span> flag==<span class="number">2</span>:</span><br><span class="line">                flag=<span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> flag!=<span class="number">0</span>:</span><br><span class="line">            output[i]=output[i].upper()</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;output :&#x27;</span> + <span class="string">&quot;&quot;</span>.join(output))</span><br></pre></td></tr></table></figure>
+
+<h4 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h4><p>这里以ciscn2022的一道题为例</p>
+<p>打开发现</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230423232631.jpg" alt="QQ截图20230423232631"></p>
+<p>提取出这两个流量</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark.exe -r ez_usb.pcapng -Y <span class="string">&#x27;usb.src == 2.8.1&#x27;</span> -T fields -e usbhid.data &gt; 2_8_1.txt</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark.exe -r ez_usb.pcapng -Y <span class="string">&#x27;usb.src == 2.10.1&#x27;</span> -T fields -e usbhid.data &gt; 2_10_1.txt</span><br></pre></td></tr></table></figure>
+
+<p>提取数据的流量</p>
+<p><img src="/./assets/image-20230423233202157.png" alt="image-20230423233202157"></p>
+<p>长的那个是rar压缩包，短的是密码。</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424100852.jpg" alt="QQ截图20230424100852"></p>
+<h3 id="数位板流量"><a href="#数位板流量" class="headerlink" title="数位板流量"></a>数位板流量</h3><p>数位也算常见的题型了，第一个显著特征是Wacom Co</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424101244.jpg" alt="QQ截图20230424101244"></p>
+<p>还有一点是他的hiddata有10位(目前遇到的题是这样的)</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424101426.jpg" alt="QQ截图20230424101426"></p>
+<p>hiddata的10位数据中，前2位是类似标识符的作用，3，4位是数位板移动的X轴,5，6位是数位板的y轴。这里xy是绝对位置，y要加个符号，把图像变到第四象限</p>
+<blockquote>
+<p>第一种<br>第四位代表的就是数位笔是否在数位板上画画，0代表没画，1代表画<br>第五到八位代表的是x坐标<br>第九到十二位代表的是y坐标<br>第十三到十六位代表的是数位笔在数位板上的压感</p>
+<p>第二种<br>第五到八位代表的x坐标,00分隔<br>第十一到十四位代表的y坐标,00分隔<br>第十七和十八位00表示无按压，01表示按压</p>
+</blockquote>
+<p>网上现成的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">data=[]</span><br><span class="line">lines=[]</span><br><span class="line">line=[]</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;C:\\Users\\SharkChili\\Desktop\\finall.txt&quot;</span>,<span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> f.readlines():</span><br><span class="line">        <span class="keyword">if</span> i!=<span class="string">&#x27;\n&#x27;</span>:</span><br><span class="line">              lines.append(i.strip(<span class="string">&#x27;\n&#x27;</span>))</span><br><span class="line"><span class="comment"># X = []</span></span><br><span class="line"><span class="comment"># Y = []</span></span><br><span class="line">result=<span class="built_in">open</span>(<span class="string">&#x27;xy.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">posx = <span class="number">0</span></span><br><span class="line">posy = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> lines:</span><br><span class="line">        <span class="comment"># print(i)</span></span><br><span class="line">        x0=<span class="built_in">int</span>(i[<span class="number">4</span>:<span class="number">6</span>],<span class="number">16</span>)</span><br><span class="line">        x1=<span class="built_in">int</span>(i[<span class="number">6</span>:<span class="number">8</span>],<span class="number">16</span>)</span><br><span class="line">        x=x0+x1*<span class="number">256</span></span><br><span class="line">        y0=<span class="built_in">int</span>(i[<span class="number">8</span>:<span class="number">10</span>],<span class="number">16</span>)</span><br><span class="line">        y1=<span class="built_in">int</span>(i[<span class="number">10</span>:<span class="number">12</span>],<span class="number">16</span>)</span><br><span class="line">        y=y0+y1*<span class="number">256</span></span><br><span class="line">        <span class="comment"># X.append(x)</span></span><br><span class="line">        <span class="comment"># Y.append(-y)</span></span><br><span class="line">        result.write(<span class="built_in">str</span>(x)+<span class="string">&#x27; &#x27;</span>+<span class="built_in">str</span>(-y)+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"><span class="comment"># fig = plt.figure()</span></span><br><span class="line"><span class="comment"># ax1 = fig.add_subplot(111)</span></span><br><span class="line"><span class="comment"># ax1.set_title(&quot;result&quot;)</span></span><br><span class="line"><span class="comment"># ax1.scatter(X, Y, c=&#x27;b&#x27;, marker=&#x27;o&#x27;)</span></span><br><span class="line"><span class="comment"># plt.show()</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>有PIL库就把注释取消直接跑，没有就存到txt文件中，然后用gnuplot画</p>
+<p>有时候还要根据前2位过滤一下</p>
+<p>这里举个例子</p>
+<p>guodctf的一道题为例</p>
+<p><img src="/./assets/image-20230424111101110.png" alt="image-20230424111101110"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark.exe -r .\final.pcapng -Y <span class="string">&#x27;usb.src == 2.12.1&#x27;</span> -T fields -e usbhid.data &gt;finall.txt</span><br></pre></td></tr></table></figure>
+
+<p>然后用上面的脚本跑，得到图片</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424104344.jpg" alt="QQ截图20230424104344"></p>
+<p>看着不太清晰，看一下提取出的数据，发现</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424111316.jpg" alt="QQ截图20230424111316"></p>
+<p>有两个，一个02f0，一个02f1，分别提取看一下</p>
+<p>修改的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.....</span><br><span class="line"><span class="keyword">if</span> i[<span class="number">0</span>:<span class="number">4</span>]==<span class="string">&#x27;02f0&#x27;</span>: <span class="comment">#02f1</span></span><br><span class="line">    result.write(<span class="built_in">str</span>(x)+<span class="string">&#x27; &#x27;</span>+<span class="built_in">str</span>(-y)+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">.....   </span><br></pre></td></tr></table></figure>
+
+<p>得到</p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424111702.jpg" alt="QQ截图20230424111702"></p>
+<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424111637.jpg" alt="QQ截图20230424111637"></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/06/01/%E8%A5%BF%E5%AE%89%E4%B8%89%E6%97%A5%E6%B8%B8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/06/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E4%B8%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="流量分析" data-title="" data-url="http://example.com/2023/06/01/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/"  data-images="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg" data-content="">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2023 John Doe
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
