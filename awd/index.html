@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="南柯一梦">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://gaoxudong.top/awd/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="awd加固阶段用ssh登录的服务器通常是Finallshell或者XShell+Sxfpt 登录之后修改ssh的登录密码 12passwd#先输入旧密码，再输入两次新密码  打包备份网站目录一般是&#x2F;var&#x2F;www&#x2F;html&#x2F;目录，但是在www目录下没有执行的权限，如果执行打包命令会失败，所以我们进入html目录下面进行打包 1tar -zcvf 4.tar.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="awd">
+<meta property="og:url" content="http://gaoxudong.top/awd/index.html">
+<meta property="og:site_name" content="南柯一梦">
+<meta property="og:description" content="awd加固阶段用ssh登录的服务器通常是Finallshell或者XShell+Sxfpt 登录之后修改ssh的登录密码 12passwd#先输入旧密码，再输入两次新密码  打包备份网站目录一般是&#x2F;var&#x2F;www&#x2F;html&#x2F;目录，但是在www目录下没有执行的权限，如果执行打包命令会失败，所以我们进入html目录下面进行打包 1tar -zcvf 4.tar.">
+<meta property="og:locale">
+<meta property="og:image" content="https://gaoxudong.top/wp-content/uploads/2023/04/weblogger.jpg">
+<meta property="og:image" content="https://gaoxudong.top/wp-content/uploads/2023/04/weblogger-1.jpg">
+<meta property="og:image" content="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411174327.jpg">
+<meta property="og:image" content="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411174556.jpg">
+<meta property="og:image" content="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411181102.jpg">
+<meta property="article:published_time" content="2023-06-01T03:08:58.208Z">
+<meta property="article:modified_time" content="2023-06-01T03:08:58.208Z">
+<meta property="article:author" content="sharkhhhh">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gaoxudong.top/wp-content/uploads/2023/04/weblogger.jpg">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            awd -
+        
+        南柯一梦
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<link rel="stylesheet" href="/assets/fonts.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"gaoxudong.top","root":"/","language":"ch"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"lang":"zh-CN","fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"lang":"zh-CN","enable":true,"style":"static","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"南柯一梦'S Blog","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.1.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","lang":"zh-CN","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}}};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                南柯一梦
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">awd</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/redefine-avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">南柯一梦</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-06-01 11:08:58</span>
+        <span class="mobile">2023-06-01 11:08</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-06-01 11:08:58</span>
+            <span class="mobile">2023-06-01 11:08</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="awd"><a href="#awd" class="headerlink" title="awd"></a>awd</h1><h2 id="加固阶段"><a href="#加固阶段" class="headerlink" title="加固阶段"></a>加固阶段</h2><h3 id="用ssh登录的服务器"><a href="#用ssh登录的服务器" class="headerlink" title="用ssh登录的服务器"></a>用ssh登录的服务器</h3><p>通常是<code>Finallshell</code>或者<code>XShell+Sxfpt</code></p>
+<p>登录之后修改ssh的登录密码</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br><span class="line"><span class="comment">#先输入旧密码，再输入两次新密码</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="打包备份网站目录"><a href="#打包备份网站目录" class="headerlink" title="打包备份网站目录"></a>打包备份网站目录</h3><p>一般是&#x2F;var&#x2F;www&#x2F;html&#x2F;目录，但是在www目录下没有执行的权限，如果执行打包命令会失败，所以我们进入html目录下面进行打包</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zcvf 4.tar.gz *</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="修改数据库密码"><a href="#修改数据库密码" class="headerlink" title="修改数据库密码"></a>修改数据库密码</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -u xxx -p xxxx   <span class="comment">#进入数据库</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> PASSWORD = password(‘123456’); <span class="comment">#修改密码</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="备份数据库"><a href="#备份数据库" class="headerlink" title="备份数据库"></a>备份数据库</h3><ul>
+<li>备份指定的多个数据库</li>
+</ul>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u xxx -p xxx --databases DB1 DB2 &gt; /tmp/db.sql</span><br></pre></td></tr></table></figure></div>
+
+<p>无 lock tables 权限的解决方法</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u xxx -p xxx --all-databases --skip-lock-tables &gt; /tmp/db.sql</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>恢复备份（在 MySQL 终端下执行）</li>
+</ul>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source FILE_PATH</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="D盾扫目录"><a href="#D盾扫目录" class="headerlink" title="D盾扫目录"></a>D盾扫目录</h3><p>将打包好的文件拖出来，放到D盾里面去扫，拖出来的过程有点慢，这时候可以上<strong>weblogger</strong>了</p>
+<h3 id="上weblogger"><a href="#上weblogger" class="headerlink" title="上weblogger"></a>上weblogger</h3><p>weblogger是进行流量监控，</p>
+<ol>
+<li><p>将weblogger拖到html目录下</p>
+</li>
+<li><p>给weblogger 777的权限</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 -R weblogger</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>在浏览器打开weblogger下的install.php文件</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url+/weblogger/install.php</span><br></pre></td></tr></table></figure></div>
+
+<p>输入一系列东西之后如果成功会出现如下界面</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gaoxudong.top/wp-content/uploads/2023/04/weblogger.jpg"
+                      alt="weblogger"
+                ></p>
+<p><strong>记住这两行的内容</strong></p>
+<p>第一行是需要包含到文件中的路径</p>
+<p>第二行是welogger的登录地址</p>
+</li>
+<li><p>添加文件包含到index.php文件里面</p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="string">&#x27;xxx&#x27;</span> ; </span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">include</span> <span class="string">&#x27;xxx&#x27;</span>; <span class="meta">?&gt;</span></span><br><span class="line"><span class="comment">#xxx为绝对路径或者相对路径</span></span><br><span class="line">    </span><br><span class="line">改 .user.ini配置文件 auto_prepend_file=; </span><br><span class="line">包含在文件头auto_append_file=; 包含在文件尾</span><br></pre></td></tr></table></figure></div>
+
+<p>这里不一定只包含到index.php中，具体情况具体分析</p>
+</li>
+<li><p>登录weblogger查看流量</p>
+<p>靶机地址后面拼接第二行的内容</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gaoxudong.top/wp-content/uploads/2023/04/weblogger-1.jpg"
+                      alt="weblogger-1"
+                ></p>
+<p>登录刚才输入的账号密码，然后就可以查看流量监控</p>
+</li>
+</ol>
+<p><strong>如果weblogger忘了给权限，就换一个浏览器从第二步重新开始</strong></p>
+<p>换一个浏览器</p>
+<p>换一个浏览器</p>
+<p>换一个浏览器</p>
+<h3 id="上waf"><a href="#上waf" class="headerlink" title="上waf"></a>上waf</h3><p>waf有被check的风险，所以我个人的想法就是不上waf。</p>
+<p>上waf方法比较简单，与weblogger是相同的</p>
+<p>传waf到一个路径，然后包含到index或者其他路径里面就行</p>
+<div class="highlight-container" data-rel="Php"><figure class="iseeu highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="string">&#x27;waf.php&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>有一个很有用的waf叫<code>warchbird</code>，我们不使用他的waf功能，只是借助<code>watchbird</code>来进行流量分析</p>
+<ol>
+<li><p>将watchbird中的<code>waf.so</code>和<code>watchbird.php</code>文件都传到html目录下面</p>
+</li>
+<li><p>给两个文件777权限</p>
+</li>
+<li><p>在目录下面执行</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php watchbird.php --install /var/www/html</span><br></pre></td></tr></table></figure></div>
+
+<p>这时，所有php文件都会包含<code>watchbird</code></p>
+</li>
+<li><p>登录<code>watchbird</code></p>
+<div class="highlight-container" data-rel="Http"><figure class="iseeu highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?watchbird=ui</span><br></pre></td></tr></table></figure></div>
+
+<p>登录之后要设置密码，<strong>密码不要设置弱口令，一定要加几个符号</strong></p>
+<p>设置之后再登录就好</p>
+</li>
+<li><p>关闭<code>watchbird</code>里面的waf</p>
+<p>不关指定没好果汁吃</p>
+</li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411174327.jpg"
+                      alt="QQ截图20230411174327"
+                ></p>
+<p>然后再日志里面就可以看流量了</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411174556.jpg"
+                      alt="QQ截图20230411174556"
+                ></p>
+<p>流量重放很好用，可以根据别人的方法来反打</p>
+<p><strong>这里流量日志没有过滤ip的选项，所以结合weblogger使用</strong></p>
+<h3 id="上传文件监控"><a href="#上传文件监控" class="headerlink" title="上传文件监控"></a>上传文件监控</h3><p>在上面都做完后，审出来的洞都修复以后，再上文件监控</p>
+<p>文件监控会自动识别并恢复被删除的文件或者删除新上传的文件</p>
+<ol>
+<li><p>上传文件到html目录下面</p>
+</li>
+<li><p>给777权限</p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x jiankong</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>执行脚本</p>
+<p><strong>在执行文件监控的时候建议再开一个ssh窗口，因为该进程会一直占用shell</strong></p>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./jiankong</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411181102.jpg"
+                      alt="QQ截图20230411181102"
+                ></p>
+<p>监控位置一般是&#x2F;var&#x2F;www&#x2F;html</p>
+<p>备份位置选择&#x2F;tmp</p>
+</li>
+</ol>
+<div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x guardian.phar</span><br><span class="line"><span class="built_in">chmod</span> +x tapeworm.phar</span><br><span class="line"><span class="built_in">chmod</span> +x roundworm</span><br><span class="line"></span><br><span class="line">./guardian.phar -i /var/www/html -s 10.211.55.3:8023</span><br><span class="line">./tapeworm.phar -d /var/www/html -s 10.211.55.3:8023</span><br><span class="line">./roundworm  -w /var/www/html -s 10.211.55.3 -p 8023 -d</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="密码"><a href="#密码" class="headerlink" title="密码"></a>密码</h1><ol>
+<li><p>上weblogger</p>
+<p>高旭东负责，密码：<code>b565769ffbfe776234873fa18cc8b8a2</code></p>
+</li>
+<li><p>上watchbird</p>
+<p>高旭东负责，密码：<code>b565769ffbfe776234873fa18cc8b8a2</code></p>
+</li>
+</ol>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> awd</li>
+        <li><strong>Author:</strong> 南柯一梦</li>
+        <li><strong>Created at:</strong> 2023-06-01 11:08:58</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-06-01 11:08:58
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com//awd/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/CISCN/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">CISCN</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-pjax>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://gaoxudong.top',
+                lang: 'zh-CN',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">awd</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#awd"><span class="nav-text">awd</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A0%E5%9B%BA%E9%98%B6%E6%AE%B5"><span class="nav-text">加固阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8ssh%E7%99%BB%E5%BD%95%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-text">用ssh登录的服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E7%9B%AE%E5%BD%95"><span class="nav-text">打包备份网站目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%86%E7%A0%81"><span class="nav-text">修改数据库密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">备份数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D%E7%9B%BE%E6%89%AB%E7%9B%AE%E5%BD%95"><span class="nav-text">D盾扫目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8Aweblogger"><span class="nav-text">上weblogger</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8Awaf"><span class="nav-text">上waf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E7%9B%91%E6%8E%A7"><span class="nav-text">上传文件监控</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%86%E7%A0%81"><span class="nav-text">密码</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">南柯一梦</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.1.4</a>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/layouts/navbarShrink.js"></script>
+
+<script src="/js/tools/scrollTopBottom.js"></script>
+
+<script src="/js/tools/lightDarkSwitch.js"></script>
+
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
